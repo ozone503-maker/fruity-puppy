@@ -341,7 +341,12 @@
 .ourCreamHero .tagline{color:#ffd3df}
 .ourCreamHero h1 em{color:#f0a0b8}
 
-/* Our Dream — warm gold vision */
+/* Our Dream — warm gold vision; copy sits in lower half */
+.dreamHero .heroCopy{
+  justify-content:flex-end;
+  padding-top:clamp(120px,28vh,280px);
+  padding-bottom:clamp(48px,8vw,96px);
+}
 .dreamHero .tagline{color:#ffe2a8}
 .dreamHero h1 em,
 .dreamHero em{color:#f0c35a}
@@ -350,10 +355,21 @@
   box-shadow:0 16px 34px rgba(196,138,26,.38);
 }
 .dreamHero .heroSample{border-color:rgba(255,226,168,.88);color:#fff8ef}
+.dreamHero .heroVideo,
+.dreamHero .heroPhoto video{
+  object-position:center 40%;
+}
 .dreamHero:after{
   background:
-    linear-gradient(90deg,rgba(28,18,8,.86) 0%,rgba(28,18,8,.55) 40%,rgba(28,18,8,.1) 70%),
-    linear-gradient(0deg,rgba(28,18,8,.5) 0%,transparent 50%);
+    linear-gradient(0deg,rgba(28,18,8,.88) 0%,rgba(28,18,8,.55) 38%,rgba(28,18,8,.12) 68%,transparent 100%),
+    linear-gradient(90deg,rgba(28,18,8,.55) 0%,rgba(28,18,8,.22) 45%,transparent 75%);
+}
+@media(max-width:950px){
+  .dreamHero .heroCopy{
+    justify-content:flex-end;
+    padding-top:180px;
+    padding-bottom:72px;
+  }
 }
 
 /* FPX — electric teal */
