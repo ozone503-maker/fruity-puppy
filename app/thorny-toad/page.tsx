@@ -169,11 +169,11 @@ export default function Page() {
 
 
 
-      <section className="thornyHarvest" aria-label="Fresh volcano plant harvest">
+      <section className="thornyHarvest" aria-label="Guava leaf harvest">
         <div className="thornyHarvestIntro">
           <p className="ey">Picked that morning</p>
           <h2>
-            Tender red shoots.
+            Guava leaves.
             <br />
             <em>Still wet with island air.</em>
           </h2>
@@ -181,15 +181,15 @@ export default function Page() {
         <div className="thornyHarvestVideoWrap">
           <video
             className="thornyHarvestVideo"
-            src="/images/thorny-toad/harvest-red-shoots.mp4"
-            poster="/images/thorny-toad/harvest-red-shoots-poster.jpg"
+            src="/images/thorny-toad/guava-leaves-harvest.mp4"
+            poster="/images/thorny-toad/guava-leaves-harvest-poster.jpg"
             autoPlay
             muted
             loop
             playsInline
             preload="metadata"
           />
-          <p className="thornyHarvestCaption">FlashTown harvest · red young growth</p>
+          <p className="thornyHarvestCaption">FlashTown harvest · guava leaves</p>
         </div>
       </section>
 
@@ -323,6 +323,21 @@ export default function Page() {
             Shop Face Juice — $29.99
           </a>
         </div>
+      </section>
+
+
+      <section className="thornyPond" aria-label="FlashTown pond">
+        <video
+          className="thornyPondVideo"
+          src="/images/thorny-toad/flash-town-pond.mp4"
+          poster="/images/thorny-toad/flash-town-pond-poster.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        />
+        <p className="thornyPondCaption">FlashTown pond</p>
       </section>
 
       <footer>
