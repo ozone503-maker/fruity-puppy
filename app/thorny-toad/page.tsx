@@ -168,6 +168,31 @@ export default function Page() {
       </section>
 
 
+
+      <section className="thornyHarvest" aria-label="Fresh volcano plant harvest">
+        <div className="thornyHarvestIntro">
+          <p className="ey">Picked that morning</p>
+          <h2>
+            Tender red shoots.
+            <br />
+            <em>Still wet with island air.</em>
+          </h2>
+        </div>
+        <div className="thornyHarvestVideoWrap">
+          <video
+            className="thornyHarvestVideo"
+            src="/images/thorny-toad/harvest-red-shoots.mp4"
+            poster="/images/thorny-toad/harvest-red-shoots-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+          <p className="thornyHarvestCaption">FlashTown harvest · red young growth</p>
+        </div>
+      </section>
+
       <section className="ervCelebrity" aria-label="Erv, celebrity Face Juice ritual">
         <div className="ervCelebrityIntro">
           <p className="ey">Rooster Island royalty</p>
@@ -180,19 +205,6 @@ export default function Page() {
             Paparazzi. Flashes. Wayfarers. One mist of Face Juice and the cane toad scientist keeps
             walking.
           </p>
-        </div>
-        <div className="ervCelebrityVideoWrap">
-          <video
-            className="ervCelebrityVideo"
-            src="/images/thorny-toad/erv-celebrity-spray.mp4"
-            poster="/images/thorny-toad/erv-celebrity-spray-poster.jpg"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            aria-label="Erv spraying Face Juice like a celebrity"
-          />
         </div>
         <div className="ervCelebrityGrid">
           <figure>
