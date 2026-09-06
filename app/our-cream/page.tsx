@@ -1,0 +1,67 @@
+import InnerPage from "../InnerPage";
+
+const shop = "https://shop.fruitypuppy.com/products/fruity-puppy";
+
+export default function Page() {
+  return (
+    <InnerPage
+      data={{
+        eyebrow: "fruity puppy original · refrigerated",
+        title: "Our Cream",
+        intro:
+          "Skin eats. Feed it well. Fruity Puppy Original is fresh biological refrigerated cream—about 45% real Hawaiian tropical fruit suspended in a crystalline lipid matrix, made cold, kept cold, and never embalmed for the shelf.",
+        hero: "/images/process/open-cream.jpg",
+        heroAlt: "Open jar showing the real texture of Fruity Puppy Original cream",
+        sections: [
+          {
+            title: "We refused to embalm it.",
+            body: "Shelf-stable skincare solves a logistics problem. We chose a different point on the spectrum. Harvest goes on ice. Fruit cells are ruptured while the chemistry is still alive. The cream lives in the refrigerator because freshness is a spectrum—and we would rather protect living plant material than cook it into something that can sit under fluorescent lights for eighteen months.",
+            image: "/images/process/fruit-on-ice.jpg",
+            alt: "Fresh tropical fruit on ice after harvest at FlashTown",
+          },
+          {
+            title: "Forty-five percent real fruit.",
+            body: "This is not a water lotion with a botanical whisper for the label. Fruity Puppy Original carries a major fresh botanical phase: the Big Five—lilikoi, papaya, cranberry hibiscus tender tips, ice cream bean, and spearmint—plus fresh aloe, held in a lipid/butter matrix of mango, shea, cocoa, and 92° coconut oil. The story is whole fruit in the jar, not extract dust on the marketing copy.",
+            image: "/images/process/fresh-aloe.jpg",
+            alt: "Fresh aloe prepared for Fruity Puppy Original",
+          },
+          {
+            title: "A lipid matrix your skin recognizes.",
+            body: "Plant butters and oils are not filler. They are structure. When the butters cool, they organize into a crystalline network that can hold fruit particulates, botanical waters, and antioxidants until body heat softens the lattice against skin. That architecture is formulation logic—how we carry freshness—not a clinical trial claiming superiority over every other cream on Earth.",
+            image: "/images/process/lipid-batch.jpg",
+            alt: "Lipid and butter batch prepared for Fruity Puppy cream",
+          },
+          {
+            title: "What is established. What is suggested. What is ours.",
+            body: "Cosmetic only. No disease-cure language. Story powers are not clinical claims. We speak in three registers on purpose: well-established skin-barrier and antioxidant biochemistry; strongly suggested freshness advantages grounded in enzyme and oxidation science; and our own hypothesis about this specific cold-processed fruit-and-butter matrix. Marketing lines like a rich antioxidant network belong to the story of the complete formula—not an immutable compound inventory carved in stone.",
+            details: [
+              [
+                "Established",
+                "Skin’s outer barrier depends on organized lipids. Heat and time degrade enzymes such as papain. Free-radical damage to skin is basic biochemistry. Occlusive and emollient lipids help reduce moisture loss—those parts are well established.",
+              ],
+              [
+                "Suggested",
+                "Cold handling and refrigeration protect heat-sensitive botanical chemistry better than hot, long-shelf processing. That advantage is strongly suggested by enzyme and oxidation science, even when a head-to-head clinical study of this exact jar does not yet exist.",
+              ],
+              [
+                "Hypothesis",
+                "That this particular crystalline fruit-and-butter matrix delivers fresh botanical material more intelligently than conventional extract-in-water lotions is our formulation claim. Plausible. Passionate. Not independently proven as medical fact.",
+              ],
+              [
+                "How to keep it",
+                "Refrigerate when you can. Use clean hands. Keep the lid closed. Think yogurt more than drugstore lotion. Face and body. Patch test if your skin is reactive. Verify live Shopify for current size and price.",
+              ],
+            ],
+          },
+          {
+            title: "Freshness is a spectrum.",
+            body: "A morning papaya, a dried slice, a powder, an extract, and an isolated enzyme can all begin as papaya and still be materially different things. Fruity Puppy Original chooses the cold, refrigerated end of that spectrum—small batches, ice, lipid carrier, and a cream that asks you to feed skin like something alive.",
+            image: "/images/process/cream-texture.jpg",
+            alt: "Close-up of the actual Fruity Puppy Original cream texture",
+          },
+        ],
+        cta: { label: "Shop Fruity Puppy Original", href: shop },
+      }}
+    />
+  );
+}

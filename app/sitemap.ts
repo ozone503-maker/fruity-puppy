@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/our-team",
     "/our-dream",
+    "/our-cream",
     "/our-home",
     "/safety-and-transparency",
     "/lava-guava",

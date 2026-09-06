@@ -3,6 +3,7 @@ import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from 
 const links: [string, string][] = [
   ["Our Team", "/our-team"],
   ["Our Dream", "/our-dream"],
+  ["Our Cream", "/our-cream"],
   ["Our Home", "/our-home"],
   ["Safety", "/safety-and-transparency"],
   ["LAVA-GUAVA", "/lava-guava"],
@@ -51,6 +52,7 @@ export function BlogFooter() {
       <div>
         <a href="/our-team">Team</a>
         <a href="/our-dream">Dream</a>
+        <a href="/our-cream">Cream</a>
         <a href="/our-home">Home</a>
         <a href="/our-partners">Partners</a>
         <a href={BLOG_HREF}>Blog</a>

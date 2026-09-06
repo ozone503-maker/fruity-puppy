@@ -44,7 +44,7 @@ const robotLessons = [
   { no: "10", subject: "REDUCTION", title: "More ingredients did not mean a better cream.", body: "Jessie and GPT-4 kept removing plants, then studied what remained. The goal was the leanest self-sustaining fruit phase that still did the work—not a padded label." },
 ];
 
-function Header(){return <header id="top"><a className="logo" href="/">FRUITY <b>PUPPY</b></a><nav><a href="/our-team">Our Team</a><a href="/our-dream">Our Dream</a><a href="/lava-guava">LAVA-GUAVA</a><a href="/moon-tea">Moon Tea</a><a href="/fpx">FPX</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a></nav><details className="mobileNav"><summary>Menu</summary><div><a href="/">Home</a><a href="/our-team">Our Team</a><a href="/our-dream">Our Dream</a><a href="/lava-guava">LAVA-GUAVA</a><a href="/moon-tea">Moon Tea</a><a href="/fpx">FPX</a><a href="/our-partners">Our Partners</a><a href={BLOG_HREF}>Blog</a></div></details></header>}
+function Header(){return <header id="top"><a className="logo" href="/">FRUITY <b>PUPPY</b></a><nav><a href="/our-team">Our Team</a><a href="/our-dream">Our Dream</a><a href="/our-cream">Our Cream</a><a href="/lava-guava">LAVA-GUAVA</a><a href="/moon-tea">Moon Tea</a><a href="/fpx">FPX</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a></nav><details className="mobileNav"><summary>Menu</summary><div><a href="/">Home</a><a href="/our-team">Our Team</a><a href="/our-dream">Our Dream</a><a href="/our-cream">Our Cream</a><a href="/lava-guava">LAVA-GUAVA</a><a href="/moon-tea">Moon Tea</a><a href="/fpx">FPX</a><a href="/our-partners">Our Partners</a><a href={BLOG_HREF}>Blog</a></div></details></header>}
 
 export default function Page(){
   const robotTrack = useRef<HTMLDivElement>(null);
@@ -118,5 +118,5 @@ export default function Page(){
   </section>
 
   <section className="intelligenceCta"><p className="eyebrow">Plant × human × artificial</p><h2>This is only the beginning.</h2><a className="button dark" href="/our-dream">See Our Dream</a></section>
-  <footer><a className="logo" href="/">FRUITY <b>PUPPY</b></a><p>Made by hand on Big Island, Hawaiʻi.</p><div><a href="/our-team">Team</a><a href="/our-dream">Dream</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={PRIVACY_HREF}>Privacy</a><a href={TERMS_HREF}>Terms</a><a href={RETURNS_HREF}>Returns</a></div></footer>
+  <footer><a className="logo" href="/">FRUITY <b>PUPPY</b></a><p>Made by hand on Big Island, Hawaiʻi.</p><div><a href="/our-team">Team</a><a href="/our-dream">Dream</a><a href="/our-cream">Cream</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={PRIVACY_HREF}>Privacy</a><a href={TERMS_HREF}>Terms</a><a href={RETURNS_HREF}>Returns</a></div></footer>
 </main>}
