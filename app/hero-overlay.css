@@ -296,3 +296,14 @@
   letter-spacing:.12em;
   text-transform:uppercase;
 }
+
+.moonTeaPage header{
+  position:relative;
+  z-index:5;
+  background:rgba(255,248,239,.92);
+  backdrop-filter:blur(8px);
+}
+.moonTeaHero .heroVideo,
+.moonTeaHero .heroPhoto video{
+  object-position:center 40%;
+}
