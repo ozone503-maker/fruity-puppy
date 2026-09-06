@@ -1,0 +1,21 @@
+.heroBuy {
+  padding: 19px 34px;
+  font-size: 13px;
+  box-shadow: 0 12px 28px #e0517d38;
+}
+
+.actionPhoto {
+  background: #161215;
+}
+
+.samplePhoto img {
+  object-position: center 46%;
+}
+
+@media (max-width: 520px) {
+  .heroBuy {
+    width: min(100%, 240px);
+    padding: 18px 30px;
+    font-size: 12px;
+  }
+}
