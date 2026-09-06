@@ -124,6 +124,27 @@ export default function Page() {
         ))}
       </section>
 
+
+      <section className="moonNightGallery" aria-label="FlashTown after dark">
+        <div className="moonNightIntro">
+          <p className="tagline">FlashTown after dark</p>
+          <h2>Where Moon Tea gets its quiet.</h2>
+        </div>
+        <figure className="moonNightShot">
+          <img src="/images/moon-tea/night-01-cabin-pond.jpg" alt="The FlashTown cabin glowing beside the pond at twilight" />
+        </figure>
+        <figure className="moonNightShot">
+          <img src="/images/moon-tea/night-02-pond-ferns.jpg" alt="Ferns and pond lights at FlashTown after dusk" />
+        </figure>
+        <figure className="moonNightShot">
+          <img src="/images/moon-tea/night-03-purple-sky.jpg" alt="Purple twilight sky over FlashTown with the moon rising" />
+        </figure>
+        <figure className="moonNightShot moonNightShotLast">
+          <img src="/images/moon-tea/night-04-purple-lagoon.jpg" alt="Deep purple lagoon reflection at FlashTown" />
+          <figcaption>Most purple · bottom of the night</figcaption>
+        </figure>
+      </section>
+
       <section className="innerCta">
         <h2>Moon Tea</h2>
         <a className="button dark" href={shop}>
