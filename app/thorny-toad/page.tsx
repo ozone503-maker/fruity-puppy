@@ -173,6 +173,38 @@ export default function Page() {
         poster="/images/process/beats/beat-08-poster.jpg"
       />
 
+
+      <section className="ervCelebrity" aria-label="Erv, celebrity Face Juice ritual">
+        <div className="ervCelebrityIntro">
+          <p className="ey">Rooster Island royalty</p>
+          <h2>
+            Erv doesn’t moisturize.
+            <br />
+            <em>He sprays.</em>
+          </h2>
+          <p>
+            Paparazzi. Flashes. Wayfarers. One mist of Face Juice and the cane toad scientist keeps
+            walking.
+          </p>
+        </div>
+        <div className="ervCelebrityGrid">
+          <figure>
+            <img
+              src="/images/thorny-toad/erv-celebrity-spray.png"
+              alt="Erv the cane toad celebrity spraying Thorny Toad Face Juice amid paparazzi flashes"
+            />
+            <figcaption>The ritual</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/images/thorny-toad/erv-paparazzi-walk.png"
+              alt="Erv walking through paparazzi after spraying Face Juice"
+            />
+            <figcaption>Then the walk</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className="plantStory">
         <div className="sticky">
           <p className="ey">Ingredient intelligence</p>
