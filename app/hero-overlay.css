@@ -445,3 +445,39 @@
   letter-spacing:.14em;
   text-transform:uppercase;
 }
+
+/* Thorny Toad — stickerbush acid green */
+.thornyPage header{
+  position:relative;
+  z-index:5;
+  background:rgba(20,28,22,.78);
+  backdrop-filter:blur(8px);
+  border-bottom-color:rgba(220,239,112,.22);
+  color:#f5f0e5;
+}
+.thornyPage header .logo b{color:#dcef70}
+.thornyPage header .navShop{background:#dcef70;color:#26372d}
+.thornyHero .heroVideo,
+.thornyHero .heroPhoto video{
+  object-position:center 48%;
+}
+.thornyHero:after{
+  background:
+    linear-gradient(90deg,rgba(14,22,16,.9) 0%,rgba(14,22,16,.58) 40%,rgba(14,22,16,.12) 72%),
+    linear-gradient(0deg,rgba(14,22,16,.55) 0%,transparent 52%);
+}
+.thornyHero .tagline{color:#dcef70}
+.thornyHero h1 em,
+.thornyHero em{color:#dcef70}
+.thornyHero .heroBuy{
+  background:#dcef70;
+  color:#1c2a1f;
+  box-shadow:0 16px 34px rgba(220,239,112,.28);
+}
+.thornyHero .heroSample{border-color:rgba(220,239,112,.88);color:#f5f0e5}
+.thornyHero .heroSample:hover,
+.thornyHero .heroSample:focus-visible{
+  background:rgba(220,239,112,.14);
+  border-color:#dcef70;
+  outline-color:#dcef70;
+}
