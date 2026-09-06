@@ -126,7 +126,7 @@ function TenetsCarousel() {
           ‹
         </button>
         <div className="tenetTrack" key={t.name}>
-          <details className="tenetCard" open>
+          <details className="tenetCard">
             <summary>
               <span className="tenetNum">{t.n}</span>
               <span className="tenetName">{t.name}</span>
