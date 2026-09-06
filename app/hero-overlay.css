@@ -43,8 +43,27 @@
 .hero .tagline{color:#ffd3df}
 .hero h1{font-size:clamp(66px,8vw,118px)}
 .hero h2{max-width:590px;color:#fff8ef;font-size:clamp(21px,2.15vw,32px)}
-.hero .textLink{color:#fff8ef;border-color:#fff8ef}
 .hero .heroBuy{box-shadow:0 16px 34px rgba(224,81,125,.38)}
+
+.hero .heroButtons{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:14px;
+}
+.hero .heroSample{
+  background:transparent;
+  color:#fff8ef;
+  border:2px solid rgba(255,248,239,.88);
+  box-shadow:0 12px 28px rgba(0,0,0,.22);
+  font-weight:900;
+}
+.hero .heroSample:hover,
+.hero .heroSample:focus-visible{
+  background:rgba(255,248,239,.14);
+  border-color:#fff8ef;
+  outline:2px solid #fff8ef;
+  outline-offset:3px;
+}
 .heroAudioBtn{
   position:absolute;
   right:clamp(16px,3vw,28px);
