@@ -58,8 +58,8 @@ export default function LavaGuava() {
 
       <section className="hero lavaHero">
         <HeroVideo
-          src="/images/hero/our-cream-hero.mp4"
-          poster="/images/hero/our-cream-hero-poster.jpg"
+          src="/images/hero/lava-guava-hero.mp4"
+          poster="/images/hero/lava-guava-hero-poster.jpg"
           silent
         />
         <div className="heroCopy">
@@ -200,19 +200,6 @@ export default function LavaGuava() {
             </p>
           </div>
         </div>
-        <section className="placeStrip" aria-label="Kīlauea at night from downhill">
-          <video
-            className="placeStripVideo"
-            src="/images/our-home/kilauea-night.mp4"
-            poster="/images/our-home/kilauea-night-poster.jpg"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-          />
-          <p className="placeStripCaption">Kīlauea at night · fifteen miles uphill from FLASHTOWN</p>
-        </section>
       </section>
 
       <section className="botanicalSection">
