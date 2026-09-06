@@ -16,7 +16,7 @@ function Header(){return <header id="top"><a className="logo" href="/">FRUITY <b
 export default function Page(){return <main className="ourHomePage">
   <Header/>
   <AmbientScrollAudio src="/audio/our-home-ambience.mp3" triggerSelector="#home-story" />
-  <section className="hero">
+  <section className="hero homeVideoHero">
     <HeroVideo
       src="/images/hero/our-cream-hero.mp4"
       poster="/images/hero/our-cream-hero-poster.jpg"
@@ -27,7 +27,7 @@ export default function Page(){return <main className="ourHomePage">
       <h1>OUR<br/><em>HOME</em></h1>
       <h2>Fruity Puppy doesn’t just come from a kitchen. It comes from a place. A real one.</h2>
       <div className="buttonRow heroButtons">
-        <a className="button pink heroBuy" href="#home-story">Explore FLASHTOWN</a>
+        <a className="button heroBuy" href="#home-story">Explore FLASHTOWN</a>
       </div>
     </div>
     <div className="homeCoordinates"><span>EDEN ROC · HAWAIʻI</span><span>1,800 FT</span><span>OFF GRID</span></div>

@@ -69,7 +69,7 @@ export default function Page() {
 
       <AmbientScrollAudio src="/audio/our-dream-ambience.mp3" triggerSelector="#dream-story" />
 
-      <section className="hero">
+      <section className="hero dreamHero">
         <HeroVideo
           src="/images/hero/home-hero.mp4"
           poster="/images/hero/home-hero-poster.jpg"
@@ -85,7 +85,7 @@ export default function Page() {
             with the land, and with the way things grow and change and heal.
           </h2>
           <div className="buttonRow heroButtons">
-            <a className="button pink heroBuy" href={shop}>
+            <a className="button heroBuy" href={shop}>
               Buy Now
             </a>
             <a className="button heroSample" href="#dream-story">

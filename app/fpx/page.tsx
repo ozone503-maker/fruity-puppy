@@ -69,7 +69,7 @@ export default function Page() {
 
       <AmbientScrollAudio src="/audio/fpx-ambience.mp3" triggerSelector="#fpx-story" />
 
-      <section className="hero">
+      <section className="hero fpxHero">
         <HeroVideo
           src="/images/hero/home-hero.mp4"
           poster="/images/hero/home-hero-poster.jpg"
@@ -87,7 +87,7 @@ export default function Page() {
             higher-stress skin.
           </h2>
           <div className="buttonRow heroButtons">
-            <a className="button pink heroBuy" href={shop}>
+            <a className="button heroBuy" href={shop}>
               Shop FPX
             </a>
             <a className="button heroSample" href="#fpx-story">

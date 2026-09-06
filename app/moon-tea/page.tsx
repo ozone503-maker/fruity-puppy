@@ -87,7 +87,7 @@ export default function Page() {
             A fresh botanical toner brewed for the quiet work your skin does at night.
           </h2>
           <div className="buttonRow heroButtons">
-            <a className="button pink heroBuy" href={shop}>
+            <a className="button moonTeaBuy heroBuy" href={shop}>
               Shop Moon Tea
             </a>
             <a className="button heroSample" href="#moon-story">

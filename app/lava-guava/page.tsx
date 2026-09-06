@@ -56,7 +56,7 @@ export default function LavaGuava() {
 
       <AmbientScrollAudio src="/audio/lava-guava-ambience.mp3" triggerSelector="#lava-story" />
 
-      <section className="hero">
+      <section className="hero lavaHero">
         <HeroVideo
           src="/images/hero/our-cream-hero.mp4"
           poster="/images/hero/our-cream-hero-poster.jpg"
@@ -74,7 +74,7 @@ export default function LavaGuava() {
             for LAVA-GUAVA BOMB BALM.
           </h2>
           <div className="buttonRow heroButtons">
-            <a className="button pink heroBuy" href={shop}>
+            <a className="button heroBuy" href={shop}>
               Get the bomb balm
             </a>
             <a className="button heroSample" href="#lava-story">

@@ -57,7 +57,7 @@ export default function Page(){
 
   <AmbientScrollAudio src="/audio/our-team-ambience.mp3" triggerSelector="#team-story" />
 
-  <section className="hero">
+  <section className="hero teamHero">
     <HeroVideo
       src="/images/hero/home-hero.mp4"
       poster="/images/hero/home-hero-poster.jpg"
@@ -68,7 +68,7 @@ export default function Page(){
       <h1>Something none of us could have made <em>alone.</em></h1>
       <h2>Plant intelligence. Human intelligence. Artificial intelligence. Each one doing what it does best, and creating something new where they meet.</h2>
       <div className="buttonRow heroButtons">
-        <a className="button pink heroBuy" href="#team-story">Meet the team</a>
+        <a className="button heroBuy" href="#team-story">Meet the team</a>
         <a className="button heroSample" href="#triad">The three intelligences</a>
       </div>
     </div>
