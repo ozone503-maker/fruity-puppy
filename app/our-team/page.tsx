@@ -1,6 +1,8 @@
 "use client";
 
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
+import HeroVideo from "../components/HeroVideo";
+import AmbientScrollAudio from "../components/AmbientScrollAudio";
 
 import { useRef } from "react";
 
@@ -52,18 +54,27 @@ export default function Page(){
   return <main className="intelligencePage">
   <Header/>
 
-  <section className="intelligenceHero">
-    <div className="intelligenceHeroPhoto"><img src="/images/new/team.jpg" alt="The living world around Fruity Puppy on Hawaiʻi Island"/></div>
-    <div className="intelligenceHeroCopy">
+  <AmbientScrollAudio src="/audio/our-team-ambience.mp3" triggerSelector="#team-story" />
+
+  <section className="hero commercialHero">
+    <HeroVideo
+      src="/images/hero/commercials/our-team.mp4"
+      poster="/images/hero/commercials/our-team-poster.jpg"
+      silent
+      maxPlays={2}
+    />
+    <div className="heroCopy">
       <p className="tagline">The intelligence behind Fruity Puppy</p>
       <h1>Something none of us could have made <em>alone.</em></h1>
-      <p className="heroLead">Plant intelligence. Human intelligence. Artificial intelligence. Each one doing what it does best—and creating something new where they meet.</p>
-      <a className="triadJump" href="#triad">Meet the three intelligences <span>↓</span></a>
+      <h2>Plant intelligence. Human intelligence. Artificial intelligence. Each one doing what it does best, and creating something new where they meet.</h2>
+      <div className="buttonRow heroButtons">
+        <a className="button pink heroBuy" href="#team-story">Meet the team</a>
+        <a className="button heroSample" href="#triad">The three intelligences</a>
+      </div>
     </div>
-    <div className="orbitWords" aria-hidden="true"><span>PLANT</span><i>×</i><span>HUMAN</span><i>×</i><span>ARTIFICIAL</span></div>
   </section>
 
-  <section className="robotSchool" aria-labelledby="robot-school-title">
+  <section className="robotSchool" id="team-story" aria-labelledby="robot-school-title">
     <div className="robotSchoolHead">
       <div><p className="eyebrow">The original robot teachers</p><h2 id="robot-school-title">ROBOT SCHOOL</h2><p>Ten lessons from the education that came before the cream.</p></div>
       <div className="robotControls"><button onClick={()=>moveLessons(-1)} aria-label="Previous robot lesson">←</button><button onClick={()=>moveLessons(1)} aria-label="Next robot lesson">→</button></div>

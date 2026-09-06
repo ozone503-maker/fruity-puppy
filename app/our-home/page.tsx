@@ -1,3 +1,5 @@
+import HeroVideo from "../components/HeroVideo";
+import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import type { Metadata } from "next";
 
@@ -12,14 +14,26 @@ function Header(){return <header id="top"><a className="logo" href="/">FRUITY <b
 
 export default function Page(){return <main className="ourHomePage">
   <Header/>
-  <section className="homeHero">
-    <img src={homeImages+"862456bb-bbb2-4e50-9fec-900a88d39e4b-1_all_118.jpg"} alt="The jungle home and farm at FLASHTOWN on Hawaiʻi Island"/>
-    <div className="homeHeroShade"/>
-    <div className="homeHeroCopy"><p className="tagline">The place behind every jar</p><h1>OUR<br/><em>HOME</em></h1><p>Fruity Puppy doesn’t just come from a kitchen—it comes from a place. A real one.</p></div>
+  <AmbientScrollAudio src="/audio/our-home-ambience.mp3" triggerSelector="#home-story" />
+  <section className="hero commercialHero">
+    <HeroVideo
+      src="/images/hero/commercials/our-home.mp4"
+      poster="/images/hero/commercials/our-home-poster.jpg"
+      silent
+      maxPlays={2}
+    />
+    <div className="heroCopy">
+      <p className="tagline">The place behind every jar</p>
+      <h1>OUR<br/><em>HOME</em></h1>
+      <h2>Fruity Puppy doesn’t just come from a kitchen. It comes from a place. A real one.</h2>
+      <div className="buttonRow heroButtons">
+        <a className="button pink heroBuy" href="#home-story">Explore FLASHTOWN</a>
+      </div>
+    </div>
     <div className="homeCoordinates"><span>EDEN ROC · HAWAIʻI</span><span>1,800 FT</span><span>OFF GRID</span></div>
   </section>
 
-  <section className="flashtownIntro">
+  <section className="flashtownIntro" id="home-story">
     <img className="flashtownMark" src={homeImages+"862456bb-bbb2-4e50-9fec-900a88d39e4b-1-b1ad831.jpg"} alt="FLASHTOWN Big Island Hawaiʻi logo"/>
     <div><p className="eyebrow">Farm · sanctuary · jungle home</p><h2>This is <em>FLASHTOWN.</em></h2><p>FLASHTOWN is the name of our farm, our cat sanctuary, our jungle home, and the very heart of everything we make.</p></div>
   </section>

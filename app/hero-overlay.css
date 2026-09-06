@@ -168,3 +168,34 @@
     object-position:center 38%;
   }
 }
+
+
+.commercialHero .heroVideo,
+.commercialHero .heroPhoto video{
+  object-fit:cover;
+  object-position:center center;
+}
+.ourDreamPage header,
+.ourHomePage header,
+.intelligencePage header{
+  position:relative;
+  z-index:5;
+  background:rgba(255,248,239,.92);
+  backdrop-filter:blur(8px);
+}
+
+.hero .homeCoordinates{
+  position:absolute;
+  left:clamp(16px,5vw,7vw);
+  right:clamp(16px,5vw,7vw);
+  bottom:30px;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid rgba(255,255,255,.53);
+  padding-top:16px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.18em;
+  color:#fff8ef;
+}

@@ -94,10 +94,11 @@ export default function Page() {
 
       <AmbientScrollAudio src="/audio/our-cream-ambience.mp3" triggerSelector="#cream-story" />
 
-      <section className="hero ourCreamHero">
+      <section className="hero ourCreamHero commercialHero">
         <HeroVideo
-          src="/images/hero/our-cream-hero.mp4"
-          poster="/images/hero/our-cream-hero-poster.jpg"
+          src="/images/hero/commercials/our-cream-commercial.mp4"
+          poster="/images/hero/commercials/our-cream-commercial-poster.jpg"
+          silent
           maxPlays={2}
         />
         <div className="heroCopy">
