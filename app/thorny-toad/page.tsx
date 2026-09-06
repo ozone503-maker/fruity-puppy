@@ -55,7 +55,7 @@ function Header() {
         <a href="/our-dream">Our Dream</a>
         <a href="/our-cream">Our Cream</a>
         <a href="/lava-guava">LAVA-GUAVA</a>
-        <a href="/moon-tea">Moon Tea</a>
+        <a href="/desert-squirt">Desert Squirt</a><a href="/moon-tea">Moon Tea</a>
         <a href="/fpx">FPX</a>
         <a href={BLOG_HREF}>Blog</a>
         <a className="navShop" href={shop}>
@@ -70,7 +70,7 @@ function Header() {
           <a href="/our-dream">Our Dream</a>
           <a href="/our-cream">Our Cream</a>
           <a href="/lava-guava">LAVA-GUAVA</a>
-          <a href="/moon-tea">Moon Tea</a>
+          <a href="/desert-squirt">Desert Squirt</a><a href="/moon-tea">Moon Tea</a>
           <a href={BLOG_HREF}>Blog</a>
           <a href={shop}>Shop Face Juice</a>
         </div>

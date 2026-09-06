@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/safety-and-transparency",
     "/lava-guava",
     "/thorny-toad",
+    "/desert-squirt",
     "/moon-tea",
     "/fpx",
     "/our-partners",

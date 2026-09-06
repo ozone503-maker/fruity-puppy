@@ -8,6 +8,7 @@ const links: [string, string][] = [
   ["Safety", "/safety-and-transparency"],
   ["LAVA-GUAVA", "/lava-guava"],
   ["Thorny Toad", "/thorny-toad"],
+  ["Desert Squirt", "/desert-squirt"],
   ["Moon Tea", "/moon-tea"],
   ["FPX", "/fpx"],
   ["Partners", "/our-partners"],

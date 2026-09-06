@@ -1,0 +1,32 @@
+.ds{--sand:#e8d2a8;--clay:#c47a3a;--dust:#5c3a22;--night:#1c120c;background:#f4e6d0;color:#1c120c;overflow:hidden}
+.ds .ey{margin:0;color:#c47a3a;font:900 11px Arial;letter-spacing:.18em;text-transform:uppercase}
+.dsHero{position:relative;min-height:clamp(720px,86vh,940px);overflow:hidden;background:#1c120c;isolation:isolate}
+.dsHero .heroCopy{justify-content:flex-end;padding-top:clamp(120px,28vh,280px);padding-bottom:clamp(48px,8vw,96px);color:#f4e6d0}
+.dsHero .tagline{color:#e8d2a8}
+.dsHero h1{font:500 clamp(58px,7vw,108px)/.9 Georgia;letter-spacing:-.05em;margin:18px 0 22px}
+.dsHero h1 em,.dsHero em{color:#e0a060;font-weight:400}
+.dsHero h2{max-width:560px;color:#f4e6d0;font:400 clamp(20px,2.1vw,30px)/1.3 Georgia}
+.dsHero .heroBuy{background:#c47a3a;color:#fff8ef;box-shadow:0 16px 34px rgba(196,122,58,.35)}
+.dsHero .heroSample{border-color:rgba(232,210,168,.88);color:#f4e6d0}
+.dsHero:after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(0deg,rgba(28,18,12,.9) 0%,rgba(28,18,12,.55) 40%,rgba(28,18,12,.1) 70%,transparent 100%),
+    linear-gradient(90deg,rgba(28,18,12,.7) 0%,rgba(28,18,12,.25) 50%,transparent 78%);
+}
+.dsIntro{padding:100px 7vw;text-align:center;max-width:900px;margin:0 auto}
+.dsIntro h2{margin:18px 0 24px;font:400 clamp(40px,5vw,72px)/1 Georgia;letter-spacing:-.04em}
+.dsIntro p{color:#5c3a22;line-height:1.8;font-size:17px}
+.dsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:0 5vw 90px;max-width:1180px;margin:0 auto}
+.dsGrid article{padding:28px;background:#fff8ef;border-radius:10px;border-top:4px solid #c47a3a}
+.dsGrid h3{margin:0 0 12px;font:400 28px Georgia}
+.dsGrid p{margin:0;color:#5c3a22;line-height:1.65;font-size:15px}
+.dsLineage{padding:80px 7vw;background:#5c3a22;color:#f4e6d0}
+.dsLineage h2{font:400 clamp(36px,4.5vw,60px)/1 Georgia;margin:14px 0 28px}
+.dsLineage .links{display:flex;flex-wrap:wrap;gap:14px}
+.dsLineage a{display:inline-flex;padding:14px 20px;border-radius:999px;border:1px solid rgba(244,230,208,.55);color:#f4e6d0;font:800 11px Arial;letter-spacing:.1em;text-transform:uppercase}
+.dsLineage a:hover{background:rgba(244,230,208,.12)}
+.dsCta{padding:90px 7vw;background:#c47a3a;color:#fff8ef;text-align:center}
+.dsCta h2{font:400 clamp(44px,6vw,80px)/1 Georgia;margin:0 0 28px}
+.dsCta .button{background:#1c120c;color:#f4e6d0}
+@media(max-width:900px){.dsGrid{grid-template-columns:1fr;padding:0 22px 70px}.dsIntro{padding:70px 22px}}
