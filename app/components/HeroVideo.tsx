@@ -2,9 +2,17 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const MAX_PLAYS = 2;
+type HeroVideoProps = {
+  src?: string;
+  poster?: string;
+  maxPlays?: number;
+};
 
-export default function HeroVideo() {
+export default function HeroVideo({
+  src = "/images/hero/home-hero.mp4",
+  poster = "/images/hero/home-hero-poster.jpg",
+  maxPlays = 2,
+}: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const playsRef = useRef(0);
   const inViewRef = useRef(true);
@@ -29,7 +37,7 @@ export default function HeroVideo() {
   function handleEnded() {
     const video = videoRef.current;
     if (!video || !inViewRef.current) return;
-    if (playsRef.current >= MAX_PLAYS) {
+    if (playsRef.current >= maxPlays) {
       video.pause();
       return;
     }
@@ -43,7 +51,6 @@ export default function HeroVideo() {
     const root = video?.closest(".hero") || video?.parentElement;
     if (!video || !root) return;
 
-    // First autoplay counts as play 1
     playsRef.current = 1;
 
     const observer = new IntersectionObserver(
@@ -52,19 +59,14 @@ export default function HeroVideo() {
         const wasVisible = inViewRef.current;
         inViewRef.current = visible;
 
-        if (visible && !wasVisible) {
-          // Scrolled back up into the hero — fresh 2-play cycle
-          restartCycle();
-        } else if (!visible && wasVisible) {
-          video.pause();
-        }
+        if (visible && !wasVisible) restartCycle();
+        else if (!visible && wasVisible) video.pause();
       },
       { threshold: [0, 0.35, 0.6] }
     );
     observer.observe(root);
-
     return () => observer.disconnect();
-  }, []);
+  }, [maxPlays]);
 
   return (
     <>
@@ -72,8 +74,8 @@ export default function HeroVideo() {
         <video
           ref={videoRef}
           className="heroVideo"
-          src="/images/hero/home-hero.mp4"
-          poster="/images/hero/home-hero-poster.jpg"
+          src={src}
+          poster={poster}
           autoPlay
           muted={muted}
           playsInline

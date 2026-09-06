@@ -151,3 +151,20 @@
   filter:brightness(.97);
   transform:translateY(-1px);
 }
+
+.ourCreamHero .heroVideo,
+.ourCreamHero .heroPhoto video{
+  object-position:center 42%;
+}
+.ourCreamPage header{
+  position:relative;
+  z-index:5;
+  background:rgba(255,248,239,.92);
+  backdrop-filter:blur(8px);
+}
+@media(max-width:520px){
+  .ourCreamHero .heroVideo,
+  .ourCreamHero .heroPhoto video{
+    object-position:center 38%;
+  }
+}

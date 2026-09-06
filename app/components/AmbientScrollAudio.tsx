@@ -2,11 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const SRC = "/audio/jungle-ambience.mp3";
+type AmbientScrollAudioProps = {
+  src?: string;
+  triggerSelector?: string;
+};
+
 const TARGET_VOLUME = 0.32;
 const FADE_MS = 2200;
 
-export default function AmbientScrollAudio() {
+export default function AmbientScrollAudio({
+  src = "/audio/jungle-ambience.mp3",
+  triggerSelector = "#why, .intro, #cream-story",
+}: AmbientScrollAudioProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const unlockedRef = useRef(false);
   const startedRef = useRef(false);
@@ -59,7 +66,7 @@ export default function AmbientScrollAudio() {
   }
 
   useEffect(() => {
-    const audio = new Audio(SRC);
+    const audio = new Audio(src);
     audio.loop = true;
     audio.preload = "auto";
     audio.volume = 0;
@@ -68,7 +75,6 @@ export default function AmbientScrollAudio() {
     const unlock = () => {
       unlockedRef.current = true;
       setNeedsGesture(false);
-      // If they already scrolled past the start zone, begin now
       if (startedRef.current || window.scrollY > window.innerHeight * 0.45) {
         void startAmbient();
       }
@@ -77,10 +83,7 @@ export default function AmbientScrollAudio() {
     window.addEventListener("pointerdown", unlock, { once: true });
     window.addEventListener("keydown", unlock, { once: true });
 
-    // Start once when the page body below the hero comes into view,
-    // then keep playing all the way to the footer (no stop on further scroll).
-    const trigger =
-      document.getElementById("why") || document.querySelector(".intro");
+    const trigger = document.querySelector(triggerSelector);
 
     const observer = trigger
       ? new IntersectionObserver(
@@ -103,7 +106,7 @@ export default function AmbientScrollAudio() {
       audioRef.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [src, triggerSelector]);
 
   function toggleMute() {
     const next = !muted;
