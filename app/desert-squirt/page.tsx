@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import HeroVideo from "../components/HeroVideo";
+import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import "./desert.css";
 
@@ -85,6 +86,8 @@ export default function Page() {
           </div>
         </details>
       </header>
+
+      <AmbientScrollAudio src="/audio/desert-squirt-ambience.mp3" triggerSelector="#ds-story" />
 
       <section className="hero dsHero">
         <HeroVideo
