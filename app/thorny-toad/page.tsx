@@ -16,31 +16,31 @@ const plants = [
     "Stickerbush Cane",
     "Tannins · Pore Tightening · Surface Grip",
     "Binds to surface proteins, tightens pores, and creates the formula’s grip.",
-    cdn + "rn-image_picker_lib_temp_9db7fb51-96db-4368-9e06-9b1df05f51a4.jpg?v=1781217619&width=1600",
+    "/images/thorny-toad/ingredients/stickerbush-cane.jpg",
   ],
   [
     "Green Tea",
     "EGCG Catechins · Antioxidant Defense",
     "Catechins intercept free-radical damage and broaden the tannin spectrum.",
-    cdn + "rn-image_picker_lib_temp_de50b158-6b45-4a43-814f-731099bfe21a.jpg?v=1781217138&width=1600",
+    "/images/thorny-toad/ingredients/green-tea.jpg",
   ],
   [
     "Guava Leaf",
     "Quercetin · Flavonoids · Anti-Inflammatory",
     "Helps quiet histamine-driven reactions from a different biochemical angle.",
-    cdn + "rn-image_picker_lib_temp_9f4a948d-589d-4b68-810d-5343670aa302.jpg?v=1781217295&width=1600",
+    "/images/thorny-toad/ingredients/guava-leaf.jpg",
   ],
   [
     "Lemon Peel",
     "Citric Acid · pH Alignment",
     "Whole peel organic acids help realign skin’s surface pH after disruption.",
-    cdn + "rn-image_picker_lib_temp_76498c68-3e34-4ff8-a4fc-73b00069d18f.jpg?v=1781217156&width=1600",
+    "/images/thorny-toad/ingredients/lemon-peel.jpg",
   ],
   [
     "Jungle Mint",
     "Rosmarinic Acid · Carvone · Activation",
     "Cold-extracted whole plant—not essential oil—activates on contact.",
-    cdn + "20251216_141734.jpg?v=1775240960&width=1600",
+    "/images/thorny-toad/ingredients/jungle-mint.jpg",
   ],
 ];
 
@@ -240,10 +240,13 @@ export default function Page() {
         <div className="steps">
           {plants.map((plant, i) => (
             <article key={plant[0]} data-p={i} data-r>
-              <span>0{i + 1}</span>
-              <h2>{plant[0]}</h2>
-              <h3>{plant[1]}</h3>
-              <p>{plant[2]}</p>
+              <img className="stepBg" src={plant[3]} alt="" aria-hidden="true" />
+              <div className="stepCopy">
+                <span>0{i + 1}</span>
+                <h2>{plant[0]}</h2>
+                <h3>{plant[1]}</h3>
+                <p>{plant[2]}</p>
+              </div>
             </article>
           ))}
         </div>
