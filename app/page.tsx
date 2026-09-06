@@ -1,5 +1,6 @@
 import IpoWidget from "./components/IpoWidget";
 import HeroVideo from "./components/HeroVideo";
+import AmbientScrollAudio from "./components/AmbientScrollAudio";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "./site-config";
 
 const shop="https://shop.fruitypuppy.com/products/fruity-puppy";
@@ -48,6 +49,7 @@ const faqs=[
 export default function Home(){return <main>
   <header id="top"><a className="logo" href="#top">FRUITY <b>PUPPY</b></a><nav><a href="/our-team">Our Team</a><a href="/our-dream">Our Dream</a><a href="/our-cream">Our Cream</a><a href="/our-home">Our Home</a><a href="/safety-and-transparency">Safety</a><a href="/lava-guava">LAVA-GUAVA</a><a href="/thorny-toad">Thorny Toad</a><a href="/moon-tea">Moon Tea</a><a href="/fpx">FPX</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a className="navShop" href={shop}>Shop</a></nav><details className="mobileNav"><summary>Menu</summary><div><a href="/our-team">Our Team</a><a href="/our-dream">Our Dream</a><a href="/our-cream">Our Cream</a><a href="/our-home">Our Home</a><a href="/safety-and-transparency">Safety</a><a href="/lava-guava">LAVA-GUAVA</a><a href="/thorny-toad">Thorny Toad Face Juice</a><a href="/moon-tea">Moon Tea</a><a href="/fpx">FPX</a><a href="/our-partners">Our Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={shop}>Shop</a></div></details></header>
 
+  <AmbientScrollAudio />
   <section className="hero">
     <HeroVideo />
     <div className="heroCopy"><p className="tagline">REAL FRUIT SKIN CREAM FROM BIG ISLAND</p><h1>Skin eats.<br/><em>Feed it well.</em></h1><h2>45% fresh fruit and 17 antioxidants inside your skin to heal you from the inside.</h2><div className="buttonRow heroButtons"><a className="button pink heroBuy" href={shop}>Buy Now</a><a className="button heroSample" href={sample}>or get a free sample</a></div></div>
