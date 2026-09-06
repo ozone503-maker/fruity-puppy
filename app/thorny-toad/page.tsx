@@ -103,7 +103,7 @@ export default function Page() {
   return (
     <main className="tt thornyPage">
       <Header />
-      <AmbientScrollAudio src="/audio/jungle-ambience.mp3" triggerSelector="#science" />
+      <AmbientScrollAudio src="/audio/thorny-toad-ambience.mp3" triggerSelector="#science" />
 
       <section className="hero thornyHero">
         <HeroVideo
