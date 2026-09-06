@@ -169,12 +169,6 @@
   }
 }
 
-
-.commercialHero .heroVideo,
-.commercialHero .heroPhoto video{
-  object-fit:cover;
-  object-position:center center;
-}
 .ourDreamPage header,
 .ourHomePage header,
 .intelligencePage header{
@@ -198,4 +192,40 @@
   font-weight:800;
   letter-spacing:.18em;
   color:#fff8ef;
+}
+
+.cartoonStrip{
+  position:relative;
+  display:block;
+  width:100%;
+  overflow:hidden;
+  background:#120c0e;
+  isolation:isolate;
+}
+.cartoonStrip:before,
+.cartoonStrip:after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:min(12vw,96px);
+  z-index:1;
+  pointer-events:none;
+}
+.cartoonStrip:before{
+  left:0;
+  background:linear-gradient(90deg,rgba(18,12,14,.72),transparent);
+}
+.cartoonStrip:after{
+  right:0;
+  background:linear-gradient(270deg,rgba(18,12,14,.72),transparent);
+}
+.cartoonStripVideo{
+  display:block;
+  width:100%;
+  max-height:70vh;
+  height:auto;
+  object-fit:cover;
+  object-position:center center;
+  background:#120c0e;
 }

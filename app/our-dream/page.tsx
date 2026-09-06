@@ -68,12 +68,11 @@ export default function Page() {
 
       <AmbientScrollAudio src="/audio/our-dream-ambience.mp3" triggerSelector="#dream-story" />
 
-      <section className="hero commercialHero">
+      <section className="hero">
         <HeroVideo
-          src="/images/hero/commercials/our-dream.mp4"
-          poster="/images/hero/commercials/our-dream-poster.jpg"
+          src="/images/hero/home-hero.mp4"
+          poster="/images/hero/home-hero-poster.jpg"
           silent
-          maxPlays={2}
         />
         <div className="heroCopy">
           <p className="tagline">grown here · meant for everywhere</p>
@@ -93,6 +92,19 @@ export default function Page() {
             </a>
           </div>
         </div>
+      </section>
+
+      <section className="cartoonStrip" aria-label="Fruity Puppy dream commercial">
+        <video
+          className="cartoonStripVideo"
+          src="/images/hero/commercials/our-dream.mp4"
+          poster="/images/hero/commercials/our-dream-poster.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        />
       </section>
 
       <section className="storyStack" id="dream-story">

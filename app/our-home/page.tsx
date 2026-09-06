@@ -15,12 +15,11 @@ function Header(){return <header id="top"><a className="logo" href="/">FRUITY <b
 export default function Page(){return <main className="ourHomePage">
   <Header/>
   <AmbientScrollAudio src="/audio/our-home-ambience.mp3" triggerSelector="#home-story" />
-  <section className="hero commercialHero">
+  <section className="hero">
     <HeroVideo
-      src="/images/hero/commercials/our-home.mp4"
-      poster="/images/hero/commercials/our-home-poster.jpg"
+      src="/images/hero/our-cream-hero.mp4"
+      poster="/images/hero/our-cream-hero-poster.jpg"
       silent
-      maxPlays={2}
     />
     <div className="heroCopy">
       <p className="tagline">The place behind every jar</p>

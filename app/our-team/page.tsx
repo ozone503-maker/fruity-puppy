@@ -56,12 +56,11 @@ export default function Page(){
 
   <AmbientScrollAudio src="/audio/our-team-ambience.mp3" triggerSelector="#team-story" />
 
-  <section className="hero commercialHero">
+  <section className="hero">
     <HeroVideo
-      src="/images/hero/commercials/our-team.mp4"
-      poster="/images/hero/commercials/our-team-poster.jpg"
+      src="/images/hero/home-hero.mp4"
+      poster="/images/hero/home-hero-poster.jpg"
       silent
-      maxPlays={2}
     />
     <div className="heroCopy">
       <p className="tagline">The intelligence behind Fruity Puppy</p>
@@ -72,6 +71,19 @@ export default function Page(){
         <a className="button heroSample" href="#triad">The three intelligences</a>
       </div>
     </div>
+  </section>
+
+  <section className="cartoonStrip" aria-label="Fruity Puppy team commercial">
+    <video
+      className="cartoonStripVideo"
+      src="/images/hero/commercials/our-team.mp4"
+      poster="/images/hero/commercials/our-team-poster.jpg"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+    />
   </section>
 
   <section className="robotSchool" id="team-story" aria-labelledby="robot-school-title">

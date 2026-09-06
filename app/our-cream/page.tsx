@@ -94,12 +94,11 @@ export default function Page() {
 
       <AmbientScrollAudio src="/audio/our-cream-ambience.mp3" triggerSelector="#cream-story" />
 
-      <section className="hero ourCreamHero commercialHero">
+      <section className="hero ourCreamHero">
         <HeroVideo
-          src="/images/hero/commercials/our-cream-commercial.mp4"
-          poster="/images/hero/commercials/our-cream-commercial-poster.jpg"
+          src="/images/hero/our-cream-hero.mp4"
+          poster="/images/hero/our-cream-hero-poster.jpg"
           silent
-          maxPlays={2}
         />
         <div className="heroCopy">
           <p className="tagline">FRUITY PUPPY ORIGINAL · REFRIGERATED</p>
@@ -121,6 +120,19 @@ export default function Page() {
             </a>
           </div>
         </div>
+      </section>
+
+      <section className="cartoonStrip" aria-label="Fruity Puppy cream commercial">
+        <video
+          className="cartoonStripVideo"
+          src="/images/hero/commercials/our-cream-commercial.mp4"
+          poster="/images/hero/commercials/our-cream-commercial-poster.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        />
       </section>
 
       <section className="storyStack" id="cream-story">
