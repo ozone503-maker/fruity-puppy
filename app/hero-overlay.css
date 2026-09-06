@@ -297,13 +297,38 @@
   text-transform:uppercase;
 }
 
+
 .moonTeaPage header{
   position:relative;
   z-index:5;
   background:rgba(255,248,239,.92);
   backdrop-filter:blur(8px);
 }
-.moonTeaHero .heroVideo,
-.moonTeaHero .heroPhoto video{
-  object-position:center 40%;
+
+.moonTeaHero{
+  min-height:auto;
+}
+.moonTeaHero .heroCopy{
+  min-height:clamp(520px,70vh,780px);
+}
+.moonTeaHero .heroPhoto,
+.moonTeaHero .heroPhoto video,
+.moonTeaHero .heroVideo{
+  object-fit:cover;
+  object-position:center top;
+}
+@media(min-width:900px){
+  .moonTeaHero{
+    aspect-ratio:1 / 1;
+    max-height:min(900px,92vh);
+    min-height:0;
+    margin:0 auto;
+    width:min(100%,920px);
+  }
+  .moonTeaHero .heroCopy{
+    min-height:0;
+    height:100%;
+    width:min(100%,78%);
+    padding:clamp(36px,6vw,64px);
+  }
 }
