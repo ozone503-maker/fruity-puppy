@@ -28,6 +28,32 @@ const sections = [
   },
 ];
 
+function StoryBlock({
+  title,
+  body,
+  image,
+  alt,
+  id,
+}: {
+  title: string;
+  body: string;
+  image?: string;
+  alt?: string;
+  id?: string;
+}) {
+  return (
+    <section className="storyStack dreamStoryBeat" id={id}>
+      <article className={image ? "storyCard withImage" : "storyCard"}>
+        {image && <img src={image} alt={alt || title} />}
+        <div>
+          <h2>{title}</h2>
+          <p>{body}</p>
+        </div>
+      </article>
+    </section>
+  );
+}
+
 export default function Page() {
   return (
     <main className="innerPage ourDreamPage">
@@ -77,9 +103,7 @@ export default function Page() {
         />
         <div className="heroCopy">
           <p className="tagline">grown here · meant for everywhere</p>
-          <h1>
-            Our Dream.
-          </h1>
+          <h1>Our Dream.</h1>
           <h2>
             We believe skincare can be more than a routine. It can be a relationship with your body,
             with the land, and with the way things grow and change and heal.
@@ -95,6 +119,8 @@ export default function Page() {
         </div>
       </section>
 
+      <StoryBlock {...sections[0]} id="dream-story" />
+
       <section className="cartoonStrip" aria-label="Fruity Puppy dream commercial">
         <video
           className="cartoonStripVideo"
@@ -107,6 +133,8 @@ export default function Page() {
           preload="metadata"
         />
       </section>
+
+      <StoryBlock {...sections[1]} />
 
       <section className="cartoonStrip" aria-label="Detective haunted cartoon strip">
         <video
@@ -121,19 +149,14 @@ export default function Page() {
         />
       </section>
 
-      <ProcessBeat src="/images/process/beats/beat-03.mp4" poster="/images/process/beats/beat-03-poster.jpg" />
+      <StoryBlock {...sections[2]} />
 
-      <section className="storyStack" id="dream-story">
-        {sections.map((s) => (
-          <article className={s.image ? "storyCard withImage" : "storyCard"} key={s.title}>
-            {s.image && <img src={s.image} alt={s.alt || s.title} />}
-            <div>
-              <h2>{s.title}</h2>
-              <p>{s.body}</p>
-            </div>
-          </article>
-        ))}
-      </section>
+      <ProcessBeat
+        src="/images/process/beats/beat-03.mp4"
+        poster="/images/process/beats/beat-03-poster.jpg"
+      />
+
+      <StoryBlock {...sections[3]} />
 
       <section className="innerCta">
         <h2>Our Dream</h2>

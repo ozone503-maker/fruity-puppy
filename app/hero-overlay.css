@@ -481,3 +481,16 @@
   border-color:#dcef70;
   outline-color:#dcef70;
 }
+
+.ourDreamPage .dreamStoryBeat{
+  padding:56px 7vw;
+}
+.ourDreamPage .dreamStoryBeat .storyCard{
+  padding:0;
+  border-bottom:0;
+  max-width:1100px;
+  margin:0 auto;
+}
+@media(max-width:900px){
+  .ourDreamPage .dreamStoryBeat{padding:42px 24px}
+}
