@@ -128,3 +128,54 @@
 @media(max-width:950px){
   .steps article{min-height:58vh;margin-bottom:14px}
 }
+
+.tenets{padding:100px 5vw;background:var(--acid);color:#202a22}
+.tenetsHead{max-width:820px;margin:0 auto 36px;text-align:center}
+.tenetsLead{margin:14px auto 0;max-width:480px;color:#3a4a38;line-height:1.6}
+.tenetCarousel{
+  display:grid;
+  grid-template-columns:48px 1fr 48px;
+  gap:14px;
+  align-items:center;
+  max-width:720px;
+  margin:0 auto;
+}
+.tenetNav{
+  width:48px;height:48px;border-radius:999px;border:0;
+  background:#26372d;color:#dcef70;font:800 28px/1 Georgia,serif;
+  cursor:pointer;display:grid;place-items:center;
+}
+.tenetNav:hover,.tenetNav:focus-visible{background:#1a241c;outline:2px solid #26372d;outline-offset:2px}
+.tenetTrack{min-width:0}
+.tenetCard{
+  margin:0;padding:0;background:#f5f0e5;border-radius:14px;
+  box-shadow:0 18px 40px rgba(38,55,45,.18);overflow:hidden;
+}
+.tenetCard summary{
+  list-style:none;cursor:pointer;padding:28px 28px 22px;
+  display:grid;gap:10px;position:relative;
+}
+.tenetCard summary::-webkit-details-marker{display:none}
+.tenetCard summary:after{
+  content:"+";position:absolute;right:24px;top:28px;
+  font:800 22px/1 Arial,sans-serif;color:#26372d;
+}
+.tenetCard[open] summary:after{content:"−"}
+.tenetNum{color:#526a4f;font:900 11px Arial;letter-spacing:.16em}
+.tenetName{font:400 clamp(36px,5vw,56px)/1 Georgia,serif;letter-spacing:-.04em}
+.tenetHook{color:#526a4f;font:900 11px Arial;letter-spacing:.1em;text-transform:uppercase}
+.tenetCard p{
+  margin:0;padding:0 28px 28px;max-width:520px;
+  color:#3f4d41;line-height:1.7;font-size:16px;
+}
+.tenetDots{display:flex;justify-content:center;gap:10px;margin-top:22px}
+.tenetDots button{
+  width:10px;height:10px;border-radius:999px;border:0;
+  background:#26372d55;cursor:pointer;padding:0;
+}
+.tenetDots button.active{background:#26372d;transform:scale(1.2)}
+@media(max-width:700px){
+  .tenetCarousel{grid-template-columns:40px 1fr 40px;gap:8px}
+  .tenetNav{width:40px;height:40px;font-size:24px}
+  .tenetCard summary,.tenetCard p{padding-left:20px;padding-right:20px}
+}

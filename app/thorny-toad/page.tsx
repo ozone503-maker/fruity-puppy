@@ -79,6 +79,88 @@ function Header() {
   );
 }
 
+const TENETS = [
+  {
+    n: "01",
+    name: "Mucilage",
+    hook: "Hold · Hydration · Stay",
+    body: "Plant gel that keeps the mist on your face so the actives stay put instead of vanishing.",
+  },
+  {
+    n: "02",
+    name: "Acid",
+    hook: "pH · Balance · Restoration",
+    body: "Realigns surface pH after soap, sweat, and hard water shove it out of range.",
+  },
+  {
+    n: "03",
+    name: "Tannins",
+    hook: "Structure · Defense · Tighten",
+    body: "Grip and guardrails — tighten, defend, and work the surface without the alcohol trap.",
+  },
+  {
+    n: "04",
+    name: "Catalyst",
+    hook: "Activate · Penetrate · Signal",
+    body: "Wakes the stack on contact so mucilage, acid, and tannins actually do something.",
+  },
+];
+
+function TenetsCarousel() {
+  const [i, setI] = useState(0);
+  const t = TENETS[i];
+  return (
+    <section className="tenets" data-r>
+      <div className="tenetsHead">
+        <p className="ey">ERV’s botanical toner framework</p>
+        <h2>The Four Tenets</h2>
+        <p className="tenetsLead">Regulation, not stripping — open each card.</p>
+      </div>
+      <div className="tenetCarousel" aria-roledescription="carousel" aria-label="Four Tenets">
+        <button
+          type="button"
+          className="tenetNav tenetPrev"
+          aria-label="Previous tenet"
+          onClick={() => setI((x) => (x + TENETS.length - 1) % TENETS.length)}
+        >
+          ‹
+        </button>
+        <div className="tenetTrack" key={t.name}>
+          <details className="tenetCard" open>
+            <summary>
+              <span className="tenetNum">{t.n}</span>
+              <span className="tenetName">{t.name}</span>
+              <span className="tenetHook">{t.hook}</span>
+            </summary>
+            <p>{t.body}</p>
+          </details>
+        </div>
+        <button
+          type="button"
+          className="tenetNav tenetNext"
+          aria-label="Next tenet"
+          onClick={() => setI((x) => (x + 1) % TENETS.length)}
+        >
+          ›
+        </button>
+      </div>
+      <div className="tenetDots" role="tablist" aria-label="Tenet slides">
+        {TENETS.map((item, idx) => (
+          <button
+            key={item.name}
+            type="button"
+            className={idx === i ? "active" : ""}
+            aria-label={item.name}
+            aria-selected={idx === i}
+            onClick={() => setI(idx)}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+
 export default function Page() {
   const [a, setA] = useState(0);
   useEffect(() => {
@@ -252,27 +334,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="tenets">
-        <div data-r>
-          <p className="ey">ERV’s botanical toner framework</p>
-          <h2>The Four Tenets</h2>
-        </div>
-        <aside>
-          {[
-            ["01", "Mucilage", "Hold · Hydration · Stay"],
-            ["02", "Acid", "pH · Balance · Restoration"],
-            ["03", "Tannins", "Structure · Defense · Tighten"],
-            ["04", "Catalyst", "Activate · Penetrate · Signal"],
-          ].map((t) => (
-            <article tabIndex={0} data-r key={t[1]}>
-              <span>{t[0]}</span>
-              <h3>{t[1]}</h3>
-              <b>{t[2]}</b>
-              <i>+</i>
-            </article>
-          ))}
-        </aside>
-      </section>
+      <TenetsCarousel />
 
       <section className="how">
         <div data-r>
