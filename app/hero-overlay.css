@@ -18,7 +18,7 @@
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center 48%;
+  object-position:center 58%;
 }
 .hero:after{
   content:"";
@@ -35,8 +35,8 @@
   z-index:1;
   min-height:clamp(720px,86vh,940px);
   width:min(680px,58vw);
-  padding:clamp(54px,8vw,110px) 5vw;
-  justify-content:center;
+  padding:clamp(40px,6vw,72px) 5vw clamp(54px,8vw,110px);
+  justify-content:flex-start;
   color:#fff8ef;
   text-shadow:0 2px 20px rgba(20,8,12,.28);
 }
@@ -48,7 +48,7 @@
 .heroAudioBtn{
   position:absolute;
   right:clamp(16px,3vw,28px);
-  bottom:clamp(16px,3vw,28px);
+  top:clamp(16px,3vw,28px);
   z-index:2;
   display:inline-flex;
   align-items:center;
@@ -80,7 +80,7 @@
   .heroCopy{width:min(620px,76vw);padding:70px 7vw}
   .heroPhoto img,
   .heroPhoto video,
-  .heroVideo{object-position:56% center}
+  .heroVideo{object-position:58% 62%}
   .hero:after{background:linear-gradient(90deg,rgba(25,13,17,.82) 0%,rgba(25,13,17,.5) 48%,rgba(25,13,17,.08) 82%),linear-gradient(0deg,rgba(25,13,17,.45),transparent 55%)}
 }
 
@@ -88,12 +88,12 @@
   .hero,.heroCopy{min-height:700px}
   .heroPhoto img,
   .heroPhoto video,
-  .heroVideo{object-position:60% center}
-  .hero:after{background:linear-gradient(0deg,rgba(25,13,17,.92) 0%,rgba(25,13,17,.62) 52%,rgba(25,13,17,.08) 100%)}
-  .heroCopy{width:100%;padding:270px 22px 46px;justify-content:flex-end}
+  .heroVideo{object-position:62% 68%}
+  .hero:after{background:linear-gradient(180deg,rgba(25,13,17,.78) 0%,rgba(25,13,17,.35) 34%,rgba(25,13,17,.2) 58%,rgba(25,13,17,.55) 100%)}
+  .heroCopy{width:100%;padding:72px 22px 120px;justify-content:flex-start}
   .hero h1{font-size:58px;margin:16px 0 22px}
   .hero h2{font-size:21px;margin-bottom:24px}
   .hero .buttonRow{gap:16px}
-  .heroAudioBtn{right:16px;bottom:16px;padding:11px 14px}
+  .heroAudioBtn{right:16px;top:16px;padding:11px 14px}
   .heroAudioBtnLabel{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 }
