@@ -14,3 +14,21 @@
 .ervCelebrityGrid img{width:100%;height:min(72vh,780px);object-fit:cover;object-position:center 20%;display:block}
 .ervCelebrityGrid figcaption{margin:0;padding:12px 4px 0;color:#dcef70;font:800 10px/1 Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
 @media(max-width:900px){.ervCelebrity{padding:70px 22px}.ervCelebrityGrid{grid-template-columns:1fr}.ervCelebrityGrid img{height:auto;max-height:70vh}}
+
+.ervCelebrityVideoWrap{
+  max-width:420px;
+  margin:0 auto 28px;
+  overflow:hidden;
+  border-radius:14px;
+  background:#0f1611;
+  box-shadow:0 24px 48px rgba(0,0,0,.35);
+}
+.ervCelebrityVideo{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:72vh;
+  object-fit:cover;
+  object-position:center center;
+  background:#0f1611;
+}

@@ -181,6 +181,19 @@ export default function Page() {
             walking.
           </p>
         </div>
+        <div className="ervCelebrityVideoWrap">
+          <video
+            className="ervCelebrityVideo"
+            src="/images/thorny-toad/erv-celebrity-spray.mp4"
+            poster="/images/thorny-toad/erv-celebrity-spray-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Erv spraying Face Juice like a celebrity"
+          />
+        </div>
         <div className="ervCelebrityGrid">
           <figure>
             <img
