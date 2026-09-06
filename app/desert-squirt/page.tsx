@@ -11,27 +11,27 @@ const moonTea = "https://shop.fruitypuppy.com/products/thorny-toad-moon-tea";
 // Placeholder botanicals — swap photos when Jessie drops Texas ingredient stills.
 const plants = [
   [
-    "Texas field botanical",
+    "Southwest field botanical",
     "Hold · Mucilage",
-    "Jar stand-in for now. Your Texas ingredient photo lands here.",
+    "Jar stand-in for now. Your Southwest ingredient photo lands here.",
     "/images/desert-squirt/ingredients/jar-green.jpg",
   ],
   [
-    "Texas field botanical",
+    "Southwest field botanical",
     "pH · Acid",
-    "Jar stand-in for now. Your Texas ingredient photo lands here.",
+    "Jar stand-in for now. Your Southwest ingredient photo lands here.",
     "/images/desert-squirt/ingredients/jar-gold.jpg",
   ],
   [
-    "Texas field botanical",
+    "Southwest field botanical",
     "Tannins · Defense",
-    "Jar stand-in for now. Your Texas ingredient photo lands here.",
+    "Jar stand-in for now. Your Southwest ingredient photo lands here.",
     "/images/desert-squirt/ingredients/jar-red-leaf.jpg",
   ],
   [
-    "Texas field botanical",
+    "Southwest field botanical",
     "Catalyst · Signal",
-    "Jar stand-in for now. Your Texas ingredient photo lands here.",
+    "Jar stand-in for now. Your Southwest ingredient photo lands here.",
     "/images/desert-squirt/ingredients/jar-amber-field.jpg",
   ],
 ];
@@ -88,21 +88,21 @@ export default function Page() {
 
       <section className="hero dsHero">
         <HeroVideo
-          src="/images/hero/thorny-toad-hero.mp4"
-          poster="/images/hero/thorny-toad-hero-poster.jpg"
+          src="/images/hero/desert-squirt-hero.mp4"
+          poster="/images/hero/desert-squirt-hero-poster.jpg"
           silent
           maxPlays={2}
         />
         <div className="heroCopy">
-          <p className="tagline">Dry-climate botanical toner · Ruch territory</p>
+          <p className="tagline">Loved in Texas · Arizona · New Mexico</p>
           <h1>
             DESERT SQUIRT
             <br />
             <em>For skin that’s been parched.</em>
           </h1>
           <h2>
-            Mineral-rich. Field-formulated. The Texas cousin in the Thorny Toad toner lineage —
-            built for heat, wind, and thirsty skin.
+            Mineral-rich. Field-formulated. The Southwest cousin in the Thorny Toad toner lineage —
+            built for heat, wind, and thirsty skin. Loved in Texas, Arizona, and New Mexico.
           </h2>
           <div className="buttonRow heroButtons">
             <a className="button heroBuy" href={ASK_IPO_HREF}>
@@ -126,15 +126,16 @@ export default function Page() {
         </h2>
         <p>
           Desert Squirt is the dry-climate botanical toner in the Thorny Toad family — mineral-rich
-          mist for skin that’s been cooked by sun, AC, altitude, or straight-up desert air. Same
-          photo-panel ingredient system as Face Juice. Texas botanicals coming from the field.
+          mist for skin that’s been cooked by sun, AC, altitude, or straight-up desert air. Loved
+          in Texas, Arizona, and New Mexico. Same photo-panel ingredient system as Face Juice.
+          Southwest botanicals coming from the field.
         </p>
       </section>
 
       <section className="dsPlantStory" aria-label="Desert Squirt Texas ingredients">
         <div className="dsSticky">
           <p className="ey" style={{ color: "#e8d2a8" }}>
-            Texas ingredient intelligence
+            Southwest ingredient intelligence
           </p>
           <figure>
             {plants.map((plant, i) => (

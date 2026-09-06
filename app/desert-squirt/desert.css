@@ -1,7 +1,7 @@
 .ds{--sand:#e8d2a8;--clay:#c47a3a;--dust:#5c3a22;--night:#1c120c;background:#f4e6d0;color:#1c120c;overflow:hidden}
 .ds .ey{margin:0;color:#c47a3a;font:900 11px Arial;letter-spacing:.18em;text-transform:uppercase}
 .dsHero{position:relative;min-height:clamp(720px,86vh,940px);overflow:hidden;background:#1c120c;isolation:isolate}
-.dsHero .heroCopy{justify-content:flex-end;padding-top:clamp(120px,28vh,280px);padding-bottom:clamp(48px,8vw,96px);color:#f4e6d0}
+.dsHero .heroCopy{justify-content:flex-end;padding-top:clamp(160px,34vh,320px);padding-bottom:clamp(48px,8vw,96px);color:#f4e6d0}
 .dsHero .tagline{color:#e8d2a8}
 .dsHero h1{font:500 clamp(58px,7vw,108px)/.9 Georgia;letter-spacing:-.05em;margin:18px 0 22px}
 .dsHero h1 em,.dsHero em{color:#e0a060;font-weight:400}
@@ -11,9 +11,11 @@
 .dsHero:after{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:
-    linear-gradient(0deg,rgba(28,18,12,.9) 0%,rgba(28,18,12,.55) 40%,rgba(28,18,12,.1) 70%,transparent 100%),
-    linear-gradient(90deg,rgba(28,18,12,.7) 0%,rgba(28,18,12,.25) 50%,transparent 78%);
+    linear-gradient(0deg,rgba(28,18,12,.92) 0%,rgba(28,18,12,.62) 36%,rgba(28,18,12,.18) 62%,transparent 100%),
+    linear-gradient(90deg,rgba(28,18,12,.55) 0%,rgba(28,18,12,.2) 48%,transparent 78%);
 }
+.dsHero .heroVideo,
+.dsHero .heroPhoto video{object-position:center 45%}
 .dsIntro{padding:100px 7vw;text-align:center;max-width:900px;margin:0 auto}
 .dsIntro h2{margin:18px 0 24px;font:400 clamp(40px,5vw,72px)/1 Georgia;letter-spacing:-.04em}
 .dsIntro p{color:#5c3a22;line-height:1.8;font-size:17px}
