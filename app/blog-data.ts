@@ -273,4 +273,8 @@ export const blogArticles: BlogArticle[] = [
   }
 ];
 
-export function getArticle(slug:string){return blogArticles.find((article)=>article.slug===decodeURIComponent(slug));}
+export function getArticle(slug:string){
+  let decoded = slug;
+  try { decoded = decodeURIComponent(slug); } catch { /* slug may contain literal % */ }
+  return blogArticles.find((article)=>article.slug===decoded || article.slug===slug);
+}

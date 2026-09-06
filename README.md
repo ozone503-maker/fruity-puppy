@@ -4,7 +4,9 @@ Marketing site for **Fruity Puppy** fresh biological skincare from FlashTown, Ha
 
 **GitHub:** https://github.com/ozone503-maker/fruity-puppy
 
-This checkout is a vinext / Next.js App Router app (`app/`). Shop checkout stays on Shopify (`shop.fruitypuppy.com`).
+This checkout is a **Next.js App Router** app (`app/`). Shop checkout stays on Shopify (`shop.fruitypuppy.com`).
+
+Legacy vinext / Cloudflare Workers files (`vite.config.ts`, `worker/`, `scripts/*`) may still be present for reference but are **not** used for production builds.
 
 ## Site config
 
@@ -18,32 +20,29 @@ Set `NEXT_PUBLIC_SITE_URL` in your host env for production sitemap / schema URLs
 
 ## Local development
 
-Prerequisites: Node.js `>=22.13.0`.
+Prerequisites: Node.js `>=20.9.0` (Node 22 recommended on Vercel).
 
-Install dependencies with your package manager lockfile install, then start the vinext/Vite dev server via the `dev` script.
-
-Diagnostic / Sites lifecycle scripts remain for the original vinext/Sites workflow. Prefer a standard Next production build (or Vercel's default) when deploying outside Cloudflare Sites.
+Use the lockfile with your Node package manager, then run the `dev` script.
+For a production artifact locally, run the `build` script (which calls `next build` and writes `.next/`), then the `start` script.
 
 ## Deploy
 
 ### Preferred: Vercel
 
-This App Router tree deploys most cleanly on Vercel.
-
-1. Import https://github.com/ozone503-maker/fruity-puppy in the Vercel dashboard (set the project root to this folder if needed).
-2. Framework: Next.js (see `vercel.json`).
-3. Set `NEXT_PUBLIC_SITE_URL` to your production origin.
+1. Import https://github.com/ozone503-maker/fruity-puppy in the Vercel dashboard (root directory = this repo root, or the `site-source` folder if nested).
+2. Framework preset: **Next.js** (`vercel.json` sets `framework` and `buildCommand`).
+3. Set `NEXT_PUBLIC_SITE_URL` to your production origin (e.g. `https://your-app.vercel.app`).
 4. Deploy. No DNS changes are required from this repo.
 
-Use `npx vercel` from this directory if you prefer the CLI.
+CLI alternative from this directory: the Vercel CLI (`vercel`).
 
-### Netlify (best-effort)
+### Netlify (static fallback only)
 
-`netlify.toml` publishes `public/` static assets (images, favicon). **Full vinext on Netlify is awkward** (vinext targets Cloudflare Workers / Vite). Prefer Vercel for the interactive Next app.
+`netlify.toml` publishes `public/` (images, favicon). It does **not** run the Next.js app. Prefer Vercel for the interactive site.
 
 1. Connect the GitHub repo in Netlify.
-2. Review `netlify.toml` (`publish = "public"`). To attempt a Next runtime deploy, enable `@netlify/plugin-nextjs` in Netlify and point the build command at a Next production build.
-3. Set `NEXT_PUBLIC_SITE_URL` when using dynamic URL generation.
+2. Review `netlify.toml` (`publish = "public"`).
+3. Optional: set `NEXT_PUBLIC_SITE_URL` if you later enable a Next runtime on Netlify.
 
 Default public preview base used in config: `https://fruity-puppy.netlify.app`.
 
@@ -61,5 +60,5 @@ Product copy is cosmetic-only. Ask Ipo is an AI guide, not a medical provider.
 
 ## Learn more
 
-- vinext: https://github.com/cloudflare/vinext
+- Next.js: https://nextjs.org/docs
 - Shop: https://shop.fruitypuppy.com

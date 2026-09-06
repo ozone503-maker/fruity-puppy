@@ -1,5 +1,6 @@
-import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 "use client";
+
+import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import {useEffect,useState} from "react";
 import "./thorny.css";
 const shop="https://shop.fruitypuppy.com/products/thorny-toad-face-juice",cdn="https://shop.fruitypuppy.com/cdn/shop/files/";

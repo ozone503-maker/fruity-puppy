@@ -1,6 +1,4 @@
-# Best-effort Netlify config for this vinext / Next app.
-# Full vinext builds are awkward on Netlify; prefer Vercel (see README).
-# At minimum publishes public/ static assets.
+# Static public/ fallback only. Prefer Vercel for the Next.js App Router app (see README).
 
 [build]
   command = "true"
