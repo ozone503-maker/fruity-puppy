@@ -1,12 +1,13 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const MAX_PLAYS = 4;
+const MAX_PLAYS = 2;
 
 export default function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const playsRef = useRef(1);
+  const playsRef = useRef(0);
+  const inViewRef = useRef(true);
   const [muted, setMuted] = useState(true);
 
   function toggleMute() {
@@ -17,9 +18,17 @@ export default function HeroVideo() {
     setMuted(next);
   }
 
-  function handleEnded() {
+  function restartCycle() {
     const video = videoRef.current;
     if (!video) return;
+    playsRef.current = 1;
+    video.currentTime = 0;
+    void video.play().catch(() => {});
+  }
+
+  function handleEnded() {
+    const video = videoRef.current;
+    if (!video || !inViewRef.current) return;
     if (playsRef.current >= MAX_PLAYS) {
       video.pause();
       return;
@@ -28,6 +37,34 @@ export default function HeroVideo() {
     video.currentTime = 0;
     void video.play().catch(() => {});
   }
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const root = video?.closest(".hero") || video?.parentElement;
+    if (!video || !root) return;
+
+    // First autoplay counts as play 1
+    playsRef.current = 1;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.some((e) => e.isIntersecting && e.intersectionRatio >= 0.35);
+        const wasVisible = inViewRef.current;
+        inViewRef.current = visible;
+
+        if (visible && !wasVisible) {
+          // Scrolled back up into the hero — fresh 2-play cycle
+          restartCycle();
+        } else if (!visible && wasVisible) {
+          video.pause();
+        }
+      },
+      { threshold: [0, 0.35, 0.6] }
+    );
+    observer.observe(root);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>

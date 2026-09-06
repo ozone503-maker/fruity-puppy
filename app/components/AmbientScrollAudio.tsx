@@ -9,7 +9,7 @@ const FADE_MS = 2200;
 export default function AmbientScrollAudio() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const unlockedRef = useRef(false);
-  const pastHeroRef = useRef(false);
+  const startedRef = useRef(false);
   const mutedRef = useRef(false);
   const rafRef = useRef<number | null>(null);
 
@@ -20,9 +20,9 @@ export default function AmbientScrollAudio() {
   function fadeTo(audio: HTMLAudioElement, target: number) {
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
     const startVol = audio.volume;
-    const started = performance.now();
+    const startedAt = performance.now();
     const step = (now: number) => {
-      const t = Math.min(1, (now - started) / FADE_MS);
+      const t = Math.min(1, (now - startedAt) / FADE_MS);
       audio.volume = startVol + (target - startVol) * t;
       if (t < 1) rafRef.current = requestAnimationFrame(step);
       else rafRef.current = null;
@@ -32,7 +32,7 @@ export default function AmbientScrollAudio() {
 
   async function startAmbient() {
     const audio = audioRef.current;
-    if (!audio || mutedRef.current || !pastHeroRef.current) return;
+    if (!audio || mutedRef.current) return;
     if (!unlockedRef.current) {
       setNeedsGesture(true);
       return;
@@ -40,6 +40,7 @@ export default function AmbientScrollAudio() {
     try {
       if (audio.paused) await audio.play();
       fadeTo(audio, TARGET_VOLUME);
+      startedRef.current = true;
       setPlaying(true);
       setNeedsGesture(false);
     } catch {
@@ -48,22 +49,13 @@ export default function AmbientScrollAudio() {
     }
   }
 
-  function stopAmbient(fade = true) {
+  function stopAmbient() {
     const audio = audioRef.current;
     if (!audio) return;
-    if (fade && !audio.paused) {
-      fadeTo(audio, 0);
-      window.setTimeout(() => {
-        if (!pastHeroRef.current && audioRef.current) {
-          audioRef.current.pause();
-          setPlaying(false);
-        }
-      }, FADE_MS + 40);
-    } else {
-      audio.pause();
-      audio.volume = 0;
-      setPlaying(false);
-    }
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    audio.pause();
+    audio.volume = 0;
+    setPlaying(false);
   }
 
   useEffect(() => {
@@ -76,12 +68,17 @@ export default function AmbientScrollAudio() {
     const unlock = () => {
       unlockedRef.current = true;
       setNeedsGesture(false);
-      void startAmbient();
+      // If they already scrolled past the start zone, begin now
+      if (startedRef.current || window.scrollY > window.innerHeight * 0.45) {
+        void startAmbient();
+      }
     };
 
     window.addEventListener("pointerdown", unlock, { once: true });
     window.addEventListener("keydown", unlock, { once: true });
 
+    // Start once when the page body below the hero comes into view,
+    // then keep playing all the way to the footer (no stop on further scroll).
     const trigger =
       document.getElementById("why") || document.querySelector(".intro");
 
@@ -89,9 +86,7 @@ export default function AmbientScrollAudio() {
       ? new IntersectionObserver(
           (entries) => {
             const hit = entries.some((e) => e.isIntersecting);
-            pastHeroRef.current = hit;
-            if (hit) void startAmbient();
-            else stopAmbient(true);
+            if (hit && !startedRef.current) void startAmbient();
           },
           { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
         )
@@ -116,7 +111,7 @@ export default function AmbientScrollAudio() {
     setMuted(next);
     unlockedRef.current = true;
     setNeedsGesture(false);
-    if (next) stopAmbient(false);
+    if (next) stopAmbient();
     else void startAmbient();
   }
 
