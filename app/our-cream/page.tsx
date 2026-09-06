@@ -135,6 +135,19 @@ export default function Page() {
         />
       </section>
 
+      <section className="cartoonStrip" aria-label="Harvesting aloe at FlashTown">
+        <video
+          className="cartoonStripVideo"
+          src="/images/hero/commercials/aloe-harvest.mp4"
+          poster="/images/hero/commercials/aloe-harvest-poster.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        />
+      </section>
+
       <section className="storyStack" id="cream-story">
         {sections.map((s) => (
           <article className={s.image ? "storyCard withImage" : "storyCard"} key={s.title}>

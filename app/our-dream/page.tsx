@@ -107,6 +107,19 @@ export default function Page() {
         />
       </section>
 
+      <section className="cartoonStrip" aria-label="Detective haunted cartoon strip">
+        <video
+          className="cartoonStripVideo"
+          src="/images/hero/commercials/detective-haunted.mp4"
+          poster="/images/hero/commercials/detective-haunted-poster.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        />
+      </section>
+
       <section className="storyStack" id="dream-story">
         {sections.map((s) => (
           <article className={s.image ? "storyCard withImage" : "storyCard"} key={s.title}>

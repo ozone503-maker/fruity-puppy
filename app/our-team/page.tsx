@@ -86,6 +86,19 @@ export default function Page(){
     />
   </section>
 
+  <section className="cartoonStrip" aria-label="Jessie with Ipo and Erv at dinner">
+    <video
+      className="cartoonStripVideo"
+      src="/images/hero/commercials/dinner-ipo-erv.mp4"
+      poster="/images/hero/commercials/dinner-ipo-erv-poster.jpg"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+    />
+  </section>
+
   <section className="robotSchool" id="team-story" aria-labelledby="robot-school-title">
     <div className="robotSchoolHead">
       <div><p className="eyebrow">The original robot teachers</p><h2 id="robot-school-title">ROBOT SCHOOL</h2><p>Ten lessons from the education that came before the cream.</p></div>
