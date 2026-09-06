@@ -1,0 +1,15 @@
+# Best-effort Netlify config for this vinext / Next app.
+# Full vinext builds are awkward on Netlify; prefer Vercel (see README).
+# At minimum publishes public/ static assets.
+
+[build]
+  command = "true"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

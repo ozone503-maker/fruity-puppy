@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
+import { ASK_IPO_HREF } from "../site-config";
 
 type Message = { role: "user" | "assistant"; content: string };
 type IpoState = "idle" | "greeting" | "listening" | "thinking" | "speaking" | "excited" | "concerned" | "sleeping" | "clarifying" | "teaching";
@@ -53,6 +54,6 @@ export default function IpoWidget() {
     <div className="ipoConversation" ref={logRef} aria-live="polite">{messages.slice(-6).map((message, index) => <div className={`ipoBubble ${message.role}`} key={`${message.role}-${index}`}>{message.content}</div>)}{busy && <div className="ipoBubble assistant ipoDots"><i/><i/><i/></div>}</div>
     <form className="ipoForm" onSubmit={submit}><input value={input} onChange={event => setInput(event.target.value)} onFocus={() => setState("listening")} maxLength={800} placeholder="Ask Ipo anything…" aria-label="Message Ipo"/><button type="button" className="ipoSound" onClick={() => setMuted(!muted)} aria-label={muted ? "Turn Ipo’s voice on" : "Mute Ipo"}>{muted ? "🔇" : "🔊"}</button><button type="submit" disabled={busy || !input.trim()} aria-label="Send message">🐾</button></form>
     <div className="ipoQuick" aria-label="Common questions">{quickStarts.map(item => <button key={item} onClick={() => void ask(item)} disabled={busy}>{item}</button>)}</div>
-    <p className="ipoDisclaimer">Ipo is an AI guide, not a medical provider. <a href="https://fruitypuppy.com/ask-ipo">Open full-page Ipo ↗</a></p>
+    <p className="ipoDisclaimer">Ipo is an AI guide, not a medical provider. <a href={ASK_IPO_HREF}>Open full-page Ipo ↗</a></p>
   </section>;
 }
