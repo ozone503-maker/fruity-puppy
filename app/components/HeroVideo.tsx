@@ -2,8 +2,11 @@
 
 import { useRef, useState } from "react";
 
+const MAX_PLAYS = 4;
+
 export default function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const playsRef = useRef(1);
   const [muted, setMuted] = useState(true);
 
   function toggleMute() {
@@ -12,6 +15,18 @@ export default function HeroVideo() {
     const next = !muted;
     video.muted = next;
     setMuted(next);
+  }
+
+  function handleEnded() {
+    const video = videoRef.current;
+    if (!video) return;
+    if (playsRef.current >= MAX_PLAYS) {
+      video.pause();
+      return;
+    }
+    playsRef.current += 1;
+    video.currentTime = 0;
+    void video.play().catch(() => {});
   }
 
   return (
@@ -24,10 +39,10 @@ export default function HeroVideo() {
           poster="/images/hero/home-hero-poster.jpg"
           autoPlay
           muted={muted}
-          loop
           playsInline
           preload="metadata"
           aria-hidden="true"
+          onEnded={handleEnded}
         />
       </div>
       <button
