@@ -54,6 +54,44 @@ const sections = [
   },
 ];
 
+function StoryBlock({
+  title,
+  body,
+  image,
+  alt,
+  id,
+  details,
+}: {
+  title: string;
+  body: string;
+  image?: string;
+  alt?: string;
+  id?: string;
+  details?: [string, string][];
+}) {
+  return (
+    <section className="storyStack" id={id}>
+      <article className={image ? "storyCard withImage" : "storyCard"}>
+        {image && <img src={image} alt={alt || title} />}
+        <div>
+          <h2>{title}</h2>
+          <p>{body}</p>
+          {details && (
+            <div className="detailList">
+              {details.map(([q, a]) => (
+                <details key={q}>
+                  <summary>{q}</summary>
+                  <p>{a}</p>
+                </details>
+              ))}
+            </div>
+          )}
+        </div>
+      </article>
+    </section>
+  );
+}
+
 export default function Page() {
   return (
     <main className="innerPage ourCreamPage">
@@ -123,6 +161,8 @@ export default function Page() {
         </div>
       </section>
 
+      <StoryBlock {...sections[0]} id="cream-story" />
+
       <section className="cartoonStrip" aria-label="Fruity Puppy cream commercial">
         <video
           className="cartoonStripVideo"
@@ -135,6 +175,8 @@ export default function Page() {
           preload="metadata"
         />
       </section>
+
+      <StoryBlock {...sections[1]} />
 
       <section className="cartoonStrip" aria-label="Harvesting aloe at FlashTown">
         <video
@@ -149,29 +191,12 @@ export default function Page() {
         />
       </section>
 
+      <StoryBlock {...sections[2]} />
+
       <ProcessBeat src="/images/process/beats/beat-02.mp4" poster="/images/process/beats/beat-02-poster.jpg" />
 
-      <section className="storyStack" id="cream-story">
-        {sections.map((s) => (
-          <article className={s.image ? "storyCard withImage" : "storyCard"} key={s.title}>
-            {s.image && <img src={s.image} alt={s.alt || s.title} />}
-            <div>
-              <h2>{s.title}</h2>
-              <p>{s.body}</p>
-              {s.details && (
-                <div className="detailList">
-                  {s.details.map(([q, a]) => (
-                    <details key={q}>
-                      <summary>{q}</summary>
-                      <p>{a}</p>
-                    </details>
-                  ))}
-                </div>
-              )}
-            </div>
-          </article>
-        ))}
-      </section>
+      <StoryBlock {...sections[3]} />
+      <StoryBlock {...sections[4]} />
 
       <section className="innerCta">
         <h2>Our Cream</h2>

@@ -84,18 +84,7 @@ export default function LavaGuava() {
         </div>
       </section>
 
-      <section className="cartoonStrip" aria-label="Relentless Jungle Funk fire guy cartoon strip">
-        <video
-          className="cartoonStripVideo"
-          src="/images/lava-guava/fire-guy.mp4"
-          poster="/images/lava-guava/fire-guy-poster.jpg"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-        />
-      </section>
+      
 
       <section className="problem" id="lava-story">
         <div>
@@ -122,15 +111,17 @@ export default function LavaGuava() {
         </div>
       </section>
 
-      <ProcessBeat src="/images/process/beats/beat-07.mp4" poster="/images/process/beats/beat-07-poster.jpg" />
-
-      <section className="funkStrip" aria-label="Places where jungle funk appears">
-        <span>Thighs</span>
-        <span>Feet</span>
-        <span>Under folds</span>
-        <span>Working hands</span>
-        <span>Rubbing seams</span>
-        <span>Anywhere funk gets ideas</span>
+      <section className="cartoonStrip" aria-label="Relentless Jungle Funk fire guy cartoon strip">
+        <video
+          className="cartoonStripVideo"
+          src="/images/lava-guava/fire-guy.mp4"
+          poster="/images/lava-guava/fire-guy-poster.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        />
       </section>
 
       <section className="defunk">
@@ -154,6 +145,17 @@ export default function LavaGuava() {
             Shop LAVA-GUAVA BOMB BALM
           </a>
         </div>
+      </section>
+
+      <ProcessBeat src="/images/process/beats/beat-07.mp4" poster="/images/process/beats/beat-07-poster.jpg" />
+
+      <section className="funkStrip" aria-label="Places where jungle funk appears">
+        <span>Thighs</span>
+        <span>Feet</span>
+        <span>Under folds</span>
+        <span>Working hands</span>
+        <span>Rubbing seams</span>
+        <span>Anywhere funk gets ideas</span>
       </section>
 
       <section className="lavaMovie" id="movie">
@@ -181,19 +183,6 @@ export default function LavaGuava() {
       </section>
 
       <section className="nameStory">
-        <section className="placeStrip" aria-label="Kīlauea at night from downhill">
-          <video
-            className="placeStripVideo"
-            src="/images/our-home/kilauea-night.mp4"
-            poster="/images/our-home/kilauea-night-poster.jpg"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-          />
-          <p className="placeStripCaption">Kīlauea at night · fifteen miles uphill from FLASHTOWN</p>
-        </section>
         <div className="nameStoryCopy">
           <p className="lavaEyebrow">The plant behind the name</p>
           <h2>LAVA-GUAVA.</h2>
@@ -211,6 +200,19 @@ export default function LavaGuava() {
             </p>
           </div>
         </div>
+        <section className="placeStrip" aria-label="Kīlauea at night from downhill">
+          <video
+            className="placeStripVideo"
+            src="/images/our-home/kilauea-night.mp4"
+            poster="/images/our-home/kilauea-night-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+          <p className="placeStripCaption">Kīlauea at night · fifteen miles uphill from FLASHTOWN</p>
+        </section>
       </section>
 
       <section className="botanicalSection">

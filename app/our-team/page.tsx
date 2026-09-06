@@ -74,6 +74,12 @@ export default function Page(){
     </div>
   </section>
 
+  <section className="manifesto" id="team-story">
+    <p className="eyebrow">The team is bigger than the people</p>
+    <h2>Fruity Puppy began with a plant, a question and a robot.</h2>
+    <p>No single intelligence owns this invention. The plants were already growing here, carrying a biochemical library in the yard. Human hands supplied observation, care and the requirement that every fruit remain within our own supply chain. Artificial intelligence helped us read what was already here—matching specific antioxidant compounds to actual ingredients, one plant and one better question at a time.</p>
+  </section>
+
   <section className="cartoonStrip" aria-label="Fruity Puppy team commercial">
     <video
       className="cartoonStripVideo"
@@ -85,6 +91,10 @@ export default function Page(){
       playsInline
       preload="metadata"
     />
+  </section>
+
+  <section className="triad" id="triad">
+    <div className="triadIntro"><p className="eyebrow">Three distinct strengths</p><h2>The triad of intelligence</h2><p>Not three versions of the same mind. Three radically different abilities, strongest in collaboration.</p></div>
   </section>
 
   <section className="cartoonStrip" aria-label="Jessie with Ipo and Erv at dinner">
@@ -100,9 +110,7 @@ export default function Page(){
     />
   </section>
 
-  <ProcessBeat src="/images/process/beats/beat-05.mp4" poster="/images/process/beats/beat-05-poster.jpg" />
-
-  <section className="robotSchool" id="team-story" aria-labelledby="robot-school-title">
+  <section className="robotSchool" aria-labelledby="robot-school-title">
     <div className="robotSchoolHead">
       <div><p className="eyebrow">The original robot teachers</p><h2 id="robot-school-title">ROBOT SCHOOL</h2><p>Ten lessons from the education that came before the cream.</p></div>
       <div className="robotControls"><button onClick={()=>moveLessons(-1)} aria-label="Previous robot lesson">←</button><button onClick={()=>moveLessons(1)} aria-label="Next robot lesson">→</button></div>
@@ -116,14 +124,9 @@ export default function Page(){
     <p className="swipeHint">Swipe or use the arrows · 10 lessons</p>
   </section>
 
-  <section className="manifesto">
-    <p className="eyebrow">The team is bigger than the people</p>
-    <h2>Fruity Puppy began with a plant, a question and a robot.</h2>
-    <p>No single intelligence owns this invention. The plants were already growing here, carrying a biochemical library in the yard. Human hands supplied observation, care and the requirement that every fruit remain within our own supply chain. Artificial intelligence helped us read what was already here—matching specific antioxidant compounds to actual ingredients, one plant and one better question at a time.</p>
-  </section>
+  <ProcessBeat src="/images/process/beats/beat-05.mp4" poster="/images/process/beats/beat-05-poster.jpg" />
 
-  <section className="triad" id="triad">
-    <div className="triadIntro"><p className="eyebrow">Three distinct strengths</p><h2>The triad of intelligence</h2><p>Not three versions of the same mind. Three radically different abilities, strongest in collaboration.</p></div>
+  <section className="triad">
     <div className="triadCards">{triad.map((item)=><article className="intelligenceCard" key={item.kind}>
       <div className="cardImage"><img src={item.image} alt={item.alt}/><span>{item.number}</span></div>
       <div className="cardCopy"><p>{item.kind}</p><h3>{item.line}</h3><div className="cardReveal"><p>{item.body}</p></div></div>

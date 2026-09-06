@@ -120,12 +120,6 @@ export default function Page() {
         </div>
       </section>
 
-      <ProcessBeat
-        src="/images/process/moon-tea/spearmint-harvest.mp4"
-        poster="/images/process/moon-tea/spearmint-harvest-poster.jpg"
-        caption="Harvesting spearmint · Moon Tea"
-      />
-
       <section className="storyStack" id="moon-story">
         <article className="storyCard">
           <div>
@@ -138,6 +132,12 @@ export default function Page() {
           </div>
         </article>
       </section>
+
+      <ProcessBeat
+        src="/images/process/moon-tea/spearmint-harvest.mp4"
+        poster="/images/process/moon-tea/spearmint-harvest-poster.jpg"
+        caption="Harvesting spearmint · Moon Tea"
+      />
 
       <section className="moonPlantStory" aria-label="Moon Tea ingredients">
         <div className="moonSticky">
