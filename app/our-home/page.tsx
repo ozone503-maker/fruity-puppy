@@ -40,6 +40,20 @@ export default function Page(){return <main className="ourHomePage">
   <section className="homeStory">
     <article className="homeChapter volcano"><div className="chapterImage"><img src={homeImages+"1000000686.jpg"} alt="A misty road through the rainforest near FLASHTOWN"/><span>15 MILES DOWNHILL FROM KĪLAUEA</span></div><div className="chapterCopy"><h2>Grown above a river of old lava.</h2><p>We live and grow here, fifteen miles downhill from Kīlauea, perched above the Kazumura caves—the longest and deepest lava tubes in the world. At 1,800 feet up in Eden Roc, Hawaiʻi, the air is clean and full of mist, and the ground vibrates with volcanic energy.</p><p>This is where we grow our lilikoi orchards, papaya trees, cranberry hibiscus, aloe vera, and spearmint. Every jar of Fruity Puppy starts right here.</p></div></article>
 
+    <section className="placeStrip" aria-label="Kīlauea at night from downhill">
+      <video
+        className="placeStripVideo"
+        src="/images/our-home/kilauea-night.mp4"
+        poster="/images/our-home/kilauea-night-poster.jpg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      />
+      <p className="placeStripCaption">Kīlauea at night · fifteen miles uphill from FLASHTOWN</p>
+    </section>
+
     <article className="homeChapter reverse"><div className="chapterImage"><img src={homeImages+"1000000508.jpg"} alt="The lush water garden at FLASHTOWN"/><span>RAIN + SUN + HUMAN HANDS</span></div><div className="chapterCopy"><h2>Off-grid—with fiber optic internet.</h2><p>FLASHTOWN is entirely off-grid—except for our fiber optic cable, because robots need internet. Our water comes from rain catchment. Our power comes from the sun.</p><p>Jessie hand-cleared this land with nothing but a machete, a rake, and a promise—to one day build a sanctuary. And now it’s real.</p></div></article>
 
     <div className="homeInterlude"><p>OVER 30</p><h2>fruit trees growing in stages all around you.</h2></div>
