@@ -3,6 +3,7 @@
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
+import ProcessBeat from "../components/ProcessBeat";
 
 import { useRef } from "react";
 
@@ -98,6 +99,8 @@ export default function Page(){
       preload="metadata"
     />
   </section>
+
+  <ProcessBeat src="/images/process/beats/beat-05.mp4" poster="/images/process/beats/beat-05-poster.jpg" />
 
   <section className="robotSchool" id="team-story" aria-labelledby="robot-school-title">
     <div className="robotSchoolHead">

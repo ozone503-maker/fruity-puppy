@@ -1,5 +1,6 @@
 import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
+import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 
 const shop = "https://shop.fruitypuppy.com";
@@ -108,6 +109,8 @@ export default function Page() {
           preload="metadata"
         />
       </section>
+
+      <ProcessBeat src="/images/process/beats/beat-06.mp4" poster="/images/process/beats/beat-06-poster.jpg" />
 
       <section className="storyStack" id="fpx-story">
         {sections.map((s) => (

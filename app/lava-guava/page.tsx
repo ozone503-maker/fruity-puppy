@@ -1,5 +1,6 @@
 import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
+import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 
 const shop = "https://shop.fruitypuppy.com";
@@ -120,6 +121,8 @@ export default function LavaGuava() {
           </p>
         </div>
       </section>
+
+      <ProcessBeat src="/images/process/beats/beat-07.mp4" poster="/images/process/beats/beat-07-poster.jpg" />
 
       <section className="funkStrip" aria-label="Places where jungle funk appears">
         <span>Thighs</span>

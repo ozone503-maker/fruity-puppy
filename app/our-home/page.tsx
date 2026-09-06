@@ -1,5 +1,6 @@
 import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
+import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import type { Metadata } from "next";
 
@@ -36,6 +37,8 @@ export default function Page(){return <main className="ourHomePage">
     <img className="flashtownMark" src={homeImages+"862456bb-bbb2-4e50-9fec-900a88d39e4b-1-b1ad831.jpg"} alt="FLASHTOWN Big Island Hawaiʻi logo"/>
     <div><p className="eyebrow">Farm · sanctuary · jungle home</p><h2>This is <em>FLASHTOWN.</em></h2><p>FLASHTOWN is the name of our farm, our cat sanctuary, our jungle home, and the very heart of everything we make.</p></div>
   </section>
+
+  <ProcessBeat src="/images/process/beats/beat-04.mp4" poster="/images/process/beats/beat-04-poster.jpg" />
 
   <section className="homeStory">
     <article className="homeChapter volcano"><div className="chapterImage"><img src={homeImages+"1000000686.jpg"} alt="A misty road through the rainforest near FLASHTOWN"/><span>15 MILES DOWNHILL FROM KĪLAUEA</span></div><div className="chapterCopy"><h2>Grown above a river of old lava.</h2><p>We live and grow here, fifteen miles downhill from Kīlauea, perched above the Kazumura caves—the longest and deepest lava tubes in the world. At 1,800 feet up in Eden Roc, Hawaiʻi, the air is clean and full of mist, and the ground vibrates with volcanic energy.</p><p>This is where we grow our lilikoi orchards, papaya trees, cranberry hibiscus, aloe vera, and spearmint. Every jar of Fruity Puppy starts right here.</p></div></article>
