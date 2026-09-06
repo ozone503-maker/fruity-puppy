@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import HeroVideo from "../components/HeroVideo";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import "./desert.css";
@@ -5,7 +8,54 @@ import "./desert.css";
 const faceJuice = "https://shop.fruitypuppy.com/products/thorny-toad-face-juice";
 const moonTea = "https://shop.fruitypuppy.com/products/thorny-toad-moon-tea";
 
+// Placeholder botanicals — swap photos when Jessie drops Texas ingredient stills.
+const plants = [
+  [
+    "Texas field botanical",
+    "Hold · Mucilage",
+    "Jar stand-in for now. Your Texas ingredient photo lands here.",
+    "/images/desert-squirt/ingredients/jar-green.jpg",
+  ],
+  [
+    "Texas field botanical",
+    "pH · Acid",
+    "Jar stand-in for now. Your Texas ingredient photo lands here.",
+    "/images/desert-squirt/ingredients/jar-gold.jpg",
+  ],
+  [
+    "Texas field botanical",
+    "Tannins · Defense",
+    "Jar stand-in for now. Your Texas ingredient photo lands here.",
+    "/images/desert-squirt/ingredients/jar-red-leaf.jpg",
+  ],
+  [
+    "Texas field botanical",
+    "Catalyst · Signal",
+    "Jar stand-in for now. Your Texas ingredient photo lands here.",
+    "/images/desert-squirt/ingredients/jar-amber-field.jpg",
+  ],
+];
+
 export default function Page() {
+  const [a, setA] = useState(0);
+  useEffect(() => {
+    const r = new IntersectionObserver(
+      (es) => es.forEach((e) => e.isIntersecting && e.target.classList.add("shown")),
+      { threshold: 0.12 },
+    );
+    document.querySelectorAll("[data-r]").forEach((x) => r.observe(x));
+    const p = new IntersectionObserver(
+      (es) =>
+        es.forEach((e) => e.isIntersecting && setA(Number((e.target as HTMLElement).dataset.p))),
+      { rootMargin: "-35% 0px -45%" },
+    );
+    document.querySelectorAll("[data-p]").forEach((x) => p.observe(x));
+    return () => {
+      r.disconnect();
+      p.disconnect();
+    };
+  }, []);
+
   return (
     <main className="ds">
       <header id="top">
@@ -65,7 +115,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="dsIntro" id="ds-story">
+      <section className="dsIntro" id="ds-story" data-r>
         <p className="ey">Thorny Toad toner lineage</p>
         <h2>
           Face Juice for the day.
@@ -76,23 +126,55 @@ export default function Page() {
         </h2>
         <p>
           Desert Squirt is the dry-climate botanical toner in the Thorny Toad family — mineral-rich
-          mist for skin that’s been cooked by sun, AC, altitude, or straight-up desert air. Ruch
-          energy. No alcohol strip. Regulation, not punishment.
+          mist for skin that’s been cooked by sun, AC, altitude, or straight-up desert air. Same
+          photo-panel ingredient system as Face Juice. Texas botanicals coming from the field.
         </p>
       </section>
 
+      <section className="dsPlantStory" aria-label="Desert Squirt Texas ingredients">
+        <div className="dsSticky">
+          <p className="ey" style={{ color: "#e8d2a8" }}>
+            Texas ingredient intelligence
+          </p>
+          <figure>
+            {plants.map((plant, i) => (
+              <img key={plant[1]} className={i === a ? "active" : ""} src={plant[3]} alt={plant[1]} />
+            ))}
+          </figure>
+          <div className="dsMeter">
+            <i style={{ width: ((a + 1) / plants.length) * 100 + "%" }} />
+          </div>
+          <small>
+            0{a + 1} / 0{plants.length}
+          </small>
+        </div>
+        <div className="dsSteps">
+          {plants.map((plant, i) => (
+            <article key={plant[1]} data-p={i} data-r>
+              <img className="stepBg" src={plant[3]} alt="" aria-hidden="true" />
+              <div className="stepCopy">
+                <span>0{i + 1}</span>
+                <h2>{plant[0]}</h2>
+                <h3>{plant[1]}</h3>
+                <p>{plant[2]}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="dsGrid" aria-label="What Desert Squirt is for">
-        <article>
+        <article data-r>
           <h3>Parched surface</h3>
           <p>When skin feels tight, sandy, or wind-burned — mist before cream and let minerals settle.</p>
         </article>
-        <article>
+        <article data-r>
           <h3>Heat + friction days</h3>
           <p>Travel, work, and weather that pull moisture out. Desert Squirt is the reset spray.</p>
         </article>
-        <article>
+        <article data-r>
           <h3>Sister to Face Juice</h3>
-          <p>Same Thorny Toad framework — hold, balance, defend — tuned for arid stress instead of island humidity.</p>
+          <p>Same panel system, same regulation logic — tuned for arid stress instead of island humidity.</p>
         </article>
       </section>
 

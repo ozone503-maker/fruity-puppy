@@ -30,3 +30,34 @@
 .dsCta h2{font:400 clamp(44px,6vw,80px)/1 Georgia;margin:0 0 28px}
 .dsCta .button{background:#1c120c;color:#f4e6d0}
 @media(max-width:900px){.dsGrid{grid-template-columns:1fr;padding:0 22px 70px}.dsIntro{padding:70px 22px}}
+.dsPlantStory{display:grid;grid-template-columns:1fr 1fr;background:var(--night);color:#f4e6d0}
+.dsSticky{position:sticky;top:0;height:100vh;padding:6vw;align-self:start}
+.dsSticky figure{position:relative;height:67vh;margin:25px 0 0;overflow:hidden;border-radius:50% 50% 5px 5px;background:#2a1a12}
+.dsSticky img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.07);transition:.8s}
+.dsSticky img.active{opacity:1;transform:scale(1)}
+.dsMeter{height:2px;background:#ffffff35;margin-top:22px}
+.dsMeter i{display:block;height:100%;background:var(--clay);transition:.5s}
+.dsSticky small{display:block;text-align:right;margin-top:10px;color:#e8d2a8}
+.dsSteps{padding:18vh 5vw 18vh 3vw}
+.dsSteps article{position:relative;overflow:hidden;border-radius:14px;min-height:70vh;margin:0 0 18px;isolation:isolate}
+.dsSteps .stepBg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.dsSteps article:after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(28,18,12,.9) 0%,rgba(28,18,12,.72) 42%,rgba(28,18,12,.35) 100%),
+    linear-gradient(0deg,rgba(28,18,12,.55) 0%,transparent 45%);
+}
+.dsSteps .stepCopy{position:relative;z-index:2;padding:clamp(28px,5vw,48px);max-width:560px}
+.dsSteps .stepCopy span{color:#e0a060}
+.dsSteps .stepCopy h2{margin:16px 0;font:400 clamp(34px,4.6vw,58px)/1 Georgia;color:#f4e6d0}
+.dsSteps .stepCopy h3{color:#e8d2a8;font:900 11px Arial;letter-spacing:.12em;text-transform:uppercase}
+.dsSteps .stepCopy p{color:#eadcc4;line-height:1.75}
+[data-r]{opacity:0;transform:translateY(24px);transition:.7s}
+[data-r].shown{opacity:1;transform:none}
+@media(max-width:950px){
+  .dsPlantStory{grid-template-columns:1fr}
+  .dsSticky{height:64vh;padding:36px 22px 12px;z-index:2}
+  .dsSticky figure{height:44vh}
+  .dsSteps{padding:8vh 22px}
+  .dsSteps article{min-height:56vh}
+}
