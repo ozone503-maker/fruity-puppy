@@ -2,7 +2,6 @@
 
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import { useEffect, useState } from "react";
-import ProcessBeat from "../components/ProcessBeat";
 import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import "./thorny.css";
@@ -167,11 +166,6 @@ export default function Page() {
           </b>
         </div>
       </section>
-
-      <ProcessBeat
-        src="/images/process/beats/beat-08.mp4"
-        poster="/images/process/beats/beat-08-poster.jpg"
-      />
 
 
       <section className="ervCelebrity" aria-label="Erv, celebrity Face Juice ritual">
