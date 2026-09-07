@@ -12,6 +12,7 @@ import "./action-photo-overrides.css";
 import "./lava-guava/lava-guava.css";
 import "./hero-overlay.css";
 import "./fpx/fpx.css";
+import "./use-case.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
