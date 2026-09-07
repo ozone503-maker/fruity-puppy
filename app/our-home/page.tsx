@@ -18,8 +18,8 @@ export default function Page(){return <main className="ourHomePage">
   <AmbientScrollAudio src="/audio/our-home-ambience.mp3" triggerSelector="#home-story" />
   <section className="hero homeVideoHero">
     <HeroVideo
-      src="/images/hero/our-cream-hero.mp4"
-      poster="/images/hero/our-cream-hero-poster.jpg"
+      src="/images/hero/our-home-hero.mp4"
+      poster="/images/hero/our-home-hero-poster.jpg"
       silent
     />
     <div className="heroCopy">

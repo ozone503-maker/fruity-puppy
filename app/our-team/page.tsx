@@ -59,8 +59,8 @@ export default function Page(){
 
   <section className="hero teamHero">
     <HeroVideo
-      src="/images/hero/home-hero.mp4"
-      poster="/images/hero/home-hero-poster.jpg"
+      src="/images/hero/our-team-hero.mp4"
+      poster="/images/hero/our-team-hero-poster.jpg"
       silent
     />
     <div className="heroCopy">

@@ -401,6 +401,13 @@
     linear-gradient(90deg,rgba(28,10,4,.9) 0%,rgba(28,10,4,.58) 40%,rgba(28,10,4,.12) 70%),
     linear-gradient(0deg,rgba(28,10,4,.55) 0%,transparent 50%);
 }
+@media(max-width:520px){
+  .lavaHero h1 em{
+    display:inline-block;
+    font-size:.78em;
+    letter-spacing:-.065em;
+  }
+}
 
 /* Our Home — jungle green */
 .homeVideoHero .tagline{color:#b7e4c7}
@@ -546,8 +553,15 @@
 .moonSteps .stepCopy p{color:#e6dcf4;line-height:1.75}
 @media(max-width:950px){
   .moonPlantStory{grid-template-columns:1fr}
-  .moonSticky{height:64vh;padding:36px 22px 12px;background:#120c1c;z-index:2}
+  .moonSticky{
+    position:relative;
+    top:auto;
+    height:auto;
+    padding:36px 22px 12px;
+    background:#120c1c;
+    z-index:auto;
+  }
   .moonSticky figure{height:44vh}
-  .moonSteps{padding:8vh 22px}
+  .moonSteps{padding:32px 22px 8vh}
   .moonSteps article{min-height:56vh}
 }
