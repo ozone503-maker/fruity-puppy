@@ -12,6 +12,9 @@ type Props = {
   heroImage: string;
   heroAlt: string;
   heroCaption?: string;
+  heroVideo?: string;
+  heroPoster?: string;
+  musicBed?: string;
   introEyebrow: string;
   introTitle: string;
   introBody: string;
@@ -51,29 +54,30 @@ export default function UseCasePage(props: Props) {
   return (
     <main className={`useCasePage ${props.tone}`}>
       <Header />
+      {props.musicBed && <audio className="ucMusic" src={props.musicBed} autoPlay loop playsInline preload="metadata" />}
       <section className="ucHero">
+        <div className="ucHeroMedia" aria-label={props.heroAlt}>
+          {props.heroVideo ? (
+            <video autoPlay muted loop playsInline preload="metadata" poster={props.heroPoster || props.heroImage}>
+              <source src={props.heroVideo} type="video/mp4" />
+            </video>
+          ) : <img src={props.heroImage} alt={props.heroAlt} />}
+          <div className="ucHeroShade" />
+          {props.heroCaption && <span className="ucHeroCaption">{props.heroCaption}</span>}
+        </div>
         <div className="ucHeroCopy">
           <p className="ucEyebrow">{props.eyebrow}</p>
           <h1>{props.title}<br /><em>{props.accent}</em></h1>
           <p className="ucLead">{props.lead}</p>
           <div className="ucActions"><a className="button ucPrimary" href={shop}>{props.shopLabel || "Shop Fruity Puppy Original"}</a><a className="button ucSecondary" href={ASK_IPO_HREF}>Ask Ipo</a></div>
         </div>
-        <figure className="ucHeroFigure"><img src={props.heroImage} alt={props.heroAlt}/>{props.heroCaption && <figcaption>{props.heroCaption}</figcaption>}</figure>
       </section>
 
-      <section className="ucIntro">
-        <p className="ucEyebrow">{props.introEyebrow}</p><h2>{props.introTitle}</h2><p>{props.introBody}</p>
-      </section>
+      <section className="ucIntro"><p className="ucEyebrow">{props.introEyebrow}</p><h2>{props.introTitle}</h2><p>{props.introBody}</p></section>
 
-      <section className="ucSection">
-        <p className="ucEyebrow">FRUITY PUPPY ORIGINAL</p><h2>{props.cardsTitle}</h2>
-        <div className="ucGrid">{props.cards.map((card)=><article className="ucCard" key={card.title}><small>{card.kicker}</small><h3>{card.title}</h3><p>{card.body}</p></article>)}</div>
-      </section>
+      <section className="ucSection"><p className="ucEyebrow">FRUITY PUPPY ORIGINAL</p><h2>{props.cardsTitle}</h2><div className="ucGrid">{props.cards.map((card)=><article className="ucCard" key={card.title}><small>{card.kicker}</small><h3>{card.title}</h3><p>{card.body}</p></article>)}</div></section>
 
-      <section className="ucImageBand">
-        <img src={props.imageBandImage} alt={props.imageBandAlt}/>
-        <div className="ucImageCopy"><p className="ucEyebrow">{props.imageBandEyebrow}</p><h2>{props.imageBandTitle}</h2><p>{props.imageBandBody}</p>{props.imageBandQuote && <p className="ucQuote">{props.imageBandQuote}</p>}</div>
-      </section>
+      <section className="ucImageBand"><img src={props.imageBandImage} alt={props.imageBandAlt}/><div className="ucImageCopy"><p className="ucEyebrow">{props.imageBandEyebrow}</p><h2>{props.imageBandTitle}</h2><p>{props.imageBandBody}</p>{props.imageBandQuote && <p className="ucQuote">{props.imageBandQuote}</p>}</div></section>
 
       <section className="ucHonesty"><p className="ucEyebrow">STRAIGHT TALK</p><h2>{props.honestyTitle}</h2><p>{props.honestyBody}</p></section>
 
