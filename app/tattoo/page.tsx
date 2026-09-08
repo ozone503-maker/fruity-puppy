@@ -18,7 +18,7 @@ export default function Page(){
     heroCaption="Tattoo by Keith Sharer · Dragonfly Tattoos · Vancouver, WA"
     heroVideo="/images/hero/our-cream-hero.mp4"
     heroPoster="https://fruitypuppy.com/images/tattoo-gypsy-back.jpg"
-    musicBed="/audio/tattoo-ambience.mp3"
+    musicBed="/audio/TECH TO WRECK.mp3"
     introEyebrow="SKIN ON ITS HARDEST DAY"
     introTitle="The tattoo lives in the skin."
     introBody="Fresh tattooed skin can feel tight, dry, tender, and easily irritated. Years later, the same tattoo still depends on the condition of the skin carrying it. Fruity Puppy Original was built around moisture, fresh fruit antioxidants, and a dense plant-lipid matrix—not perfume or petrolatum."
