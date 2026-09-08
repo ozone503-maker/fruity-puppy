@@ -18,7 +18,7 @@ export default function Page(){
     heroCaption="FRESH ALOE · BIG ISLAND, HAWAIʻI"
     heroVideo="/images/hero/home-hero.mp4"
     heroPoster="/images/process/fresh-aloe.jpg"
-    musicBed="/audio/our-home-ambience.mp3"
+    musicBed="/audio/sunburn-ambience.mp3"
     introEyebrow="AFTER THE BEACH"
     introTitle="Sun-stressed skin wants less drama."
     introBody="Heat, salt, wind, and UV exposure can leave skin feeling tight, dry, flushed, and depleted. Fruity Puppy Original is not sunscreen and not a burn medicine. Its job here is simpler: cold sensory relief, moisture support, and a fresh botanical phase for skin that has had enough for one day."
