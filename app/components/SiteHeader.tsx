@@ -63,10 +63,30 @@ export default function SiteHeader(){
           </div>
         </details>
 
+        <details className="mobileShopMenu">
+          <summary>ABOUT <span>+</span></summary>
+          <div>
+            <a href="/our-team">Our Team</a>
+            <a href="/our-dream">Our Dream</a>
+            <a href="/our-cream">Our Cream</a>
+            <a href="/our-home">Our Home</a>
+            <a href="/our-partners">Partners</a>
+            <a href="/safety-and-transparency">Safety + Transparency</a>
+            <a href={BLOG_HREF}>Blog</a>
+          </div>
+        </details>
+
+        <details className="mobileShopMenu">
+          <summary>SKIN HELP <span>+</span></summary>
+          <div>
+            <a href="/sunburn">Sun-Exposed Skin</a>
+            <a href="/tattoo">Tattooed Skin</a>
+            <a href="/problem-skin">Problem Skin</a>
+          </div>
+        </details>
+
         <a className="mobileSimpleLink mobileSampleLink" href={sample}>TRY A FREE SAMPLE <span>→</span></a>
         <a className="mobileIpoSimple" href={ASK_IPO_HREF}><span>ASK IPO</span><small>Help me choose what my skin needs</small></a>
-        <a className="mobileSimpleLink" href="/our-cream">OUR CREAM <span>→</span></a>
-        <a className="mobileSimpleLink" href="/our-home">OUR HOME <span>→</span></a>
         <a className="mobileSimpleLink" href={outletMall} target="_blank" rel="noopener noreferrer">OUTLET MALL <span>↗</span></a>
       </div>
     </details>
