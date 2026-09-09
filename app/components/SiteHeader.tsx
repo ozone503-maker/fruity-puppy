@@ -51,6 +51,8 @@ export default function SiteHeader(){
     <details className="siteMobileMenu">
       <summary aria-label="Open Fruity Puppy menu"><span>MENU</span><i aria-hidden="true">☰</i></summary>
       <div className="siteMobilePanel">
+        <a className="mobileBuyNow" href={shop}>BUY NOW <span>→</span></a>
+
         <details className="mobileShopMenu">
           <summary>SHOP <span>+</span></summary>
           <div>
