@@ -21,6 +21,7 @@ import "./homepage-launch.css";
 import "./desktop-launch.css";
 import "./outlet-mall-portal.css";
 
+// Redeploy marker after reverting experimental social-preview metadata.
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
