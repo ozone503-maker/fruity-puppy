@@ -1,0 +1,20 @@
+@media(min-width:1100px){
+  .siteHeader{padding-left:max(4vw,calc((100vw - 1540px)/2));padding-right:max(4vw,calc((100vw - 1540px)/2))}
+  .siteDesktopNav{gap:22px}
+  .siteDropdown{min-width:235px}
+  .innerHero{min-height:min(760px,82vh);grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .innerHeroCopy{padding-left:max(7vw,calc((100vw - 1500px)/2));padding-right:6vw}
+  .innerHeroCopy>p:last-child{max-width:650px}
+  .innerHero>img,.innerHeroVideo{min-height:min(760px,82vh)}
+  .storyStack{padding-left:max(7vw,calc((100vw - 1500px)/2));padding-right:max(7vw,calc((100vw - 1500px)/2))}
+  .storyCard{max-width:1260px;padding:92px 0}
+  .storyCard.withImage{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:8vw}
+  .storyCard img{max-height:680px}
+  .storyCard p{max-width:760px}
+  .innerCta{padding-left:max(7vw,calc((100vw - 1500px)/2));padding-right:max(7vw,calc((100vw - 1500px)/2))}
+  footer{padding-left:max(5vw,calc((100vw - 1540px)/2));padding-right:max(5vw,calc((100vw - 1540px)/2))}
+}
+@media(min-width:1500px){
+  .siteDesktopNav{font-size:14px}
+  .innerHero h1{font-size:min(108px,7vw)}
+}

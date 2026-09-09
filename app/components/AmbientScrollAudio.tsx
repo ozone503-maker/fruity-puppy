@@ -96,10 +96,48 @@ export default function AmbientScrollAudio({
       : null;
     if (trigger && observer) observer.observe(trigger);
 
+    const useCaseLinks: Array<[string, string]> = [
+      [".useGrid article:nth-child(2)", "/sunburn"],
+      [".useGrid article:nth-child(3)", "/tattoo"],
+      [".useGrid article:nth-child(4)", "/problem-skin"],
+    ];
+
+    const linkedCards = useCaseLinks
+      .map(([selector, href]) => {
+        const card = document.querySelector<HTMLElement>(selector);
+        if (!card) return null;
+
+        card.setAttribute("role", "link");
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("aria-label", `${card.querySelector("h3")?.textContent || "Skin use"}: learn more`);
+        card.style.cursor = "pointer";
+
+        const go = () => window.location.assign(href);
+        const onKeyDown = (event: KeyboardEvent) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            go();
+          }
+        };
+
+        card.addEventListener("click", go);
+        card.addEventListener("keydown", onKeyDown);
+        return { card, go, onKeyDown };
+      })
+      .filter(Boolean) as Array<{
+      card: HTMLElement;
+      go: () => void;
+      onKeyDown: (event: KeyboardEvent) => void;
+    }>;
+
     return () => {
       observer?.disconnect();
       window.removeEventListener("pointerdown", unlock);
       window.removeEventListener("keydown", unlock);
+      linkedCards.forEach(({ card, go, onKeyDown }) => {
+        card.removeEventListener("click", go);
+        card.removeEventListener("keydown", onKeyDown);
+      });
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       audio.pause();
       audio.src = "";

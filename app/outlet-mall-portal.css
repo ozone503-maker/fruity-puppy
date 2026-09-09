@@ -1,0 +1,16 @@
+.outletMallPortal{
+  width:100%;
+  background:#111;
+}
+.outletMallPortal a{
+  display:block;
+}
+.outletMallPortal img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.outletMallPortal a:focus-visible{
+  outline:4px solid #f7df18;
+  outline-offset:-4px;
+}
