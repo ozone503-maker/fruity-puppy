@@ -2,6 +2,7 @@ import { ASK_IPO_HREF, BLOG_HREF } from "../site-config";
 
 const shop = "https://shop.fruitypuppy.com/products/fruity-puppy";
 const sample = "https://shop.fruitypuppy.com/products/free-sample-fruity-puppy-original-5-shipping-amp-handling";
+const outletMall = "https://outlet-mall.vercel.app/";
 
 export default function SiteHeader(){
   return <header className="siteHeader" aria-label="Primary navigation">
@@ -43,6 +44,7 @@ export default function SiteHeader(){
 
       <a href={BLOG_HREF}>Blog</a>
       <a href={ASK_IPO_HREF}>Ask Ipo</a>
+      <a href={outletMall} target="_blank" rel="noopener noreferrer">Outlet Mall ↗</a>
       <a className="siteShopLink" href={shop}>Shop</a>
     </nav>
 
@@ -72,6 +74,7 @@ export default function SiteHeader(){
         <div className="mobileMenuLinks">
           <a href="/our-cream">Our Cream</a><a href="/our-home">Our Home</a><a href="/our-team">Our Team</a><a href="/our-dream">Our Dream</a>
           <a href={BLOG_HREF}>Blog</a><a href="/safety-and-transparency">Safety</a><a href="/our-partners">Partners</a>
+          <a href={outletMall} target="_blank" rel="noopener noreferrer">Outlet Mall ↗</a>
         </div>
       </div>
     </details>
