@@ -10,7 +10,7 @@ export default function OutletMallPortal() {
         aria-label="Visit the Fruity Puppy Outlet Mall"
       >
         <img
-          src="/images/outlet-mall-portal.png"
+          src="/outlet-mall-image"
           alt="Visit the Fruity Puppy Outlet Mall"
           loading="lazy"
         />
