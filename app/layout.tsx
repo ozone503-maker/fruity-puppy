@@ -17,6 +17,7 @@ import "./use-case.css";
 import "./site-header.css";
 import "./cta-pass.css";
 import "./homepage-launch.css";
+import "./desktop-launch.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
