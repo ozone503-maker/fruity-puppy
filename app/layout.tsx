@@ -15,6 +15,8 @@ import "./hero-overlay.css";
 import "./fpx/fpx.css";
 import "./use-case.css";
 import "./site-header.css";
+import "./cta-pass.css";
+import "./homepage-launch.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
