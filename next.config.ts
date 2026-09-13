@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const securityHeaders = [
   { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
+  { key: "Access-Control-Allow-Origin", value: "https://www.fruitypuppy.com" },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
