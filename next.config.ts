@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const securityHeaders = [
+  { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
@@ -20,7 +21,7 @@ const securityHeaders = [
       "object-src 'none'",
       "frame-ancestors 'self'",
       "form-action 'self' https://shop.fruitypuppy.com",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+      "script-src 'self' 'unsafe-inline'",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://shop.fruitypuppy.com https://cdn.shopify.com https://img1.wsimg.com",
       "media-src 'self' blob:",
