@@ -40,10 +40,11 @@ export default function PrivacyPage() {
           <div>
             <h2>How we use it</h2>
             <p>
-              We do not sell your personal information. Service providers that
-              help us run the shop, email list, or site may process data on our
-              behalf. Ask Ipo chat responses are for cosmetic product guidance
-              only and are not medical advice.
+              We do not sell your personal information. This website does not
+              run visitor analytics, advertising pixels, or a cookie banner.
+              Service providers that help us run the shop, email list, or site
+              may process data on our behalf. Ask Ipo chat responses are for
+              cosmetic product guidance only and are not medical advice.
             </p>
           </div>
         </article>
