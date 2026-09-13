@@ -142,7 +142,7 @@ export default function Page() {
           </p>
           <figure>
             {plants.map((plant, i) => (
-              <img key={plant[1]} className={i === a ? "active" : ""} src={plant[3]} alt={plant[1]} />
+              <img key={plant[1]} className={i === a ? "active" : ""} src={plant[3]} alt={`Jar stand-in for Desert Squirt (${plant[1]})`} loading="lazy" />
             ))}
           </figure>
           <div className="dsMeter">
@@ -155,7 +155,7 @@ export default function Page() {
         <div className="dsSteps">
           {plants.map((plant, i) => (
             <article key={plant[1]} data-p={i} data-r>
-              <img className="stepBg" src={plant[3]} alt="" aria-hidden="true" />
+              <img className="stepBg" src={plant[3]} alt="" aria-hidden="true" loading="lazy" />
               <div className="stepCopy">
                 <span>0{i + 1}</span>
                 <h2>{plant[0]}</h2>

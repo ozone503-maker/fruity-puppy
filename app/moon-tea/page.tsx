@@ -144,7 +144,7 @@ export default function Page() {
           <p className="moonEy">What is in the potion</p>
           <figure>
             {plants.map((plant, i) => (
-              <img key={plant[0]} className={i === a ? "active" : ""} src={plant[3]} alt={plant[0]} />
+              <img key={plant[0]} className={i === a ? "active" : ""} src={plant[3]} alt={plant[0]} loading="lazy" />
             ))}
           </figure>
           <div className="moonMeter">
@@ -157,7 +157,7 @@ export default function Page() {
         <div className="moonSteps">
           {plants.map((plant, i) => (
             <article key={plant[0]} data-p={i}>
-              <img className="stepBg" src={plant[3]} alt="" aria-hidden="true" />
+              <img className="stepBg" src={plant[3]} alt="" aria-hidden="true" loading="lazy" />
               <div className="stepCopy">
                 <span>0{i + 1}</span>
                 <h2>{plant[0]}</h2>

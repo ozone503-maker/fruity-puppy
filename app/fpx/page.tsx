@@ -104,7 +104,7 @@ export default function Page() {
         </div>
         <div className="fpxCompareCards">
           <article className="originalCard">
-            <Image src="/images/fpx/when-original-isnt-enough.jpg" alt="Fruity Puppy Original crossed out to signal the move to FPX" width={935} height={912} />
+            <Image src="/images/fpx/when-original-isnt-enough.jpg" alt="Fruity Puppy Original crossed out to signal the move to FPX" width={935} height={912} loading="lazy" />
             <div>
               <span>FRUITY PUPPY ORIGINAL</span>
               <h3>Balanced everyday skin nutrition.</h3>
@@ -123,7 +123,7 @@ export default function Page() {
 
       <section className="fpxStarfruit">
         <figure>
-          <Image src="/images/fpx/starfruit-harvest.jpg" alt="A real basket of harvested starfruit for FPX" width={1080} height={814} />
+          <Image src="/images/fpx/starfruit-harvest.jpg" alt="A real basket of harvested starfruit for FPX" width={1080} height={814} loading="lazy" />
           <figcaption>REAL STARFRUIT · HARVESTED FOR FPX</figcaption>
         </figure>
         <div>
@@ -166,7 +166,7 @@ export default function Page() {
       </section>
 
       <section className="fpxCollaboration">
-        <Image src="/images/fpx/humans-and-robots-make-puppy.png" alt="A human and robot working together on the stronger FPX formula" width={240} height={135} />
+        <Image src="/images/fpx/humans-and-robots-make-puppy.png" alt="A human and robot working together on the stronger FPX formula" width={240} height={135} loading="lazy" />
         <div>
           <p className="fpxEyebrow">PLANT × HUMAN × ARTIFICIAL INTELLIGENCE</p>
           <h2>The recipe evolved because the questions got harder.</h2>

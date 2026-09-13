@@ -126,7 +126,7 @@ export default function LavaGuava() {
 
       <section className="defunk">
         <div className="defunkPhoto">
-          <img src="/images/lava-guava/open-balm.webp" alt="Fresh open jars of LAVA-GUAVA BOMB BALM" />
+          <img src="/images/lava-guava/open-balm.webp" alt="Fresh open jars of LAVA-GUAVA BOMB BALM" loading="lazy" />
         </div>
         <div className="defunkCopy">
           <p className="lavaEyebrow">The response</p>
@@ -235,7 +235,7 @@ export default function LavaGuava() {
           <figcaption>Harvested at FlashTown</figcaption>
         </figure>
         <figure>
-          <img src="/images/lava-guava/fresh-leaves.webp" alt="Fresh leaves gathered for the balm" />
+          <img src="/images/lava-guava/fresh-leaves.webp" alt="Fresh leaves gathered for the balm" loading="lazy" />
           <figcaption>Whole plants, freshly gathered</figcaption>
         </figure>
         <figure>
@@ -248,7 +248,7 @@ export default function LavaGuava() {
       </section>
 
       <section className="finalBomb">
-        <img src="/images/lava-guava/lava-guava-circle.png" alt="LAVA-GUAVA BOMB BALM artwork" />
+        <img src="/images/lava-guava/lava-guava-circle.png" alt="LAVA-GUAVA BOMB BALM artwork" loading="lazy" />
         <div>
           <p className="lavaEyebrow">Unrelenting jungle funk?</p>
           <h2>Defunkolate it.</h2>

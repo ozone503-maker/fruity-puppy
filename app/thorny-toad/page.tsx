@@ -311,7 +311,7 @@ export default function Page() {
           <p className="ey">Ingredient intelligence</p>
           <figure>
             {plants.map((plant, i) => (
-              <img key={plant[0]} className={i === a ? "active" : ""} src={plant[3]} alt={plant[0]} />
+              <img key={plant[0]} className={i === a ? "active" : ""} src={plant[3]} alt={plant[0]} loading="lazy" />
             ))}
           </figure>
           <div className="meter">
@@ -322,7 +322,7 @@ export default function Page() {
         <div className="steps">
           {plants.map((plant, i) => (
             <article key={plant[0]} data-p={i} data-r>
-              <img className="stepBg" src={plant[3]} alt="" aria-hidden="true" />
+              <img className="stepBg" src={plant[3]} alt="" aria-hidden="true" loading="lazy" />
               <div className="stepCopy">
                 <span>0{i + 1}</span>
                 <h2>{plant[0]}</h2>
@@ -370,7 +370,7 @@ export default function Page() {
       </section>
 
       <section className="finalT">
-        <img src={bottle} alt="Thorny Toad Face Juice bottle" />
+        <img src={bottle} alt="Thorny Toad Face Juice bottle" loading="lazy" />
         <div data-r>
           <p className="ey">2 fl oz · 59 ml · keep refrigerated</p>
           <h2>

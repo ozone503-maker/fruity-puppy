@@ -77,7 +77,7 @@ export default function UseCasePage(props: Props) {
 
       <section className="ucSection"><p className="ucEyebrow">FRUITY PUPPY ORIGINAL</p><h2>{props.cardsTitle}</h2><div className="ucGrid">{props.cards.map((card)=><article className="ucCard" key={card.title}><small>{card.kicker}</small><h3>{card.title}</h3><p>{card.body}</p></article>)}</div></section>
 
-      <section className="ucImageBand"><img src={props.imageBandImage} alt={props.imageBandAlt}/><div className="ucImageCopy"><p className="ucEyebrow">{props.imageBandEyebrow}</p><h2>{props.imageBandTitle}</h2><p>{props.imageBandBody}</p>{props.imageBandQuote && <p className="ucQuote">{props.imageBandQuote}</p>}</div></section>
+      <section className="ucImageBand"><img src={props.imageBandImage} alt={props.imageBandAlt} loading="lazy"/><div className="ucImageCopy"><p className="ucEyebrow">{props.imageBandEyebrow}</p><h2>{props.imageBandTitle}</h2><p>{props.imageBandBody}</p>{props.imageBandQuote && <p className="ucQuote">{props.imageBandQuote}</p>}</div></section>
 
       <section className="ucHonesty"><p className="ucEyebrow">STRAIGHT TALK</p><h2>{props.honestyTitle}</h2><p>{props.honestyBody}</p></section>
 

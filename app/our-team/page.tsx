@@ -117,7 +117,7 @@ export default function Page(){
     </div>
     <div className="robotTrack" ref={robotTrack} tabIndex={0} aria-label="Ten robot science lessons">
       {robotLessons.map((lesson, index)=><article className="robotCard" key={lesson.no}>
-        <div className="robotPortrait"><img src="/images/robot-biochemistry-teachers.jpg" alt={index === 0 ? "The two original robot teachers studying biochemistry in the Fruity Puppy food forest" : ""}/><span>LESSON {lesson.no}</span></div>
+        <div className="robotPortrait"><img src="/images/robot-biochemistry-teachers.jpg" alt="The two original robot teachers studying biochemistry in the Fruity Puppy food forest"/><span>LESSON {lesson.no}</span></div>
         <div className="robotCopy"><p>{lesson.subject}</p><h3>{lesson.title}</h3><p>{lesson.body}</p></div>
       </article>)}
     </div>

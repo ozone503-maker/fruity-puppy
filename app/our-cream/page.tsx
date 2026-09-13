@@ -72,7 +72,7 @@ function StoryBlock({
   return (
     <section className="storyStack" id={id}>
       <article className={image ? "storyCard withImage" : "storyCard"}>
-        {image && <img src={image} alt={alt || title} />}
+        {image && <img src={image} alt={alt || title} loading="lazy" />}
         <div>
           <h2>{title}</h2>
           <p>{body}</p>

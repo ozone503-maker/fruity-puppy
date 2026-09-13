@@ -24,3 +24,14 @@
 @media(prefers-reduced-motion:reduce){.ipoPortrait,.ipoDots i{animation:none!important}}
 @media(max-width:1100px){.askLive{grid-template-columns:1fr;gap:42px;padding:82px 24px}.askIntro{max-width:720px}.ipoWidget{width:100%;max-width:760px;justify-self:center}}
 @media(max-width:520px){.askLive{padding:64px 12px}.askIntro{padding:0 12px}.askIntro h2{font-size:52px;line-height:.94}.askIntro>p:last-child{font-size:16px}.ipoWidget{border-width:2px;border-radius:22px}.ipoStage{min-height:275px}.ipoTitle{left:18px;top:18px}.ipoTitle span{font-size:34px}.ipoTitle small{max-width:170px;font-size:11px}.ipoClose{right:12px;top:12px;width:44px;height:44px}.ipoPortrait{width:318px!important;height:100%!important;right:-4%;object-fit:cover!important}.ipoStatus{left:18px;bottom:16px}.ipoConversation{height:215px;padding:14px}.ipoBubble{max-width:92%;font-size:14px}.ipoForm{margin:0 10px}.ipoQuick{padding-inline:10px}.ipoQuick button{font-size:11px}.ipoWake{right:14px;bottom:14px;width:96px;height:96px}}
+
+.ipoStatusBusy{background:#6e365f;color:#fff}
+.ipoStatusError{background:#9f214b;color:#fff}
+.ipoDots{display:flex;align-items:center;gap:7px}
+.ipoLoadingText{margin-left:4px;font-size:13px;font-weight:700;letter-spacing:.02em;opacity:.95}
+.ipoError{display:grid;gap:6px;margin:0 16px 10px;padding:12px 14px;border:1.5px solid #9f214b;border-radius:16px;background:#fff1f4;color:#5d1a2f}
+.ipoError strong{font-size:13px;letter-spacing:.02em}
+.ipoError span{font-size:13px;line-height:1.45;color:#6e365f}
+.ipoErrorRetry{justify-self:start;margin-top:4px;padding:8px 14px;border:0;border-radius:99px;background:var(--pink);color:#fff;font-size:12px;font-weight:800;letter-spacing:.04em;cursor:pointer}
+.ipoErrorRetry:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:520px){.ipoError{margin:0 10px 10px}}

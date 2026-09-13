@@ -1,0 +1,65 @@
+/* Persistent mobile shop CTA — hidden on desktop (matches site header breakpoint). */
+.stickyBuyPad,
+.stickyBuyBar{
+  display:none;
+}
+
+@media (max-width:980px){
+  .stickyBuyPad{
+    display:block;
+    height:calc(64px + env(safe-area-inset-bottom,0px));
+    pointer-events:none;
+  }
+
+  /* Keep page footers / CTAs clear of the fixed bar */
+  body:has(.stickyBuyBar) main{
+    padding-bottom:calc(72px + env(safe-area-inset-bottom,0px));
+  }
+
+  .stickyBuyBar{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    position:fixed;
+    z-index:90;
+    left:12px;
+    right:12px;
+    bottom:calc(10px + env(safe-area-inset-bottom,0px));
+    min-height:52px;
+    padding:14px 22px;
+    border-radius:999px;
+    background:var(--pink,#e0517d);
+    color:#fff !important;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:950;
+    letter-spacing:.06em;
+    line-height:1;
+    box-shadow:
+      0 10px 28px rgba(159,33,75,.28),
+      0 2px 0 rgba(255,248,239,.22) inset;
+    border:1.5px solid rgba(255,248,239,.35);
+    -webkit-tap-highlight-color:transparent;
+  }
+
+  .stickyBuyBar:active{
+    background:var(--berry,#9f214b);
+    transform:translateY(1px);
+  }
+
+  .stickyBuyLabel{
+    font-family:Arial,sans-serif;
+  }
+
+  .stickyBuyArrow{
+    font-size:18px;
+    line-height:1;
+    opacity:.92;
+  }
+
+  /* Keep minimized Ask Ipo wake button above the bar on home. */
+  body:has(.stickyBuyBar) .ipoWake{
+    bottom:calc(74px + env(safe-area-inset-bottom,0px));
+  }
+}

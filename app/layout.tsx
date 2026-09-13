@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import SiteHeader from "./components/SiteHeader";
 import OutletMallPortal from "./components/OutletMallPortal";
+import StickyBuyBar from "./components/StickyBuyBar";
 import "./globals.css";
 import "./photo-sections.css";
 import "./product-proof.css";
@@ -20,6 +21,7 @@ import "./cta-pass.css";
 import "./homepage-launch.css";
 import "./desktop-launch.css";
 import "./outlet-mall-portal.css";
+import "./sticky-buy-bar.css";
 
 // Redeploy marker after reverting experimental social-preview metadata.
 const geistSans = Geist({
@@ -71,6 +73,7 @@ export default function RootLayout({
       >
         <SiteHeader />
         {children}
+        <StickyBuyBar />
         <OutletMallPortal />
       </body>
     </html>
