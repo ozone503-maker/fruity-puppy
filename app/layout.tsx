@@ -35,9 +35,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Fruity Puppy | Fresh Fruit Skin Nutrition from Hawaiʻi",
   description: "Fresh biological skincare made with 45% real Hawaiian fruit. Ice-extracted and handmade on the Big Island.",
-  other: {
-    "codex-preview": "development",
-  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
