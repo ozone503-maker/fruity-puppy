@@ -18,7 +18,7 @@ export default function HeroVideo({
   const videoRef = useRef<HTMLVideoElement>(null);
   const playsRef = useRef(0);
   const inViewRef = useRef(true);
-  const [muted, setMuted] = useState(true);
+  const [muted, setMuted] = useState(false);
 
   function toggleMute() {
     if (silent) return;
