@@ -121,11 +121,17 @@
   position:fixed;
   left:clamp(12px,3vw,22px);
   bottom:clamp(12px,3vw,22px);
-  z-index:40;
+  /* Above sticky buy bar (z-index 90) so the mp3 control stays tappable. */
+  z-index:110;
   display:flex;
   flex-direction:column;
   align-items:flex-start;
   gap:8px;
+}
+@media (max-width:980px){
+  body:has(.stickyBuyBar) .ambientAudioDock{
+    bottom:calc(74px + env(safe-area-inset-bottom,0px));
+  }
 }
 .ambientMuteBtn,
 .ambientEnableBtn{

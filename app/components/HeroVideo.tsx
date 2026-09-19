@@ -18,7 +18,8 @@ export default function HeroVideo({
   const videoRef = useRef<HTMLVideoElement>(null);
   const playsRef = useRef(0);
   const inViewRef = useRef(true);
-  const [muted, setMuted] = useState(false);
+  // Prefer soundtrack on; fall back to muted if the browser blocks unmuted autoplay.
+  const [muted, setMuted] = useState(silent ? true : false);
 
   function toggleMute() {
     if (silent) return;
@@ -27,6 +28,7 @@ export default function HeroVideo({
     const next = !muted;
     video.muted = next;
     setMuted(next);
+    if (!next) void video.play().catch(() => {});
   }
 
   function restartCycle() {
@@ -34,7 +36,23 @@ export default function HeroVideo({
     if (!video) return;
     playsRef.current = 1;
     video.currentTime = 0;
-    void video.play().catch(() => {});
+    void playWithFallback(video);
+  }
+
+  async function playWithFallback(video: HTMLVideoElement) {
+    if (silent) {
+      video.muted = true;
+      await video.play().catch(() => {});
+      return;
+    }
+    video.muted = muted;
+    try {
+      await video.play();
+    } catch {
+      video.muted = true;
+      setMuted(true);
+      await video.play().catch(() => {});
+    }
   }
 
   function handleEnded() {
@@ -46,7 +64,7 @@ export default function HeroVideo({
     }
     playsRef.current += 1;
     video.currentTime = 0;
-    void video.play().catch(() => {});
+    void playWithFallback(video);
   }
 
   useEffect(() => {
@@ -55,9 +73,8 @@ export default function HeroVideo({
     if (!video || !root) return;
 
     playsRef.current = 1;
-    if (silent) {
-      video.muted = true;
-    }
+    if (silent) video.muted = true;
+    void playWithFallback(video);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -72,7 +89,8 @@ export default function HeroVideo({
     );
     observer.observe(root);
     return () => observer.disconnect();
-  }, [maxPlays, silent]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [maxPlays, silent, src]);
 
   return (
     <>

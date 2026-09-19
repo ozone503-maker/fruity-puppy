@@ -18,11 +18,21 @@ export default function AmbientScrollAudio({
   const unlockedRef = useRef(false);
   const startedRef = useRef(false);
   const mutedRef = useRef(false);
+  const playingRef = useRef(false);
   const rafRef = useRef<number | null>(null);
 
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(false);
   const [needsGesture, setNeedsGesture] = useState(false);
+
+  function publish(nextPlaying: boolean, nextMuted: boolean) {
+    if (typeof window === "undefined") return;
+    window.dispatchEvent(
+      new CustomEvent("fp-ambient-state", {
+        detail: { playing: nextPlaying, muted: nextMuted },
+      })
+    );
+  }
 
   function fadeTo(audio: HTMLAudioElement, target: number) {
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -42,17 +52,22 @@ export default function AmbientScrollAudio({
     if (!audio || mutedRef.current) return;
     if (!unlockedRef.current) {
       setNeedsGesture(true);
+      publish(false, mutedRef.current);
       return;
     }
     try {
       if (audio.paused) await audio.play();
       fadeTo(audio, TARGET_VOLUME);
       startedRef.current = true;
+      playingRef.current = true;
       setPlaying(true);
       setNeedsGesture(false);
+      publish(true, false);
     } catch {
       setNeedsGesture(true);
+      playingRef.current = false;
       setPlaying(false);
+      publish(false, mutedRef.current);
     }
   }
 
@@ -62,7 +77,30 @@ export default function AmbientScrollAudio({
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
     audio.pause();
     audio.volume = 0;
+    playingRef.current = false;
     setPlaying(false);
+    publish(false, mutedRef.current);
+  }
+
+  function turnOn() {
+    unlockedRef.current = true;
+    mutedRef.current = false;
+    setMuted(false);
+    setNeedsGesture(false);
+    void startAmbient();
+  }
+
+  function turnOff() {
+    mutedRef.current = true;
+    setMuted(true);
+    setNeedsGesture(false);
+    stopAmbient();
+  }
+
+  function toggleMute() {
+    // Idle shows "Soundscape off" — first tap must turn sound ON, not mute.
+    if (playingRef.current && !mutedRef.current) turnOff();
+    else turnOn();
   }
 
   useEffect(() => {
@@ -83,13 +121,20 @@ export default function AmbientScrollAudio({
     window.addEventListener("pointerdown", unlock, { once: true });
     window.addEventListener("keydown", unlock, { once: true });
 
+    const onToggle = () => toggleMute();
+    const onPlay = () => turnOn();
+    const onStop = () => turnOff();
+    window.addEventListener("fp-ambient-toggle", onToggle as EventListener);
+    window.addEventListener("fp-ambient-play", onPlay as EventListener);
+    window.addEventListener("fp-ambient-stop", onStop as EventListener);
+
     const trigger = document.querySelector(triggerSelector);
 
     const observer = trigger
       ? new IntersectionObserver(
           (entries) => {
             const hit = entries.some((e) => e.isIntersecting);
-            if (hit && !startedRef.current) void startAmbient();
+            if (hit && !startedRef.current && !mutedRef.current) void startAmbient();
           },
           { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
         )
@@ -109,7 +154,10 @@ export default function AmbientScrollAudio({
 
         card.setAttribute("role", "link");
         card.setAttribute("tabindex", "0");
-        card.setAttribute("aria-label", `${card.querySelector("h3")?.textContent || "Skin use"}: learn more`);
+        card.setAttribute(
+          "aria-label",
+          `${card.querySelector("h3")?.textContent || "Skin use"}: learn more`
+        );
         card.style.cursor = "pointer";
 
         const go = () => window.location.assign(href);
@@ -130,10 +178,15 @@ export default function AmbientScrollAudio({
       onKeyDown: (event: KeyboardEvent) => void;
     }>;
 
+    publish(false, false);
+
     return () => {
       observer?.disconnect();
       window.removeEventListener("pointerdown", unlock);
       window.removeEventListener("keydown", unlock);
+      window.removeEventListener("fp-ambient-toggle", onToggle as EventListener);
+      window.removeEventListener("fp-ambient-play", onPlay as EventListener);
+      window.removeEventListener("fp-ambient-stop", onStop as EventListener);
       linkedCards.forEach(({ card, go, onKeyDown }) => {
         card.removeEventListener("click", go);
         card.removeEventListener("keydown", onKeyDown);
@@ -146,22 +199,8 @@ export default function AmbientScrollAudio({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [src, triggerSelector]);
 
-  function toggleMute() {
-    const next = !muted;
-    mutedRef.current = next;
-    setMuted(next);
-    unlockedRef.current = true;
-    setNeedsGesture(false);
-    if (next) stopAmbient();
-    else void startAmbient();
-  }
-
   async function enableSound() {
-    unlockedRef.current = true;
-    mutedRef.current = false;
-    setMuted(false);
-    setNeedsGesture(false);
-    await startAmbient();
+    turnOn();
   }
 
   return (
@@ -175,8 +214,8 @@ export default function AmbientScrollAudio({
         type="button"
         className="ambientMuteBtn"
         onClick={toggleMute}
-        aria-label={muted || !playing ? "Unmute soundscape" : "Mute soundscape"}
-        aria-pressed={!(muted || !playing)}
+        aria-label={muted || !playing ? "Turn soundscape on" : "Turn soundscape off"}
+        aria-pressed={playing && !muted}
       >
         {muted || !playing ? "Soundscape off" : "Soundscape on"}
       </button>
