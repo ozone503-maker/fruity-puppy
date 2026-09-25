@@ -1,7 +1,8 @@
 import { ASK_IPO_HREF, BLOG_HREF } from "../site-config";
+import { SHOP } from "../shop-links";
 
-const shop = "https://shop.fruitypuppy.com/products/fruity-puppy";
-const sample = "https://shop.fruitypuppy.com/products/free-sample-fruity-puppy-original-5-shipping-amp-handling";
+const shop = SHOP.original;
+const sample = SHOP.sample;
 const outletMall = "https://outlet-mall.vercel.app/";
 
 export default function SiteHeader(){
@@ -45,6 +46,7 @@ export default function SiteHeader(){
       <a href={BLOG_HREF}>Blog</a>
       <a href={ASK_IPO_HREF}>Ask Ipo</a>
       <a href={outletMall} target="_blank" rel="noopener noreferrer">Outlet Mall ↗</a>
+      <a href={sample}>Sample</a>
       <a className="siteShopLink" href={shop}>Shop</a>
     </nav>
 
@@ -56,12 +58,12 @@ export default function SiteHeader(){
         <details className="mobileShopMenu">
           <summary>SHOP <span>+</span></summary>
           <div>
-            <a href={shop}>Original</a>
-            <a href="/fpx">FPX</a>
+            <a href={shop}>Original · $59.99</a>
+            <a href={SHOP.fpx}>FPX · $59.99</a>
             <a href="/lava-guava">Lava-Guava</a>
-            <a href="/thorny-toad">Face Juice</a>
+            <a href={SHOP.faceJuice}>Face Juice · $29.99</a>
             <a href="/desert-squirt">Desert Squirt</a>
-            <a href="/moon-tea">Moon Tea</a>
+            <a href={SHOP.moonTea}>Moon Tea · $29.99</a>
           </div>
         </details>
 
