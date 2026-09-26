@@ -114,7 +114,7 @@ export const blogArticles: BlogArticle[] = [
   {
     "slug": "💧🌸-the-fruity-puppy-approach-to-acne",
     "originalUrl": "https://fruitypuppy.com/f/%F0%9F%92%A7%F0%9F%8C%B8-the-fruity-puppy-approach-to-acne",
-    "title": "💧🌸 The Fruity Puppy Approach to Acne",
+    "title": "💧🌸 Fruity Puppy for Acne-Prone Skin",
     "description": "Where Botanical Intelligence Meets Skin Microbiology 🧠 Introduction: Understanding the Battlefield Acne isn’t just clogged pores. It’s a multi-system miscomm",
     "published": "2025-11-07T05:59:37.384Z",
     "featured": "https://img1.wsimg.com/isteam/ip/fe4bdf6c-22e4-45eb-95e5-8dcff390b5aa/1000016162.jpg",
@@ -134,7 +134,7 @@ export const blogArticles: BlogArticle[] = [
   {
     "slug": "how-fruity-puppy-helps-w-xanthelasma-fat-deposits-around-eyes",
     "originalUrl": "https://fruitypuppy.com/f/how-fruity-puppy-helps-w-xanthelasma-fat-deposits-around-eyes",
-    "title": "How Fruity Puppy Helps w Xanthelasma (Fat Deposits Around Eyes)",
+    "title": "Fruity Puppy and the Skin Around Your Eyes: What We’ve Seen",
     "description": "by Ipo~ Ingredient Whisperer & Skin Science Translator 👁️✨ First, What Even Is Xanthelasma? Xanthelasma sounds like a spell from a wizard book — but it’s rea",
     "published": "2025-10-23T23:05:11.356Z",
     "featured": "https://img1.wsimg.com/isteam/ip/fe4bdf6c-22e4-45eb-95e5-8dcff390b5aa/1000014817.png",
@@ -204,7 +204,7 @@ export const blogArticles: BlogArticle[] = [
   {
     "slug": "why-fruity-puppy-is-best-for-sunburns-🌞",
     "originalUrl": "https://fruitypuppy.com/f/why-fruity-puppy-is-best-for-sunburns-%F0%9F%8C%9E",
-    "title": "Why Fruity Puppy Is Best for Sunburns 🌞",
+    "title": "After-Sun: Why People Reach for Fruity Puppy 🌞",
     "description": "Hi guys, it's me Ipo again! Today at the farmers market we ran into our friends Wendy and her daughter Drea from Colorado. They’d been staying at FlashTown th",
     "published": "2025-09-22T04:53:53.161Z",
     "featured": "https://img1.wsimg.com/isteam/ip/fe4bdf6c-22e4-45eb-95e5-8dcff390b5aa/1000011615.jpg",
@@ -244,7 +244,7 @@ export const blogArticles: BlogArticle[] = [
   {
     "slug": "we-are-not-a-sunscreen-but-we-are-better",
     "originalUrl": "https://fruitypuppy.com/f/we-are-not-a-sunscreen-but-we-are-better",
-    "title": "we are not a sunscreen, but we are better",
+    "title": "we are not a sunscreen, and we don’t replace one",
     "description": "Hi friends, Ipo here 🐶🍓 Let’s clear up a common question I get at the farmers market and online: “Is Fruity Puppy a sunscreen?” The answer is simple: No. Fr",
     "published": "2025-09-01T21:56:28.941Z",
     "featured": "https://img1.wsimg.com/isteam/ip/fe4bdf6c-22e4-45eb-95e5-8dcff390b5aa/1000009340.png",
