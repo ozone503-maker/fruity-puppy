@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { BlogFooter, BlogHeader } from "../BlogShell";
 import { RETURNS_HREF } from "../site-config";
+import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "Returns | Fruity Puppy",
   description: "Return and exchange notes for Fruity Puppy cosmetic products.",
-  alternates: { canonical: RETURNS_HREF },
+  ...shareMeta({
+    path: RETURNS_HREF,
+    title: "Returns | Fruity Puppy",
+    description:
+      "Return and exchange notes for Fruity Puppy cosmetic products.",
+  }),
 };
 
 export default function ReturnsPage() {

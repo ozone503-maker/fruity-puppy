@@ -2,8 +2,11 @@ import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
+import { SHOP } from "../shop-links";
 
-const shop = "https://shop.fruitypuppy.com";
+/** Lava-Guava is not for sale yet. Nav "Shop" goes where the site header's Shop goes. */
+const shop = SHOP.original;
+const notify = "#lava-notify";
 
 const botanicals = [
   ["LAVA-GUAVA leaf", "The tannin-rich backbone, harvested from the invasive guava that muscles through Hawaiʻi Island lava beds."],
@@ -69,13 +72,15 @@ export default function LavaGuava() {
             <br />
             <em>DEFUNKOLATOR.</em>
           </h1>
+          <p className="productDescriptor">Hawaiian botanical anti-chafe balm</p>
           <h2>
             When heat, sweat, moisture, and friction team up to create unrelenting jungle funk, reach
             for LAVA-GUAVA BOMB BALM.
           </h2>
+          <p className="lavaSoon">LAVA-GUAVA BOMB BALM is coming soon. It is not in the shop yet.</p>
           <div className="buttonRow heroButtons">
-            <a className="button heroBuy" href={shop}>
-              Get the bomb balm
+            <a className="button heroBuy" href={notify}>
+              Coming soon · Get notified
             </a>
             <a className="button heroSample" href="#lava-story">
               Meet Relentless Jungle Funk ↓
@@ -141,8 +146,8 @@ export default function LavaGuava() {
             <b>Softens on contact.</b>
             <b>Stays where you put it.</b>
           </div>
-          <a className="lavaButton" href={shop}>
-            Shop LAVA-GUAVA BOMB BALM
+          <a className="lavaButton" href={notify}>
+            Coming soon · Get notified
           </a>
         </div>
       </section>
@@ -256,9 +261,30 @@ export default function LavaGuava() {
             Two ounces of concentrated, shea-free, seven-botanical bomb balm. Made by jungle people
             doing jungle things on Hawaiʻi Island.
           </p>
-          <a className="lavaButton" href={shop}>
-            Get LAVA-GUAVA BOMB BALM
-          </a>
+          <div className="lavaNotify" id="lava-notify">
+            <p className="lavaEyebrow">Coming soon</p>
+            <form
+              action="https://shop.fruitypuppy.com/contact#contact_form"
+              method="post"
+              acceptCharset="UTF-8"
+            >
+              <input type="hidden" name="form_type" value="customer" />
+              <input type="hidden" name="utf8" value="✓" />
+              <input type="hidden" name="contact[tags]" value="newsletter,Lava-Guava" />
+              <label htmlFor="lava-email">Tell me when Lava-Guava drops</label>
+              <div className="lavaNotifyField">
+                <input
+                  id="lava-email"
+                  type="email"
+                  name="contact[email]"
+                  autoComplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
+                <button type="submit">Get notified</button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 

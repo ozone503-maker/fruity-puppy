@@ -200,6 +200,7 @@ export default function Page() {
             <br />
             <em>FACE JUICE</em>
           </h1>
+          <p className="productDescriptor">Hawaiian botanical toner</p>
           <h2>
             Five volcano plants. Four functions. A fresh-brewed botanical toner that balances pH,
             regulates oil, reduces visible redness, and tightens pores without stripping your skin.

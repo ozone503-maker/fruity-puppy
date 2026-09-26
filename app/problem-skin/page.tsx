@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import UseCasePage from "../components/UseCasePage";
+import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "Problem Skin | Fruity Puppy Original",
   description: "Fresh fruit and plant-lipid moisture for dry, reactive, rough, and stressed skin, with clear cosmetic boundaries.",
+  ...shareMeta({
+    path: "/problem-skin",
+    title: "Problem Skin — Fruity Puppy Original",
+    description:
+      "Fresh fruit and plant-lipid moisture for dry, reactive, rough, and stressed skin, with clear cosmetic boundaries.",
+  }),
 };
 
 export default function Page(){

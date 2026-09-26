@@ -5,6 +5,7 @@ import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
+import { PRICE } from "../shop-links";
 
 const shop = "https://shop.fruitypuppy.com/products/thorny-toad-moon-tea";
 
@@ -108,10 +109,11 @@ export default function Page() {
             <br />
             <em>After dark.</em>
           </h1>
+          <p className="productDescriptor">Evening botanical toner</p>
           <h2>A fresh botanical toner brewed for the quiet work your skin does at night.</h2>
           <div className="buttonRow heroButtons">
             <a className="button moonTeaBuy heroBuy" href={shop}>
-              Shop Moon Tea
+              {`Shop Moon Tea — ${PRICE.moonTea}`}
             </a>
             <a className="button heroSample" href="#moon-story">
               Read the brew story
@@ -216,7 +218,7 @@ export default function Page() {
       <section className="innerCta">
         <h2>Moon Tea</h2>
         <a className="button dark" href={shop}>
-          Shop Moon Tea
+          {`Shop Moon Tea — ${PRICE.moonTea}`}
         </a>
       </section>
 

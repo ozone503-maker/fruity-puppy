@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { BlogFooter, BlogHeader } from "../BlogShell";
 import { TERMS_HREF } from "../site-config";
+import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "Terms | Fruity Puppy",
   description: "Website and product terms for Fruity Puppy cosmetics.",
-  alternates: { canonical: TERMS_HREF },
+  ...shareMeta({
+    path: TERMS_HREF,
+    title: "Terms | Fruity Puppy",
+    description:
+      "Website and product terms for Fruity Puppy cosmetics.",
+  }),
 };
 
 export default function TermsPage() {

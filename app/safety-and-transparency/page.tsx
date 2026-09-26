@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
+import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "Safety, Allergens & Botanical Transparency | Fruity Puppy",
   description: "Fruity Puppy ingredient, soy lecithin, botanical sensitivity, latex-fruit cross-reactivity, patch testing, storage and safe-use information.",
+  ...shareMeta({
+    path: "/safety-and-transparency",
+    title: "Safety, Allergens & Botanical Transparency | Fruity Puppy",
+    description:
+      "Fruity Puppy ingredients, soy lecithin, botanical sensitivity, latex-fruit cross-reactivity, patch testing, storage and safe use.",
+  }),
 };
 
 const botanicals=[

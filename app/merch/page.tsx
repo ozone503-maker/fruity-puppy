@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import "./merch.css";
+import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "Fruity Puppy Outlet | Merch Hall",
   description:
     "Fruity Puppy apparel and lifestyle merch. Premium blanks, rotating drops, and Fruity Puppy attitude.",
+  ...shareMeta({
+    path: "/merch",
+    title: "Fruity Puppy Outlet — Merch Hall",
+    description:
+      "Fruity Puppy apparel and lifestyle merch. Premium blanks, rotating drops, and Fruity Puppy attitude.",
+  }),
 };
 
 const SHOP = "https://shop.fruitypuppy.com";

@@ -3,10 +3,23 @@ import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import type { Metadata } from "next";
+import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "Our Home | FLASHTOWN, Hawaiʻi | Fruity Puppy",
   description: "Meet FLASHTOWN: Fruity Puppy’s off-grid farm, jungle home and animal sanctuary on Hawaiʻi Island, fifteen miles downhill from Kīlauea.",
+  ...shareMeta({
+    path: "/our-home",
+    title: "Our Home — FLASHTOWN Farm and Animal Sanctuary, Hawaiʻi | Fruity Puppy",
+    description:
+      "Fruity Puppy’s off-grid farm, jungle home and animal sanctuary on Hawaiʻi Island, fifteen miles downhill from Kīlauea.",
+    image: {
+      url: "/images/hero/our-home-hero-poster.jpg",
+      width: 856,
+      height: 480,
+      alt: "FLASHTOWN, Fruity Puppy’s jungle farm on Hawaiʻi Island",
+    },
+  }),
 };
 
 const homeImages = "/images/our-home/";

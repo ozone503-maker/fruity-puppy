@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import "./store.css";
+import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "Fruity Puppy Store | Fresh Biological Skincare",
   description: "Shop the Fruity Puppy skincare family from the Big Island.",
+  ...shareMeta({
+    path: "/store",
+    title: "Fruity Puppy Store — Fresh Biological Skincare",
+    description:
+      "Shop the Fruity Puppy skincare family from the Big Island.",
+  }),
 };
 
 const products = [

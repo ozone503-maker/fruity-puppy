@@ -2,6 +2,7 @@ import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
+import { PRICE } from "../shop-links";
 
 const shop = "https://shop.fruitypuppy.com/products/fruity-puppy";
 
@@ -146,13 +147,14 @@ export default function Page() {
             <br />
             <em>Still alive.</em>
           </h1>
+          <p className="productDescriptor">45% real Hawaiian fruit face cream</p>
           <h2>
             Skin eats. Feed it well. About 45% real Hawaiian tropical fruit in a crystalline lipid
             matrix—made cold, kept cold, never embalmed for the shelf.
           </h2>
           <div className="buttonRow heroButtons">
             <a className="button pink heroBuy" href={shop}>
-              Buy Now
+              {`Buy Now — ${PRICE.original}`}
             </a>
             <a className="button heroSample" href="#cream-story">
               Read the cream story
@@ -201,7 +203,7 @@ export default function Page() {
       <section className="innerCta">
         <h2>Our Cream</h2>
         <a className="button dark" href={shop}>
-          Shop Fruity Puppy Original
+          {`Shop Fruity Puppy Original — ${PRICE.original}`}
         </a>
       </section>
 

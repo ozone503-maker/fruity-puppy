@@ -1,0 +1,4 @@
+/* Plain "what it is" line under each product page's hero heading. */
+.productDescriptor{margin:0 0 18px;font:700 13px/1.4 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;opacity:.92}
+.heroCopy .productDescriptor{color:#fff4ea;text-shadow:0 1px 10px #0006}
+.fpxLaunchCopy .productDescriptor{margin:-8px 0 24px;color:#efe5ea}

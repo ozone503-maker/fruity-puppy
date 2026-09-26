@@ -103,6 +103,7 @@ export default function Page() {
             <br />
             <em>For skin that’s been parched.</em>
           </h1>
+          <p className="productDescriptor">Dry-climate botanical toner</p>
           <h2>
             Mineral-rich. Field-formulated. The Southwest cousin in the Thorny Toad toner lineage —
             built for heat, wind, and thirsty skin. Loved in Texas, Arizona, and New Mexico.

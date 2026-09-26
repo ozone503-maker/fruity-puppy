@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import UseCasePage from "../components/UseCasePage";
+import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "Sun-Exposed Skin | Fruity Puppy Original",
   description: "Fridge-cold fruit-and-lipid moisture for sun-exposed skin. Cosmetic after-sun comfort, not sunscreen or medical burn treatment.",
+  ...shareMeta({
+    path: "/sunburn",
+    title: "Sun-Exposed Skin — Fruity Puppy Original",
+    description:
+      "Fridge-cold fruit-and-lipid moisture for sun-exposed skin. Cosmetic after-sun comfort, not sunscreen or medical burn treatment.",
+  }),
 };
 
 export default function Page(){

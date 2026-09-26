@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { BlogFooter, BlogHeader } from "../BlogShell";
 import { PRIVACY_HREF } from "../site-config";
+import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "Privacy | Fruity Puppy",
   description: "Privacy notes for Fruity Puppy’s website and cosmetic products.",
-  alternates: { canonical: PRIVACY_HREF },
+  ...shareMeta({
+    path: PRIVACY_HREF,
+    title: "Privacy | Fruity Puppy",
+    description:
+      "Privacy notes for Fruity Puppy’s website and cosmetic products.",
+  }),
 };
 
 export default function PrivacyPage() {

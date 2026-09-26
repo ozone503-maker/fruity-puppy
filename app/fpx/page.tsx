@@ -2,14 +2,35 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
+import JsonLd from "../components/JsonLd";
+import { PRICE, SHOP } from "../shop-links";
+import { productLd, shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "FPX | Fruity Puppy Extra Strength with Starfruit",
   description:
-    "FPX begins with Fruity Puppy Original, then increases the papaya and adds starfruit for Fruity Puppy’s strongest exfoliating formula.",
+    "Extra-strength exfoliating fruit cream. FPX begins with Fruity Puppy Original, then increases the papaya and adds starfruit for Fruity Puppy’s strongest exfoliating formula. 2 oz $59.99.",
+  ...shareMeta({
+    path: "/fpx",
+    title: "FPX — Extra-Strength Exfoliating Fruit Cream | Fruity Puppy",
+    description:
+      "Extra-strength exfoliating fruit cream: Fruity Puppy Original with more papaya and added starfruit. 2 oz $59.99. Not for sensitive skin.",
+    image: {
+      url: "/images/fpx/starfruit-harvest.jpg",
+      width: 1080,
+      height: 814,
+      alt: "A basket of starfruit harvested at FlashTown for FPX",
+    },
+  }),
 };
 
-const shop = "https://shop.fruitypuppy.com";
+const shop = SHOP.fpx;
+
+const productSchema = productLd(
+  "fpx",
+  "FPX (Fruity Puppy Xtreme)",
+  "Extra-strength exfoliating fruit cream: Fruity Puppy Original with more papaya and added starfruit. 2 oz. Not for sensitive skin.",
+);
 
 const powerStack = [
   {
@@ -59,12 +80,13 @@ export default function Page() {
         <div className="fpxLaunchCopy">
           <p className="fpxEyebrow">FRUITY PUPPY EXTREME · WITH STARFRUIT</p>
           <h1>ORIGINAL.<br /><em>AMPLIFIED.</em></h1>
+          <p className="productDescriptor">Extra-strength exfoliating fruit cream</p>
           <p className="fpxLead">
             The complete Fruity Puppy foundation—made stronger with more papaya and the addition of
             starfruit for our maximum exfoliating power and dead surface skin removal.
           </p>
           <div className="fpxActions">
-            <a className="button fpxPrimary" href={shop}>Shop FPX</a>
+            <a className="button fpxPrimary" href={shop}>{`Shop FPX — ${PRICE.fpx}`}</a>
             <a className="fpxTextLink" href="#fpx-story">See what changed ↓</a>
           </div>
           <p className="fpxWarning">EXTRA STRENGTH · NOT FOR SENSITIVE SKIN</p>
@@ -192,13 +214,14 @@ export default function Page() {
         <p className="fpxEyebrow">WHEN ORIGINAL IS NOT ENOUGH</p>
         <h2>Turn up the fruit.</h2>
         <p>More papaya. Added starfruit. Maximum Fruity Puppy exfoliation.</p>
-        <a className="button fpxPrimary" href={shop}>Shop FPX</a>
+        <a className="button fpxPrimary" href={shop}>{`Shop FPX — ${PRICE.fpx}`}</a>
       </section>
 
       <footer>
         <a className="logo" href="/">FRUITY <b>PUPPY</b></a><p>Made by hand on Big Island, Hawaiʻi.</p>
         <div><a href="/our-team">Team</a><a href="/our-dream">Dream</a><a href="/our-cream">Cream</a><a href="/our-home">Home</a><a href="/safety-and-transparency">Safety</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={PRIVACY_HREF}>Privacy</a><a href={TERMS_HREF}>Terms</a><a href={RETURNS_HREF}>Returns</a></div>
       </footer>
+      <JsonLd data={productSchema} />
     </main>
   );
 }

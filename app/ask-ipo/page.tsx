@@ -2,12 +2,18 @@ import type { Metadata } from "next";
 import IpoWidget from "../components/IpoWidget";
 import { BlogFooter, BlogHeader } from "../BlogShell";
 import { ASK_IPO_HREF } from "../site-config";
+import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "Ask Ipo | Fruity Puppy",
   description:
     "Ask Ipo, Fruity Puppy’s AI guide to fresh biological skincare from Hawaiʻi Island. Cosmetic guidance only—not medical advice.",
-  alternates: { canonical: ASK_IPO_HREF },
+  ...shareMeta({
+    path: ASK_IPO_HREF,
+    title: "Ask Ipo — Fruity Puppy’s Skincare Guide",
+    description:
+      "Ask Ipo, Fruity Puppy’s AI guide to fresh biological skincare from Hawaiʻi Island. Cosmetic guidance only, not medical advice.",
+  }),
 };
 
 export default function AskIpoPage() {

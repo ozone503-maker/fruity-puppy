@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import UseCasePage from "../components/UseCasePage";
+import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
   title: "Tattooed Skin | Fruity Puppy Original",
   description: "Cold, fruit-rich moisture for tattooed skin, from post-session dryness to long-term color care.",
+  ...shareMeta({
+    path: "/tattoo",
+    title: "Tattooed Skin — Fruity Puppy Original",
+    description:
+      "Cold, fruit-rich moisture for tattooed skin, from post-session dryness to long-term color care.",
+  }),
 };
 
 export default function Page(){
