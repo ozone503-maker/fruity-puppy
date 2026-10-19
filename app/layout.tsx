@@ -52,13 +52,13 @@ export const metadata: Metadata = {
     siteName: "Fruity Puppy",
     title: "Fruity Puppy | Fresh Fruit Skin Nutrition from Hawaiʻi",
     description: "Fresh biological skincare made with 45% real Hawaiian fruit. Ice-extracted and handmade on the Big Island.",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "FlashTown jungle on Hawaiʻi Island, home of Fruity Puppy" }],
+    images: [{ url: "/og-our-cream.jpg", width: 1200, height: 630, alt: "An open jar of Fruity Puppy Our Cream" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Fruity Puppy | Fresh Fruit Skin Nutrition from Hawaiʻi",
     description: "Fresh biological skincare made with 45% real Hawaiian fruit. Ice-extracted and handmade on the Big Island.",
-    images: ["/og.jpg"],
+    images: ["/og-our-cream.jpg"],
   },
 };
 
