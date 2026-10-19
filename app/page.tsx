@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     path: "/",
     title: "Fruity Puppy | Fresh Fruit Skin Nutrition from Hawaiʻi",
     description: "Fresh biological skincare made with 45% real Hawaiian fruit. Ice-extracted and handmade on the Big Island.",
+    image: { url: "/og-our-cream.jpg", width: 1200, height: 630, alt: "An open jar of Fruity Puppy Our Cream" },
   }),
 };
 
