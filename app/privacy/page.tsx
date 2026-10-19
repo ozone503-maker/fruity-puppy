@@ -28,7 +28,7 @@ export default function PrivacyPage() {
             us online.
           </p>
         </div>
-        <img src="/images/new/dream.jpg" alt="Fruity Puppy jungle setting" />
+        <img src="/images/our-home/five-dogs-farm.jpg" alt="One of FlashTown’s five rescued dogs beside the jungle pond" />
       </section>
       <section className="storyStack">
         <article className="storyCard">
