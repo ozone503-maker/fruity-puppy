@@ -1,6 +1,16 @@
 {
   "framework": "nextjs",
   "buildCommand": "next build",
+  "rewrites": [
+    {
+      "source": "/store",
+      "destination": "https://fruity-puppy-store.vercel.app/"
+    },
+    {
+      "source": "/store/:path*",
+      "destination": "https://fruity-puppy-store.vercel.app/:path*"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
