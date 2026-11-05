@@ -16,7 +16,7 @@ const PAGE_OG_IMAGE: Record<string, ShareImage> = {
   "/our-cream": { url: "/images/hero/our-cream-hero-poster.jpg", width: 480, height: 854, alt: "Fresh pink Fruity Puppy cream being whipped in a mixing bowl" },
   "/our-team": { url: "/images/hero/commercials/our-team-poster.jpg", width: 568, height: 320, alt: "Ipo, Erv and the Fruity Puppy robots on the beach" },
   "/safety-and-transparency": { url: "/images/safety-blue-cabin.jpg", width: 1600, height: 1200, alt: "The blue cabin in the garden at FlashTown" },
-  "/thorny-toad": { url: "/images/hero/thorny-toad-hero-poster.jpg", width: 568, height: 320, alt: "Wild green jungle growth on Hawaiʻi Island" },
+  "/thorny-toad": { url: "https://www.fruitypuppy.com/images/hero/thorny-toad-hero-poster.jpg", width: 568, height: 320, alt: "Wild green jungle growth on Hawaiʻi Island" },
   "/desert-squirt": { url: "/images/hero/desert-squirt-hero-poster.jpg", width: 320, height: 570, alt: "An open desert road at sunset" },
   "/our-partners": { url: "/images/new/partner-team.jpg", width: 1402, height: 1122, alt: "Ipo and Erv at the Fruity Puppy Partner Program office" },
   "/ask-ipo": { url: "/images/ipo/greeting.png", width: 382, height: 515, alt: "Ipo, the Fruity Puppy skincare guide, waving hello" },
@@ -99,12 +99,12 @@ type ProductKey = "original" | "fpx" | "faceJuice" | "moonTea";
 /** Product imagery hosted on the Fruity Puppy site. */
 const PRODUCT_IMAGE: Record<ProductKey, string> = {
   original:
-    "/images/process/finished-jars.jpg",
-  fpx: "/images/hero/fpx-hero-poster.jpg",
+    "https://www.fruitypuppy.com/images/process/finished-jars.jpg",
+  fpx: "https://www.fruitypuppy.com/images/hero/fpx-hero-poster.jpg",
   faceJuice:
     "/images/hero/thorny-toad-hero-poster.jpg",
   moonTea:
-    "/images/hero/moon-tea-hero-poster.jpg",
+    "https://www.fruitypuppy.com/images/hero/moon-tea-hero-poster.jpg",
 };
 
 /** Product + Offer JSON-LD. Price comes from the same PRICE map the buy buttons show. */
