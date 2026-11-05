@@ -263,27 +263,8 @@ export default function LavaGuava() {
           </p>
           <div className="lavaNotify" id="lava-notify">
             <p className="lavaEyebrow">Coming soon</p>
-            <form
-              action="https://shop.fruitypuppy.com/contact#contact_form"
-              method="post"
-              acceptCharset="UTF-8"
-            >
-              <input type="hidden" name="form_type" value="customer" />
-              <input type="hidden" name="utf8" value="✓" />
-              <input type="hidden" name="contact[tags]" value="newsletter,Lava-Guava" />
-              <label htmlFor="lava-email">Tell me when Lava-Guava drops</label>
-              <div className="lavaNotifyField">
-                <input
-                  id="lava-email"
-                  type="email"
-                  name="contact[email]"
-                  autoComplete="email"
-                  placeholder="you@example.com"
-                  required
-                />
-                <button type="submit">Get notified</button>
-              </div>
-            </form>
+            <p>Want the first word when LAVA-GUAVA drops?</p>
+            <a className="lavaNotifyLink" href={ASK_IPO_HREF}>Ask Ipo for launch updates</a>
           </div>
         </div>
       </section>
