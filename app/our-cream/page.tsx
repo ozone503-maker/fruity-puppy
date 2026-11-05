@@ -43,7 +43,7 @@ const sections = [
       ],
       [
         "How to keep it",
-        "Refrigerate when you can. Use clean hands. Keep the lid closed. Think yogurt more than drugstore lotion. Face and body. Patch test if your skin is reactive. Verify live Shopify for current size and price.",
+        "Refrigerate when you can. Use clean hands. Keep the lid closed. Think yogurt more than drugstore lotion. Face and body. Patch test if your skin is reactive. Check the Store for current size and price.",
       ],
     ] as [string, string][],
   },
