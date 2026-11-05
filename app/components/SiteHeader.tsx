@@ -53,17 +53,7 @@ export default function SiteHeader(){
       <div className="siteMobilePanel">
         <a className="mobileBuyNow" href={shop}>BUY NOW <span>→</span></a>
 
-        <details className="mobileShopMenu">
-          <summary>SHOP <span>+</span></summary>
-          <div>
-            <a href="/">Original</a>
-            <a href="/fpx">FPX</a>
-            <a href="/lava-guava">Lava-Guava</a>
-            <a href="/thorny-toad">Face Juice</a>
-            <a href="/desert-squirt">Desert Squirt</a>
-            <a href="/moon-tea">Moon Tea</a>
-          </div>
-        </details>
+        <a className="mobileSimpleLink" href={shop}>SHOP <span>→</span></a>
 
         <details className="mobileShopMenu">
           <summary>ABOUT <span>+</span></summary>
