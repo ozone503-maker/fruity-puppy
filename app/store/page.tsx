@@ -15,11 +15,11 @@ export const metadata: Metadata = {
 
 const products = [
   { name: "Fruity Puppy Original", note: "45% fresh fruit · 2 oz · $59.99", href: "/store/product/fruity-puppy-original", image: "/images/process/open-cream.jpg", tone: "pink", cta: "Add to cart →" },
-  { name: "FPX", note: "More papaya + starfruit · extra strength", href: "/fpx", image: "/images/hero/fpx-hero-poster.jpg", tone: "black", cta: "Explore →" },
-  { name: "Lava-Guava Bomb Balm", note: "High-friction + high-moisture zones", href: "/lava-guava", image: "/images/process/cream-texture.jpg", tone: "guava", cta: "Explore →" },
-  { name: "Thorny Toad Face Juice", note: "Botanical toner for balance + clarity", href: "/thorny-toad", image: "/images/ingredients/spearmint.webp", tone: "green", cta: "Explore →" },
-  { name: "Desert Squirt", note: "A dry-climate botanical ritual", href: "/desert-squirt", image: "/images/ingredients/aloe-vera.webp", tone: "sand", cta: "Explore →" },
-  { name: "Moon Tea", note: "Nocturnal botanical polishing toner", href: "/moon-tea", image: "/images/ingredients/cranberry-hibiscus.webp", tone: "moon", cta: "Explore →" },
+  { name: "FPX", note: "More papaya + starfruit · 2 oz · $59.99", href: "/store/product/fpx", image: "/images/hero/fpx-hero-poster.jpg", tone: "black", cta: "Add to cart →" },
+  { name: "Lava-Guava Bomb Balm", note: "High-friction + high-moisture zones · $59.99", href: "/store/product/lava-guava", image: "/images/process/cream-texture.jpg", tone: "guava", cta: "Add to cart →" },
+  { name: "Thorny Toad Face Juice", note: "Botanical toner · $29.99", href: "/store/product/thorny-toad", image: "/images/ingredients/spearmint.webp", tone: "green", cta: "Add to cart →" },
+  { name: "Desert Squirt", note: "Dry-climate botanical ritual · $29.99", href: "/store/product/desert-squirt", image: "/images/ingredients/aloe-vera.webp", tone: "sand", cta: "Add to cart →" },
+  { name: "Moon Tea", note: "Nocturnal polishing toner · $29.99", href: "/store/product/moon-tea", image: "/images/ingredients/cranberry-hibiscus.webp", tone: "moon", cta: "Add to cart →" },
 ];
 
 function ProductCard({ p, featured = false }: { p: (typeof products)[number]; featured?: boolean }) {
@@ -71,7 +71,7 @@ export default function StorePage() {
       </section>
 
       <section className="storeFooter">
-        <div><p>Ready to buy?</p><h2>Checkout is open for the cream.</h2></div>
+        <div><p>Ready to buy?</p><h2>Checkout is open for the whole line.</h2></div>
         <div className="footerActions">
           <a className="primary" href="/store/product/fruity-puppy-original">Buy Fruity Puppy Original · $59.99</a>
           <a className="secondary" href="/store/product/free-sample">Free sample · $5 shipping</a>
