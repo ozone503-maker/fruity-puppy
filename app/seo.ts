@@ -82,7 +82,6 @@ export const ORGANIZATION_LD = {
   sameAs: [
     "https://www.instagram.com/fruitypuppyskincream",
     "https://www.tiktok.com/@fruitypuppy.com",
-    "https://shop.fruitypuppy.com",
   ],
   address: {
     "@type": "PostalAddress",
@@ -97,15 +96,15 @@ export const ORGANIZATION_LD = {
 
 type ProductKey = "original" | "fpx" | "faceJuice" | "moonTea";
 
-/** Product photos as served by the Shopify product pages. */
+/** Product imagery hosted on the Fruity Puppy site. */
 const PRODUCT_IMAGE: Record<ProductKey, string> = {
   original:
-    "https://cdn.shopify.com/s/files/1/0660/6097/6226/files/rn-image_picker_lib_temp_3a6190c7-8639-488e-9309-6badd5511656.png?v=1781217853",
-  fpx: "https://cdn.shopify.com/s/files/1/0660/6097/6226/files/rn-image_picker_lib_temp_6f554009-fca5-412d-9e70-fb7be584bf62.jpg?v=1782519435",
+    "/images/process/finished-jars.jpg",
+  fpx: "/images/hero/fpx-hero-poster.jpg",
   faceJuice:
-    "https://cdn.shopify.com/s/files/1/0660/6097/6226/files/rn-image_picker_lib_temp_bc3193ff-85ca-4322-9f2a-24ed22a01afb.png?v=1781659872",
+    "/images/hero/thorny-toad-hero-poster.jpg",
   moonTea:
-    "https://cdn.shopify.com/s/files/1/0660/6097/6226/files/rn-image_picker_lib_temp_f9ea6cf2-2675-4e93-aa90-6ecc8a5f6b56.png?v=1782583556",
+    "/images/hero/moon-tea-hero-poster.jpg",
 };
 
 /** Product + Offer JSON-LD. Price comes from the same PRICE map the buy buttons show. */
