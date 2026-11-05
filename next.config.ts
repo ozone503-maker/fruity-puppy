@@ -21,13 +21,13 @@ const securityHeaders = [
       "base-uri 'self'",
       "object-src 'none'",
       "frame-ancestors 'self'",
-      "form-action 'self' https://shop.fruitypuppy.com",
+      "form-action 'self' https://shop.fruitypuppy.com https://checkout.stripe.com",
       "script-src 'self' 'unsafe-inline'",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://shop.fruitypuppy.com https://cdn.shopify.com https://img1.wsimg.com",
       "media-src 'self' blob:",
       "font-src 'self' data:",
-      "connect-src 'self' https://ipo-worker.ozone503.workers.dev https://shop.fruitypuppy.com",
+      "connect-src 'self' https://ipo-worker.ozone503.workers.dev https://shop.fruitypuppy.com https://checkout.stripe.com https://api.stripe.com",
       "frame-src 'self'",
       "upgrade-insecure-requests",
     ].join("; "),
@@ -35,6 +35,14 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  async rewrites() {
+    return [
+      { source: "/store/product/:path*", destination: "https://fruity-puppy-store.vercel.app/product/:path*" },
+      { source: "/store/api/:path*", destination: "https://fruity-puppy-store.vercel.app/api/:path*" },
+      { source: "/store/cart.js", destination: "https://fruity-puppy-store.vercel.app/cart.js" },
+      { source: "/store/store.css", destination: "https://fruity-puppy-store.vercel.app/store.css" },
+    ];
+  },
   poweredByHeader: false,
   async headers() {
     return [
