@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   }),
 };
 
-const shop="https://shop.fruitypuppy.com/products/fruity-puppy";
-const sample="https://shop.fruitypuppy.com/products/free-sample-fruity-puppy-original-5-shipping-amp-handling";
+const shop="https://www.fruitypuppy.com/store";
+const sample="https://www.fruitypuppy.com/store";
 const base="https://shop.fruitypuppy.com/cdn/shop/files/";
 
 const img={
