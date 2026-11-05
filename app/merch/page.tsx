@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   }),
 };
 
-const SHOP = "https://shop.fruitypuppy.com";
+const SHOP = "https://www.fruitypuppy.com/store";
 const FLAT_TEE =
   "https://cdn.shopify.com/s/files/1/0553/8949/2514/files/FPX-tee-flat.jpg";
 const FOLDED_TEE =

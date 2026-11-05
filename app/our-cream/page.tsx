@@ -4,7 +4,7 @@ import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import { PRICE } from "../shop-links";
 
-const shop = "https://shop.fruitypuppy.com/products/fruity-puppy";
+const shop = "https://www.fruitypuppy.com/store";
 
 const sections = [
   {
@@ -43,7 +43,7 @@ const sections = [
       ],
       [
         "How to keep it",
-        "Refrigerate when you can. Use clean hands. Keep the lid closed. Think yogurt more than drugstore lotion. Face and body. Patch test if your skin is reactive. Verify live Shopify for current size and price.",
+        "Refrigerate when you can. Use clean hands. Keep the lid closed. Think yogurt more than drugstore lotion. Face and body. Patch test if your skin is reactive. Check the Store for current size and price.",
       ],
     ] as [string, string][],
   },

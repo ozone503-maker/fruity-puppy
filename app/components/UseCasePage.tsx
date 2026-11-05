@@ -34,7 +34,7 @@ type Props = {
   shopLabel?: string;
 };
 
-const shop = "https://shop.fruitypuppy.com/products/fruity-puppy";
+const shop = "https://www.fruitypuppy.com/store";
 
 function Header() {
   return (
