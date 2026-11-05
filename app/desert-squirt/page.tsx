@@ -6,8 +6,8 @@ import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import "./desert.css";
 
-const faceJuice = "https://shop.fruitypuppy.com/products/thorny-toad-face-juice";
-const moonTea = "https://shop.fruitypuppy.com/products/thorny-toad-moon-tea";
+const faceJuice = "https://www.fruitypuppy.com/store";
+const moonTea = "https://www.fruitypuppy.com/store";
 
 // Placeholder botanicals — swap photos when Jessie drops Texas ingredient stills.
 const plants = [
