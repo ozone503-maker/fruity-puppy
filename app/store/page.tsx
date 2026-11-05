@@ -70,6 +70,30 @@ export default function StorePage() {
         </aside>
       </section>
 
+
+      <section className="merchCarousel" aria-label="Fruity Puppy merch">
+        <div className="merchHead">
+          <p className="eyebrow">STANDARD CATALOG ISSUE</p>
+          <h2>Ipo wears the line.</h2>
+          <p>Tee, long sleeve, three hoodies, and a blanket. Printed to order.</p>
+        </div>
+        <div className="merchTrack">
+          {[
+            { name: "Tee", note: "$28", href: "/store/product/fp-tee", image: "/images/merch/tee.jpg" },
+            { name: "Long Sleeve", note: "$32", href: "/store/product/fp-long-sleeve", image: "/images/merch/long-sleeve.jpg" },
+            { name: "Beach Hoodie", note: "Light · $42", href: "/store/product/fp-beach", image: "/images/merch/beach.jpg" },
+            { name: "Kīlauea Hoodie", note: "Standard · $48", href: "/store/product/fp-kilauea", image: "/images/merch/kilauea.jpg" },
+            { name: "Mauna Kea Hoodie", note: "Thick · $68", href: "/store/product/fp-mauna-kea", image: "/images/merch/mauna-kea.jpg" },
+            { name: "Blanket", note: "$45", href: "/store/product/fp-blanket", image: "/images/merch/blanket.jpg" },
+          ].map((m) => (
+            <a key={m.name} className="merchCard" href={m.href}>
+              <img src={m.image} alt={`Ipo in the Fruity Puppy ${m.name}`} />
+              <div><h3>{m.name}</h3><p>{m.note}</p></div>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className="storeFooter">
         <div><p>Ready to buy?</p><h2>Checkout is open for the whole line.</h2></div>
         <div className="footerActions">
