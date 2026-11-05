@@ -6,7 +6,7 @@ import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import "./thorny.css";
 
-const shop = "https://shop.fruitypuppy.com/products/thorny-toad-face-juice";
+const shop = "https://www.fruitypuppy.com/store";
 const cdn = "https://shop.fruitypuppy.com/cdn/shop/files/";
 const bottle =
   cdn +
