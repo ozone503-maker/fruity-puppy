@@ -18,12 +18,10 @@ export const metadata: Metadata = {
 
 const shop="https://www.fruitypuppy.com/store";
 const sample="https://www.fruitypuppy.com/store";
-const base="https://shop.fruitypuppy.com/cdn/shop/files/";
-
 const img={
-  jar:base+"rn-image_picker_lib_temp_3a6190c7-8639-488e-9309-6badd5511656.png?v=1781217853&width=1200",
-  hibiscus:base+"rn-image_picker_lib_temp_8152b3c5-2626-46b2-86a9-5f07fdadd850.jpg?v=1780972227&width=1200",
-  aloe:base+"rn-image_picker_lib_temp_05839881-184e-42d8-bd48-5166c9bc5d68.jpg?v=1780972227&width=1200",
+  jar:"/images/process/finished-jars.jpg",
+  hibiscus:"/images/ingredients/cranberry-hibiscus.webp",
+  aloe:"/images/ingredients/aloe-vera.webp",
 };
 
 type Ingredient = {
@@ -86,7 +84,7 @@ export default function Home(){return <main>
     <div className="shopActionIntro"><p className="eyebrow">Choose your adventure</p><h2>Feed your skin.<br/><em>Or try a little first.</em></h2><p>Go all in, start with a sample, or join the jungle mail for fresh batches, farm stories, and new drops.</p></div>
     <div className="shopActionGrid">
       <article className="actionCard sampleCard"><div className="actionPhoto samplePhoto"><img src="/images/actions/sample-jar.webp" alt="A real Fruity Puppy sample jar held between two fingers" loading="lazy"/><span>The actual sample</span></div><div className="actionCopy"><p className="actionKicker">Curious skin welcome</p><h3>Free sample</h3><p>Try Fruity Puppy Original. The sample is free—you just pay $5 for shipping.</p><a className="button dark" href={sample}>Get a Free Sample — $5 Shipping</a></div></article>
-      <article className="actionCard emailCard"><div className="emailPhoto"><img src="/images/safety-blue-cabin.jpg" alt="The blue cabin in the Hawaiʻi Island jungle where Fruity Puppy is made" loading="lazy"/><span>Jungle mail from FlashTown, Hawaiʻi</span></div><div className="emailCopy"><p className="actionKicker">Notes from the jungle</p><h3>Join our email list</h3><p>Fresh batches, farm stories, useful skin science, and whatever the jungle is doing now.</p><form action="https://shop.fruitypuppy.com/contact#contact_form" method="post" acceptCharset="UTF-8"><input type="hidden" name="form_type" value="customer"/><input type="hidden" name="utf8" value="✓"/><input type="hidden" name="contact[tags]" value="newsletter"/><label htmlFor="jungle-email">Email address</label><div className="emailField"><input id="jungle-email" type="email" name="contact[email]" autoComplete="email" placeholder="you@example.com" required/><button type="submit">Join Our Email List</button></div></form></div></article>
+      <article className="actionCard emailCard"><div className="emailPhoto"><img src="/images/safety-blue-cabin.jpg" alt="The blue cabin in the Hawaiʻi Island jungle where Fruity Puppy is made" loading="lazy"/><span>Jungle mail from FlashTown, Hawaiʻi</span></div><div className="emailCopy"><p className="actionKicker">Notes from the jungle</p><h3>Join our email list</h3><p>Fresh batches, farm stories, useful skin science, and whatever the jungle is doing now. Our email signup is being moved to its own system.</p><a className="button dark" href={ASK_IPO_HREF}>Ask Ipo for the latest</a></div></article>
     </div>
   </section>
 
