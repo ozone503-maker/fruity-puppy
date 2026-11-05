@@ -3,7 +3,7 @@ import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 
-const shop = "https://shop.fruitypuppy.com/products/fruity-puppy";
+const shop = "https://www.fruitypuppy.com/store";
 
 const sections = [
   {
