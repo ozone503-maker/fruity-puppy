@@ -14,11 +14,9 @@ export const metadata: Metadata = {
   }),
 };
 
-const SHOP = "https://shop.fruitypuppy.com";
-const FLAT_TEE =
-  "https://cdn.shopify.com/s/files/1/0553/8949/2514/files/FPX-tee-flat.jpg";
-const FOLDED_TEE =
-  "https://cdn.shopify.com/s/files/1/0553/8949/2514/files/FPX-tee-folded.jpg";
+const SHOP = "https://www.fruitypuppy.com/store";
+const FLAT_TEE = "/images/hero/fpx-hero-poster.jpg";
+const FOLDED_TEE = "/images/hero/fpx-hero-poster.jpg";
 
 const featured = [
   ["Skin Eats Tee", "Fruity Puppy graphic tee"],
@@ -57,8 +55,6 @@ export default function MerchPage() {
                 <a
                   className="merch-card"
                   href={SHOP}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   key={name}
                 >
                   <img src={FLAT_TEE} alt={alt} />
@@ -100,7 +96,7 @@ export default function MerchPage() {
               <h2>Fruity Puppy Essentials</h2>
               <p>Premium-first blanks, Fruity Puppy graphics, and rotating drops from the Outlet Mall.</p>
               <div className="hero-price">Tees from $22.99</div>
-              <a href={SHOP} className="hero-cta" target="_blank" rel="noopener noreferrer">Browse Collection</a>
+              <a href={SHOP} className="hero-cta">Browse Collection</a>
             </div>
           </div>
 
@@ -116,7 +112,7 @@ export default function MerchPage() {
           <div className="wall-grid panel">
             <h2 id="wall-title" className="section-title merch-wall-title">Merch Wall</h2>
             {wall.map(([name, alt]) => (
-              <a className="merch-card" href={SHOP} target="_blank" rel="noopener noreferrer" key={name}>
+              <a className="merch-card" href={SHOP} key={name}>
                 <img src={FLAT_TEE} alt={alt} />
                 <span className="name">{name}</span>
                 <span className="price">From $22.99</span>
@@ -132,7 +128,7 @@ export default function MerchPage() {
       </div>
 
       <footer className="store-footer">
-        <a href={SHOP} className="cta-btn primary" target="_blank" rel="noopener noreferrer">Shop All Merch</a>
+        <a href={SHOP} className="cta-btn primary">Shop All Merch</a>
         <a href="/" className="cta-btn secondary">Back to Fruity Puppy</a>
       </footer>
     </main>
