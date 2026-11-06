@@ -36,7 +36,8 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   async rewrites() {
-    return [
+    return {
+      beforeFiles: [
       { source: "/store", destination: "https://fruity-puppy-store.vercel.app/" },
       { source: "/store.css", destination: "https://fruity-puppy-store.vercel.app/store.css" },
       { source: "/cart.js", destination: "https://fruity-puppy-store.vercel.app/cart.js" },
@@ -48,7 +49,10 @@ const nextConfig: NextConfig = {
       { source: "/store/confirmation/", destination: "https://fruity-puppy-store.vercel.app/confirmation/" },
       { source: "/store/cart.js", destination: "https://fruity-puppy-store.vercel.app/cart.js" },
       { source: "/store/store.css", destination: "https://fruity-puppy-store.vercel.app/store.css" },
-    ];
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
   },
   poweredByHeader: false,
   async headers() {
