@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   }),
 };
 
-const shop="https://www.fruitypuppy.com/store";
-const sample="https://www.fruitypuppy.com/store";
+const shop="/store";
+const sample="/store";
 const base="https://shop.fruitypuppy.com/cdn/shop/files/";
 
 const img={

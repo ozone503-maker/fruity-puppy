@@ -60,7 +60,7 @@ export default function ReturnsPage() {
             <h2>How to reach us</h2>
             <p>
               Start at{" "}
-              <a href="https://www.fruitypuppy.com/store">shop.fruitypuppy.com</a>{" "}
+              <a href="/store">fruitypuppy.com/store</a>{" "}
               contact options, or ask through our email list reply if you already
               hear from jungle mail. Include your order number when you can.
             </p>
