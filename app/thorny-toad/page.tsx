@@ -6,11 +6,8 @@ import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import "./thorny.css";
 
-const shop = "https://www.fruitypuppy.com/store";
-const cdn = "https://shop.fruitypuppy.com/cdn/shop/files/";
-const bottle =
-  cdn +
-  "rn-image_picker_lib_temp_bc3193ff-85ca-4322-9f2a-24ed22a01afb.png?v=1781659872&width=1400";
+const shop = "/store";
+const bottle = "/images/products/thorny-toad-bottle.png";
 const plants = [
   [
     "Stickerbush Cane",

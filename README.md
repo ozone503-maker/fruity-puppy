@@ -4,7 +4,7 @@ Marketing site for **Fruity Puppy** fresh biological skincare from FlashTown, Ha
 
 **GitHub:** https://github.com/ozone503-maker/fruity-puppy
 
-This checkout is a **Next.js App Router** app (`app/`). Shop checkout stays on Shopify (`shop.fruitypuppy.com`).
+This checkout is a **Next.js App Router** app (`app/`). Shopping and checkout run through the Fruity Puppy Store at `/store` (proxied to the Store Kit project).
 
 Legacy vinext / Cloudflare Workers files (`vite.config.ts`, `worker/`, `scripts/*`) may still be present for reference but are **not** used for production builds.
 
@@ -61,4 +61,4 @@ Product copy is cosmetic-only. Ask Ipo is an AI guide, not a medical provider.
 ## Learn more
 
 - Next.js: https://nextjs.org/docs
-- Shop: https://shop.fruitypuppy.com
+- Shop: https://www.fruitypuppy.com/store

@@ -60,7 +60,7 @@ export default function PrivacyPage() {
             <p>
               Write us at FlashTown, P.O. Box 711416, Mountain View, Hawaiʻi
               96771, or use the contact options on{" "}
-              <a href="https://shop.fruitypuppy.com">shop.fruitypuppy.com</a>.
+              <a href="/store">fruitypuppy.com/store</a>.
             </p>
           </div>
         </article>
