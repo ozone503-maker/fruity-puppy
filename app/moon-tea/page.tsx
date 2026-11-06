@@ -7,7 +7,7 @@ import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import { PRICE } from "../shop-links";
 
-const shop = "https://shop.fruitypuppy.com/products/thorny-toad-moon-tea";
+const shop = "https://www.fruitypuppy.com/store";
 
 const plants = [
   [
