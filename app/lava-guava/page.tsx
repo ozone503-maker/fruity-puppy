@@ -1,7 +1,7 @@
 import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import ProcessBeat from "../components/ProcessBeat";
-import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
+import { ASK_IPO_HREF, BLOG_HREF, CONTACT_EMAIL, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF, contactMailto } from "../site-config";
 import { SHOP } from "../shop-links";
 
 /** Lava-Guava is not for sale yet. Nav "Shop" goes where the site header's Shop goes. */
@@ -263,27 +263,10 @@ export default function LavaGuava() {
           </p>
           <div className="lavaNotify" id="lava-notify">
             <p className="lavaEyebrow">Coming soon</p>
-            <form
-              action="https://shop.fruitypuppy.com/contact#contact_form"
-              method="post"
-              acceptCharset="UTF-8"
-            >
-              <input type="hidden" name="form_type" value="customer" />
-              <input type="hidden" name="utf8" value="✓" />
-              <input type="hidden" name="contact[tags]" value="newsletter,Lava-Guava" />
-              <label htmlFor="lava-email">Tell me when Lava-Guava drops</label>
-              <div className="lavaNotifyField">
-                <input
-                  id="lava-email"
-                  type="email"
-                  name="contact[email]"
-                  autoComplete="email"
-                  placeholder="you@example.com"
-                  required
-                />
-                <button type="submit">Get notified</button>
-              </div>
-            </form>
+            <p className="lavaNotifyLabel">Tell me when Lava-Guava drops</p>
+            <p className="lavaNotifyNote">No signup form yet. Email us and ask to be told when it drops.</p>
+            <a className="lavaNotifyLink" href={contactMailto("Tell me when LAVA-GUAVA drops")}>Email us to get notified</a>
+            <p className="lavaNotifyAddress">{CONTACT_EMAIL}</p>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { BlogFooter, BlogHeader } from "../BlogShell";
-import { RETURNS_HREF } from "../site-config";
+import { CONTACT_EMAIL, RETURNS_HREF, contactMailto } from "../site-config";
 import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
@@ -59,10 +59,10 @@ export default function ReturnsPage() {
           <div>
             <h2>How to reach us</h2>
             <p>
-              Start at{" "}
-              <a href="/store">fruitypuppy.com/store</a>{" "}
-              contact options, or ask through our email list reply if you already
-              hear from jungle mail. Include your order number when you can.
+              Email{" "}
+              <a href={contactMailto("Fruity Puppy order question")}>{CONTACT_EMAIL}</a>
+              , or ask through our email list reply if you already hear from
+              jungle mail. Include your order number when you can.
             </p>
           </div>
         </article>

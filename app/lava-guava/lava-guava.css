@@ -20,3 +20,11 @@
 .lavaNotifyField button{border:0;border-radius:999px;padding:14px 22px;background:#54172a;color:#fff;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:transform .18s ease,filter .18s ease}
 .lavaNotifyField button:hover{transform:translateY(-2px);filter:brightness(1.1)}
 @media(max-width:700px){.lavaNotifyField{display:block;border-radius:14px;padding:6px}.lavaNotifyField input{width:100%;padding:15px}.lavaNotifyField button{width:100%}}
+.lavaNotifyLabel{margin:10px 0 8px;color:#fff;font:400 clamp(24px,2.4vw,32px)/1.2 Georgia,serif}
+.lavaNotifyNote{margin:0 0 14px}
+.lavaNotifyLink{display:inline-block;border-radius:999px;padding:14px 22px;background:#54172a;color:#fff;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:transform .18s ease,filter .18s ease}
+.lavaNotifyLink:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.lavaNotifyLink:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.lavaNotifyAddress{margin:12px 0 0;color:#fff;overflow-wrap:anywhere}
+@media(max-width:700px){.lavaNotifyLink{display:block;text-align:center}}
+@media(prefers-reduced-motion:reduce){.lavaNotifyLink{transition:none}.lavaNotifyLink:hover{transform:none}}

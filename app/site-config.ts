@@ -5,3 +5,6 @@ export const BLOG_HREF = "/blog";
 export const PRIVACY_HREF = "/privacy";
 export const TERMS_HREF = "/terms";
 export const RETURNS_HREF = "/returns";
+export const CONTACT_EMAIL = "flashtown.hawaii@gmail.com";
+export const contactMailto = (subject: string) =>
+  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}`;

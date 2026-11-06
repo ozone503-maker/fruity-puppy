@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { BlogFooter, BlogHeader } from "../BlogShell";
-import { PRIVACY_HREF } from "../site-config";
+import { CONTACT_EMAIL, PRIVACY_HREF, contactMailto } from "../site-config";
 import { shareMeta } from "../seo";
 
 export const metadata: Metadata = {
@@ -59,8 +59,8 @@ export default function PrivacyPage() {
             <h2>Questions</h2>
             <p>
               Write us at FlashTown, P.O. Box 711416, Mountain View, Hawaiʻi
-              96771, or use the contact options on{" "}
-              <a href="/store">fruitypuppy.com/store</a>.
+              96771, or email{" "}
+              <a href={contactMailto("Fruity Puppy privacy question")}>{CONTACT_EMAIL}</a>.
             </p>
           </div>
         </article>
