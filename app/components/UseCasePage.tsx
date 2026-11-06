@@ -34,7 +34,7 @@ type Props = {
   shopLabel?: string;
 };
 
-const shop = "https://www.fruitypuppy.com/store";
+const shop = "/store";
 
 function Header() {
   return (

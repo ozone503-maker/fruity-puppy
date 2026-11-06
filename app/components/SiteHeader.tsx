@@ -1,7 +1,7 @@
 import { ASK_IPO_HREF, BLOG_HREF } from "../site-config";
 
-const shop = "https://www.fruitypuppy.com/store";
-const sample = "https://www.fruitypuppy.com/store";
+const shop = "/store";
+const sample = "/store";
 const outletMall = "https://outlet-mall.vercel.app/";
 
 export default function SiteHeader(){
