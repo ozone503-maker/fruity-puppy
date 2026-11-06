@@ -40,9 +40,14 @@ export default function Page(){
     imageBandImage="/images/tattoo/scroll-tattoo.jpg"
     imageBandAlt="Healed black and grey scroll tattoo on a lower leg listing Courage, Truth, Honor, Fidelity, Discipline, Hospitality, Self-reliance, Industriousness and Perseverance"
     imageBandEyebrow="HEALED INK"
-    imageBandTitle="Stained-glass polish for old work."
+    imageBandTitle="Polish for old work."
     imageBandBody="Tattoos do not stop needing skin care when the peeling ends. Consistent moisture can make dry, ashy surface texture look smoother, which lets healed ink read more clearly. That is cosmetic care—not a promise to restore pigment that has actually faded."
     imageBandQuote="Feed the skin carrying the art."
+    customerMessage={{
+      image: "/images/tattoo/customer-message.jpg",
+      alt: "Text message from a customer with a photo of the same scroll tattoo, reading: All healed up with my Fruity Puppy applied Family",
+      caption: "A customer sent us this message with the photo of their tattoo.",
+    }}
     honestyTitle="Artist first. Fruity Puppy second."
     honestyBody="Fruity Puppy is not a wound treatment and does not replace your tattoo artist's aftercare instructions. Do not put it on actively bleeding, weeping, infected, or otherwise open skin. Start only when your artist says moisturizing is appropriate. If healing looks abnormal, contact your artist or a medical professional."
     faqs={[

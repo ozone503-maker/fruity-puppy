@@ -11,3 +11,4 @@
 @media(max-width:950px){.ucHero,.ucImageBand{grid-template-columns:1fr}.ucHeroMedia{min-height:520px}.ucHeroCopy{padding:72px 24px}.ucGrid{grid-template-columns:1fr}.ucSection,.ucIntro,.ucHonesty,.ucFaq{padding:82px 24px}.ucImageCopy{padding:76px 24px}}
 @media(max-width:600px){.ucHero{min-height:0}.ucHeroMedia{min-height:430px}.ucHero h1{font-size:56px}.ucLead{font-size:20px}.ucActions{flex-direction:column}.ucActions .button{width:100%;text-align:center}.ucIntro h2,.ucSection h2,.ucHonesty h2,.ucFaq h2,.ucCta h2{font-size:44px}.ucImageBand img{min-height:0;aspect-ratio:1/1}}
 .useCasePage.tattoo .ucImageBand img{object-position:50% 35%}
+.ucCustomerMessage{margin:28px 0 0;max-width:440px}.ucImageBand .ucCustomerMessage img{width:100%;height:auto;min-height:0;aspect-ratio:auto;object-fit:contain;border-radius:14px}.ucCustomerMessage figcaption{margin-top:10px;font-size:14px;line-height:1.5;color:inherit;opacity:.75}
