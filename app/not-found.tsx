@@ -8,7 +8,7 @@ export default function NotFound() {
         <a className="button dark" href="/">
           Back home
         </a>
-        <a className="button" href="https://shop.fruitypuppy.com">
+        <a className="button" href="/store">
           Shop
         </a>
       </p>
