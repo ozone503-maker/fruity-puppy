@@ -1,13 +1,12 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
 
+const JAR =
+  "https://shop.fruitypuppy.com/cdn/shop/files/rn-image_picker_lib_temp_3a6190c7-8639-488e-9309-6badd5511656.png?v=1781217853&width=1200";
+
 /** Homepage share card: the Our Cream jar photo used on the homepage. */
 export async function GET() {
-  const jarFile = await readFile(join(process.cwd(), "public/images/products/original-jar.png"));
-  const JAR = `data:image/png;base64,${jarFile.toString("base64")}`;
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100%", display: "flex", position: "relative", background: "#3b4a2a" }}>

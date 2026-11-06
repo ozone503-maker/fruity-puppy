@@ -18,11 +18,12 @@ export const metadata: Metadata = {
 
 const shop="/store";
 const sample="/store";
+const base="https://shop.fruitypuppy.com/cdn/shop/files/";
 
 const img={
-  jar:"/images/products/original-jar.png",
-  hibiscus:"/images/products/hibiscus.jpg",
-  aloe:"/images/products/aloe.jpg",
+  jar:base+"rn-image_picker_lib_temp_3a6190c7-8639-488e-9309-6badd5511656.png?v=1781217853&width=1200",
+  hibiscus:base+"rn-image_picker_lib_temp_8152b3c5-2626-46b2-86a9-5f07fdadd850.jpg?v=1780972227&width=1200",
+  aloe:base+"rn-image_picker_lib_temp_05839881-184e-42d8-bd48-5166c9bc5d68.jpg?v=1780972227&width=1200",
 };
 
 type Ingredient = {
