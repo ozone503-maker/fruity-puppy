@@ -82,7 +82,7 @@ export const ORGANIZATION_LD = {
   sameAs: [
     "https://www.instagram.com/fruitypuppyskincream",
     "https://www.tiktok.com/@fruitypuppy.com",
-    "https://shop.fruitypuppy.com",
+    "https://www.fruitypuppy.com/store",
   ],
   address: {
     "@type": "PostalAddress",
