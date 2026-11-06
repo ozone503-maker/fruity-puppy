@@ -10,3 +10,4 @@
 .useCasePage.problem{--uc-bg:#fbf8f0;--uc-surface:#fffdf8;--uc-soft:#e7eee4;--uc-accent:#c75c7e;--uc-accent2:#667f66;--uc-honesty:#e9ddd6;--uc-cta-dark:#6c2940}
 @media(max-width:950px){.ucHero,.ucImageBand{grid-template-columns:1fr}.ucHeroMedia{min-height:520px}.ucHeroCopy{padding:72px 24px}.ucGrid{grid-template-columns:1fr}.ucSection,.ucIntro,.ucHonesty,.ucFaq{padding:82px 24px}.ucImageCopy{padding:76px 24px}}
 @media(max-width:600px){.ucHero{min-height:0}.ucHeroMedia{min-height:430px}.ucHero h1{font-size:56px}.ucLead{font-size:20px}.ucActions{flex-direction:column}.ucActions .button{width:100%;text-align:center}.ucIntro h2,.ucSection h2,.ucHonesty h2,.ucFaq h2,.ucCta h2{font-size:44px}.ucImageBand img{min-height:0;aspect-ratio:1/1}}
+.useCasePage.tattoo .ucImageBand img{object-position:50% 35%}

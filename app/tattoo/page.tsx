@@ -20,11 +20,10 @@ export default function Page(){
     title="Real ink deserves"
     accent="real fruit."
     lead="From fresh-session tightness to years-old color care, Fruity Puppy gives tattooed skin cold, fruit-rich moisture without petroleum, synthetic fragrance, or drugstore sludge."
-    heroImage="https://fruitypuppy.com/images/tattoo-gypsy-back.jpg"
-    heroAlt="Vibrant traditional gypsy back tattoo"
-    heroCaption="Tattoo by Keith Sharer · Dragonfly Tattoos · Vancouver, WA"
+    heroImage="/images/hero/our-cream-hero-poster.jpg"
+    heroAlt="Fresh pink Fruity Puppy cream being whipped in a mixing bowl"
     heroVideo="/images/hero/our-cream-hero.mp4"
-    heroPoster="https://fruitypuppy.com/images/tattoo-gypsy-back.jpg"
+    heroPoster="/images/hero/our-cream-hero-poster.jpg"
     musicBed="/audio/TECH TO WRECK.mp3"
     introEyebrow="SKIN ON ITS HARDEST DAY"
     introTitle="The tattoo lives in the skin."
@@ -38,8 +37,8 @@ export default function Page(){
       {kicker:"05 · RESPECT",title:"A little goes a long way",body:"Fresh work does not need aggressive rubbing. Use a small amount and press gently rather than dragging at peeling or tender skin."},
       {kicker:"06 · PROTECT",title:"Still use sunscreen",body:"Fruity Puppy is skin nutrition, not SPF. Once a tattoo is healed, sun protection still matters for long-term color care."}
     ]}
-    imageBandImage="https://fruitypuppy.com/images/tattoo-mars-attacks.jpg"
-    imageBandAlt="Colorful Mars Attacks themed tattoo"
+    imageBandImage="/images/tattoo/scroll-tattoo.jpg"
+    imageBandAlt="Healed black and grey scroll tattoo on a lower leg listing Courage, Truth, Honor, Fidelity, Discipline, Hospitality, Self-reliance, Industriousness and Perseverance"
     imageBandEyebrow="HEALED INK"
     imageBandTitle="Stained-glass polish for old work."
     imageBandBody="Tattoos do not stop needing skin care when the peeling ends. Consistent moisture can make dry, ashy surface texture look smoother, which lets healed ink read more clearly. That is cosmetic care—not a promise to restore pigment that has actually faded."

@@ -264,8 +264,7 @@ export default function LavaGuava() {
           <div className="lavaNotify" id="lava-notify">
             <p className="lavaEyebrow">Coming soon</p>
             <p className="lavaNotifyLabel">Tell me when Lava-Guava drops</p>
-            <p className="lavaNotifyNote">No signup form yet. Email us and ask to be told when it drops.</p>
-            <a className="lavaNotifyLink" href={contactMailto("Tell me when LAVA-GUAVA drops")}>Email us to get notified</a>
+            <a className="lavaNotifyLink" href={contactMailto("Tell me when LAVA-GUAVA drops")}>Email us to be notified</a>
             <p className="lavaNotifyAddress">{CONTACT_EMAIL}</p>
           </div>
         </div>
