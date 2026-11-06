@@ -6,7 +6,7 @@ import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import "./thorny.css";
 
-const shop = "https://www.fruitypuppy.com/store";
+const shop = "/store";
 const cdn = "https://shop.fruitypuppy.com/cdn/shop/files/";
 const bottle =
   cdn +
