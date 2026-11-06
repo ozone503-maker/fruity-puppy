@@ -37,6 +37,9 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   async rewrites() {
     return [
+      { source: "/store", destination: "https://fruity-puppy-store.vercel.app/" },
+      { source: "/store.css", destination: "https://fruity-puppy-store.vercel.app/store.css" },
+      { source: "/cart.js", destination: "https://fruity-puppy-store.vercel.app/cart.js" },
       { source: "/store/product/:path*", destination: "https://fruity-puppy-store.vercel.app/product/:path*" },
       { source: "/store/api/:path*", destination: "https://fruity-puppy-store.vercel.app/api/:path*" },
       { source: "/store/cart", destination: "https://fruity-puppy-store.vercel.app/cart" },
