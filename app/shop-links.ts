@@ -1,11 +1,11 @@
 /** Shopify product URLs and live prices. Story site stays on this domain; checkout stays on the shop. */
 export const SHOP = {
-  original: "https://shop.fruitypuppy.com/products/fruity-puppy",
-  fpx: "https://shop.fruitypuppy.com/products/fpx-fruity-puppy-xtreme",
-  faceJuice: "https://shop.fruitypuppy.com/products/thorny-toad-face-juice",
-  moonTea: "https://shop.fruitypuppy.com/products/thorny-toad-moon-tea",
+  original: "https://www.fruitypuppy.com/store",
+  fpx: "https://www.fruitypuppy.com/store",
+  faceJuice: "https://www.fruitypuppy.com/store",
+  moonTea: "https://www.fruitypuppy.com/store",
   sample:
-    "https://shop.fruitypuppy.com/products/free-sample-fruity-puppy-original-5-shipping-amp-handling",
+    "https://www.fruitypuppy.com/store",
 } as const;
 
 export const PRICE = {
