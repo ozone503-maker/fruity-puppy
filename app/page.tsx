@@ -3,6 +3,7 @@ import HeroVideo from "./components/HeroVideo";
 import AmbientScrollAudio from "./components/AmbientScrollAudio";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF, CONTACT_EMAIL, contactMailto } from "./site-config";
 import "./cta-pass.css";
+import "./new-batch-bar.css";
 import { PRICE } from "./shop-links";
 import type { Metadata } from "next";
 import { shareMeta } from "./seo";
@@ -66,6 +67,9 @@ export default function Home(){return <main>
     <HeroVideo />
     <div className="heroCopy"><p className="tagline">REAL FRUIT SKIN CREAM FROM BIG ISLAND</p><h1>Skin eats.<br/><em>Feed it well.</em></h1><h2>45% fresh fruit and 17 antioxidants, fed straight to your skin.</h2><div className="buttonRow heroButtons"><a className="button pink heroBuy" href={shop}>{`Buy Now — ${PRICE.original}`}</a><a className="button heroSample" href={sample}>or get a free sample</a></div></div>
   </section>
+
+  {/* Temporary announcement: delete this line and new-batch-bar.css to remove */}
+  <div className="newBatchBar" role="status"><p>NEW BATCH COMING SOON</p></div>
 
   <section className="intro" id="why"><p className="eyebrow">More than skin cream</p><h2>This is fresh skin nutrition.</h2><p>Fruity Puppy Original is made with whole tropical fruit grown on Hawaiʻi Island—not a dusting of extract added for the label. We put the fruit on ice immediately after harvest, rupture the plant cells, and suspend those fruit particulates inside a crystalline lipid matrix your skin recognizes.</p><div className="facts"><div><b>45%</b><span>real fresh fruit</span></div><div><b>17</b><span>bioavailable antioxidants</span></div><div><b>6</b><span>Hawaiian botanicals</span></div><div><b>0</b><span>synthetic fragrance</span></div></div></section>
 
