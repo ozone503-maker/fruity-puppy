@@ -6,6 +6,7 @@ import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import "./thorny.css";
 import SocialLinks from "../components/SocialLinks";
+import FooterSignup from "../components/FooterSignup";
 
 const shop = "/store/product/thorny-toad";
 const bottle = "/images/products/thorny-toad-bottle.png";
@@ -419,7 +420,7 @@ export default function Page() {
           <a href={TERMS_HREF}>Terms</a>
           <a href={RETURNS_HREF}>Returns</a>
         <SocialLinks /></div>
-      </footer>
+      <FooterSignup /></footer>
     </main>
   );
 }

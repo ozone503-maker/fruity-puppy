@@ -11,3 +11,15 @@
 @keyframes fpLazyFade{from{opacity:0}to{opacity:1}}
 img[loading=lazy]{animation:fpLazyFade .45s ease both}
 @media(prefers-reduced-motion:reduce){img[loading=lazy]{animation:none}}
+.fpSignup{grid-column:1/-1;flex-basis:100%;display:grid;grid-template-columns:1fr auto;gap:6px 24px;align-items:center;margin-top:28px;padding-top:24px;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent);text-align:left}
+footer .fpSignup p{margin:0;text-align:left}
+.fpSignupHead{line-height:1.5;font-size:13px}.fpSignupHead b{font-family:Georgia,serif;font-weight:400;font-size:20px;margin-right:6px}.fpSignupHead span{opacity:.8}
+.fpSignupRow{display:flex;gap:8px;justify-content:flex-end}
+.fpSignup input[type=email]{width:240px;max-width:100%;min-width:0;padding:10px 15px;border:1px solid color-mix(in srgb,currentColor 45%,transparent);border-radius:99px;background:transparent;color:inherit;font:inherit;font-size:13px}
+.fpSignup input[type=email]::placeholder{color:inherit;opacity:.5}
+.fpSignup button{padding:10px 18px;border:0;border-radius:99px;background:var(--pink);color:#fff;font:700 12px Arial,sans-serif;letter-spacing:.04em;cursor:pointer}
+.fpSignup button:disabled{opacity:.6}
+.fpSignupConsent{grid-column:2;justify-self:end;font-size:10px;opacity:.6}
+.fpSignupMsg{grid-column:2;justify-self:end;font-size:12px;min-height:1.2em}
+.fpHp,.fpSr{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+@media(max-width:950px){.fpSignup{grid-template-columns:1fr;text-align:center}footer .fpSignup p{text-align:center}.fpSignupRow{justify-content:center}.fpSignupMsg,.fpSignupConsent{grid-column:1;justify-self:center}}

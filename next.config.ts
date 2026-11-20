@@ -57,6 +57,8 @@ const nextConfig: NextConfig = {
       { source: "/store/confirmation/", destination: "https://fruity-puppy-store.vercel.app/confirmation/" },
       { source: "/store/cart.js", destination: "https://fruity-puppy-store.vercel.app/cart.js" },
       { source: "/store/store.css", destination: "https://fruity-puppy-store.vercel.app/store.css" },
+      { source: "/store/signup.js", destination: "https://fruity-puppy-store.vercel.app/signup.js" },
+      { source: "/store/unsubscribe", destination: "https://fruity-puppy-store.vercel.app/unsubscribe" },
       { source: "/store/admin", destination: "https://fruity-puppy-store.vercel.app/admin/" },
       { source: "/store/admin/", destination: "https://fruity-puppy-store.vercel.app/admin/" },
       { source: "/store/ship/:id", destination: "https://fruity-puppy-store.vercel.app/ship/:id" },

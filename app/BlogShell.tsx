@@ -1,5 +1,6 @@
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "./site-config";
 import SocialLinks from "./components/SocialLinks";
+import FooterSignup from "./components/FooterSignup";
 
 const links: [string, string][] = [
   ["Our Team", "/our-team"],
@@ -63,6 +64,6 @@ export function BlogFooter() {
         <a href={TERMS_HREF}>Terms</a>
         <a href={RETURNS_HREF}>Returns</a>
       <SocialLinks /></div>
-    </footer>
+    <FooterSignup /></footer>
   );
 }

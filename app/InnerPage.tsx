@@ -3,6 +3,7 @@ import ProcessBeat from "./components/ProcessBeat";
 import AmbientScrollAudio from "./components/AmbientScrollAudio";
 import InnerHeroVideo from "./components/InnerHeroVideo";
 import SocialLinks from "./components/SocialLinks";
+import FooterSignup from "./components/FooterSignup";
 
 export type PageData={eyebrow:string;title:string;intro:string;hero:string;heroAlt:string;sections:{title:string;body:string;image?:string;alt?:string;details?:[string,string][]}[];cta?:{label:string;href:string}};
 
@@ -34,5 +35,5 @@ export default function InnerPage({
   {processBeat&&<ProcessBeat src={processBeat.src} poster={processBeat.poster} caption={processBeat.caption}/>}
   <section className="storyStack" id="inner-story">{data.sections.map((s)=><article className={s.image?"storyCard withImage":"storyCard"} key={s.title}>{s.image&&<img src={s.image} alt={s.alt||s.title}/>}<div><h2>{s.title}</h2><p>{s.body}</p>{s.details&&<div className="detailList">{s.details.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div>}</div></article>)}</section>
   {data.cta&&<section className="innerCta"><h2>{data.title}</h2><a className="button dark" href={data.cta.href}>{data.cta.label}</a></section>}
-  <footer><a className="logo" href="/">FRUITY <b>PUPPY</b></a><p>Made by hand on Big Island, Hawaiʻi.</p><div><a href="/our-team">Team</a><a href="/our-dream">Dream</a><a href="/our-cream">Cream</a><a href="/our-home">Home</a><a href="/safety-and-transparency">Safety</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={PRIVACY_HREF}>Privacy</a><a href={TERMS_HREF}>Terms</a><a href={RETURNS_HREF}>Returns</a><SocialLinks /></div></footer>
+  <footer><a className="logo" href="/">FRUITY <b>PUPPY</b></a><p>Made by hand on Big Island, Hawaiʻi.</p><div><a href="/our-team">Team</a><a href="/our-dream">Dream</a><a href="/our-cream">Cream</a><a href="/our-home">Home</a><a href="/safety-and-transparency">Safety</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={PRIVACY_HREF}>Privacy</a><a href={TERMS_HREF}>Terms</a><a href={RETURNS_HREF}>Returns</a><SocialLinks /></div><FooterSignup /></footer>
  </main>}

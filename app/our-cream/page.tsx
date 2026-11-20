@@ -4,6 +4,7 @@ import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import { PRICE } from "../shop-links";
 import SocialLinks from "../components/SocialLinks";
+import FooterSignup from "../components/FooterSignup";
 
 const shop = "/store";
 
@@ -226,7 +227,7 @@ export default function Page() {
           <a href={TERMS_HREF}>Terms</a>
           <a href={RETURNS_HREF}>Returns</a>
         <SocialLinks /></div>
-      </footer>
+      <FooterSignup /></footer>
     </main>
   );
 }
