@@ -6,7 +6,7 @@ import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import "./thorny.css";
 
-const shop = "/store";
+const shop = "/store/product/thorny-toad";
 const bottle = "/images/products/thorny-toad-bottle.png";
 const plants = [
   [

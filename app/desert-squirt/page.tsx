@@ -6,8 +6,8 @@ import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import "./desert.css";
 
-const faceJuice = "/store";
-const moonTea = "/store";
+const faceJuice = "/store/product/thorny-toad";
+const moonTea = "/store/product/moon-tea";
 
 // Placeholder botanicals — swap photos when Jessie drops Texas ingredient stills.
 const plants = [
@@ -187,12 +187,12 @@ export default function Page() {
         <p className="ey" style={{ color: "#e8d2a8" }}>
           The toner family
         </p>
-        <h2>Shop the active sisters while Desert Squirt returns to the fridge line.</h2>
+        <h2>Shop Face Juice while Desert Squirt and Moon Tea return to the fridge line.</h2>
         <div className="links">
           <a href="/thorny-toad">Thorny Toad Face Juice</a>
           <a href="/moon-tea">Moon Tea</a>
           <a href={faceJuice}>Shop Face Juice</a>
-          <a href={moonTea}>Shop Moon Tea</a>
+          <a href={moonTea}>Moon Tea: coming soon</a>
         </div>
       </section>
 

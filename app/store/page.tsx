@@ -15,11 +15,11 @@ export const metadata: Metadata = {
 
 const products = [
   { name: "Fruity Puppy Original", note: "45% fresh fruit · 2 oz · $59.99", href: "/store/product/fruity-puppy-original", image: "/images/process/open-cream.jpg", tone: "pink", cta: "Add to cart →" },
-  { name: "FPX", note: "More papaya + starfruit · 2 oz · $59.99", href: "/store/product/fpx", image: "/images/hero/fpx-hero-poster.jpg", tone: "black", cta: "Add to cart →" },
-  { name: "Lava-Guava Bomb Balm", note: "High-friction + high-moisture zones · $59.99", href: "/store/product/lava-guava", image: "/images/process/cream-texture.jpg", tone: "guava", cta: "Add to cart →" },
+  { name: "FPX", note: "More papaya + starfruit · 2 oz · $59.99", href: "/store/product/fpx", image: "/images/hero/fpx-hero-poster.jpg", tone: "black", cta: "Coming soon" },
+  { name: "Lava-Guava Bomb Balm", note: "High-friction + high-moisture zones · $59.99", href: "/store/product/lava-guava", image: "/images/process/cream-texture.jpg", tone: "guava", cta: "Coming soon" },
   { name: "Thorny Toad Face Juice", note: "Botanical toner · $29.99", href: "/store/product/thorny-toad", image: "/images/ingredients/spearmint.webp", tone: "green", cta: "Add to cart →" },
-  { name: "Desert Squirt", note: "Dry-climate botanical ritual · $29.99", href: "/store/product/desert-squirt", image: "/images/ingredients/aloe-vera.webp", tone: "sand", cta: "Add to cart →" },
-  { name: "Moon Tea", note: "Nocturnal polishing toner · $29.99", href: "/store/product/moon-tea", image: "/images/ingredients/cranberry-hibiscus.webp", tone: "moon", cta: "Add to cart →" },
+  { name: "Desert Squirt", note: "Dry-climate botanical ritual · $29.99", href: "/store/product/desert-squirt", image: "/images/ingredients/aloe-vera.webp", tone: "sand", cta: "Coming soon" },
+  { name: "Moon Tea", note: "Nocturnal polishing toner · $29.99", href: "/store/product/moon-tea", image: "/images/ingredients/cranberry-hibiscus.webp", tone: "moon", cta: "Coming soon" },
 ];
 
 function ProductCard({ p, featured = false }: { p: (typeof products)[number]; featured?: boolean }) {

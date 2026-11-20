@@ -1,9 +1,9 @@
 /** Store links and live prices. Every purchase goes through the Fruity Puppy Store at /store. */
 export const SHOP = {
   original: "/store",
-  fpx: "/store",
-  faceJuice: "/store",
-  moonTea: "/store",
+  fpx: "/store/product/fpx",
+  faceJuice: "/store/product/thorny-toad",
+  moonTea: "/store/product/moon-tea",
   sample:
     "/store",
 } as const;

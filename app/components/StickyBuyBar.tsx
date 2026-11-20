@@ -8,9 +8,9 @@ type BuyConfig = { href: string; label: string };
 const ROUTES: Record<string, BuyConfig> = {
   "/": { href: SHOP.original, label: `BUY NOW · ${PRICE.original}` },
   "/our-cream": { href: SHOP.original, label: `BUY NOW · ${PRICE.original}` },
-  "/fpx": { href: SHOP.fpx, label: `BUY FPX · ${PRICE.fpx}` },
+  "/fpx": { href: SHOP.fpx, label: "FPX · COMING SOON" },
   "/thorny-toad": { href: SHOP.faceJuice, label: `BUY FACE JUICE · ${PRICE.faceJuice}` },
-  "/moon-tea": { href: SHOP.moonTea, label: `BUY MOON TEA · ${PRICE.moonTea}` },
+  "/moon-tea": { href: SHOP.moonTea, label: "MOON TEA · COMING SOON" },
 };
 
 export default function StickyBuyBar() {

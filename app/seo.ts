@@ -122,7 +122,7 @@ export function productLd(key: ProductKey, name: string, description: string) {
       url: SHOP[key],
       price: PRICE[key].replace(/[^0-9.]/g, ""),
       priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
+      availability: key === "fpx" || key === "moonTea" ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
       seller: { "@type": "Organization", name: "Fruity Puppy" },
     },

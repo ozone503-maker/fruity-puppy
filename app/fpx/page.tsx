@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import JsonLd from "../components/JsonLd";
-import { PRICE, SHOP } from "../shop-links";
+import { SHOP } from "../shop-links";
 import { productLd, shareMeta } from "../seo";
 
 export const metadata: Metadata = {
@@ -86,7 +86,7 @@ export default function Page() {
             starfruit for our maximum exfoliating power and dead surface skin removal.
           </p>
           <div className="fpxActions">
-            <a className="button fpxPrimary" href={shop}>{`Shop FPX — ${PRICE.fpx}`}</a>
+            <a className="button fpxPrimary" href={shop}>Coming soon</a>
             <a className="fpxTextLink" href="#fpx-story">See what changed ↓</a>
           </div>
           <p className="fpxWarning">EXTRA STRENGTH · NOT FOR SENSITIVE SKIN</p>
@@ -214,7 +214,7 @@ export default function Page() {
         <p className="fpxEyebrow">WHEN ORIGINAL IS NOT ENOUGH</p>
         <h2>Turn up the fruit.</h2>
         <p>More papaya. Added starfruit. Maximum Fruity Puppy exfoliation.</p>
-        <a className="button fpxPrimary" href={shop}>{`Shop FPX — ${PRICE.fpx}`}</a>
+        <a className="button fpxPrimary" href={shop}>Coming soon</a>
       </section>
 
       <footer>

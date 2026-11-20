@@ -35,6 +35,13 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      { source: "/shop", destination: "/store", permanent: false },
+      { source: "/cart", destination: "/store", permanent: false },
+      { source: "/checkout", destination: "/store", permanent: false },
+    ];
+  },
   async rewrites() {
     return {
       beforeFiles: [
