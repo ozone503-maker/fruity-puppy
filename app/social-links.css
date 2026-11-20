@@ -1,0 +1,7 @@
+.socialLinks{display:inline-flex;align-items:center;gap:14px}
+.socialLinks a{display:inline-flex;align-items:center;color:inherit;line-height:0}
+.socialLinks svg{width:18px;height:18px;display:block}
+.socialLinks a:hover{opacity:.75}
+.mobileSocialRow{display:flex;justify-content:center;padding:16px 0 4px}
+.mobileSocialRow .socialLinks{gap:22px}
+.mobileSocialRow .socialLinks svg{width:22px;height:22px}

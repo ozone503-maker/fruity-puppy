@@ -4,6 +4,7 @@ import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import type { Metadata } from "next";
 import { shareMeta } from "../seo";
+import SocialLinks from "../components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "Our Home | FLASHTOWN, Hawaiʻi | Fruity Puppy",
@@ -83,5 +84,5 @@ export default function Page(){return <main className="ourHomePage">
 
   <section className="homeClosing"><p>Fruity Puppy is a cream.</p><h2>FLASHTOWN is the world it comes from.</h2><p>Come visit sometime. We’re always here.</p><div><a className="button dark" href="https://www.google.com/search?q=Flashtown+Hawaii">Find FLASHTOWN</a><a className="homeTextLink" href="/our-dream">See Our Dream →</a></div></section>
 
-  <footer><a className="logo" href="/">FRUITY <b>PUPPY</b></a><p>Made by hand at FLASHTOWN, Big Island.</p><div><a href="/our-team">Team</a><a href="/our-dream">Dream</a><a href="/our-cream">Cream</a><a href="/our-home">Home</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={PRIVACY_HREF}>Privacy</a><a href={TERMS_HREF}>Terms</a><a href={RETURNS_HREF}>Returns</a></div></footer>
+  <footer><a className="logo" href="/">FRUITY <b>PUPPY</b></a><p>Made by hand at FLASHTOWN, Big Island.</p><div><a href="/our-team">Team</a><a href="/our-dream">Dream</a><a href="/our-cream">Cream</a><a href="/our-home">Home</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={PRIVACY_HREF}>Privacy</a><a href={TERMS_HREF}>Terms</a><a href={RETURNS_HREF}>Returns</a><SocialLinks /></div></footer>
 </main>}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./merch.css";
 import { shareMeta } from "../seo";
+import SocialLinks from "../components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "Fruity Puppy Outlet | Merch Hall",
@@ -132,6 +133,7 @@ export default function MerchPage() {
       <footer className="store-footer">
         <a href={SHOP} className="cta-btn primary">Shop All Merch</a>
         <a href="/" className="cta-btn secondary">Back to Fruity Puppy</a>
+        <SocialLinks />
       </footer>
     </main>
   );

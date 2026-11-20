@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "../site-config";
 import { shareMeta } from "../seo";
+import SocialLinks from "../components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "Safety, Allergens & Botanical Transparency | Fruity Puppy",
@@ -45,5 +46,5 @@ export default function Page(){return <main className="safetyPage">
   <section className="smallBatchSafety"><div><p className="eyebrow">Small-batch production</p><h2>Made by hand in Hawaiʻi.</h2></div><div><p>Fruity Puppy and Thorny Toad are produced in small batches using traditional botanical extraction methods, in a shared facility that processes various plant materials.</p><p>These products are cosmetic preparations and have not been evaluated by the U.S. Food & Drug Administration for medical purposes. They are not intended to diagnose, treat, cure, or prevent any disease or condition. Individual responses to botanical ingredients may vary.</p><p className="updated">Last updated August 2026</p></div></section>
 
   <section className="safetyClosing"><p className="eyebrow">Questions about your skin?</p><h2>Ask before you apply.</h2><a className="button dark" href={ASK_IPO_HREF}>Ask Ipo</a></section>
-  <footer><a className="logo" href="/">FRUITY <b>PUPPY</b></a><p>Made by hand on Big Island, Hawaiʻi.</p><div><a href="/our-home">Our Home</a><a href="/safety-and-transparency">Safety</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={PRIVACY_HREF}>Privacy</a><a href={TERMS_HREF}>Terms</a><a href={RETURNS_HREF}>Returns</a></div></footer>
+  <footer><a className="logo" href="/">FRUITY <b>PUPPY</b></a><p>Made by hand on Big Island, Hawaiʻi.</p><div><a href="/our-home">Our Home</a><a href="/safety-and-transparency">Safety</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={PRIVACY_HREF}>Privacy</a><a href={TERMS_HREF}>Terms</a><a href={RETURNS_HREF}>Returns</a><SocialLinks /></div></footer>
 </main>}

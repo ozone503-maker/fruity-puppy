@@ -5,6 +5,7 @@ import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from 
 import JsonLd from "../components/JsonLd";
 import { SHOP } from "../shop-links";
 import { productLd, shareMeta } from "../seo";
+import SocialLinks from "../components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "FPX | Fruity Puppy Extra Strength with Starfruit",
@@ -219,7 +220,7 @@ export default function Page() {
 
       <footer>
         <a className="logo" href="/">FRUITY <b>PUPPY</b></a><p>Made by hand on Big Island, Hawaiʻi.</p>
-        <div><a href="/our-team">Team</a><a href="/our-dream">Dream</a><a href="/our-cream">Cream</a><a href="/our-home">Home</a><a href="/safety-and-transparency">Safety</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={PRIVACY_HREF}>Privacy</a><a href={TERMS_HREF}>Terms</a><a href={RETURNS_HREF}>Returns</a></div>
+        <div><a href="/our-team">Team</a><a href="/our-dream">Dream</a><a href="/our-cream">Cream</a><a href="/our-home">Home</a><a href="/safety-and-transparency">Safety</a><a href="/our-partners">Partners</a><a href={BLOG_HREF}>Blog</a><a href={ASK_IPO_HREF}>Ask Ipo</a><a href={PRIVACY_HREF}>Privacy</a><a href={TERMS_HREF}>Terms</a><a href={RETURNS_HREF}>Returns</a><SocialLinks /></div>
       </footer>
       <JsonLd data={productSchema} />
     </main>

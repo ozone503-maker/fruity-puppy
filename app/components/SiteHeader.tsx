@@ -1,4 +1,5 @@
 import { ASK_IPO_HREF, BLOG_HREF } from "../site-config";
+import SocialLinks from "./SocialLinks";
 
 const shop = "/store";
 const buyNow = "/store/buy/FP-2OZ";
@@ -93,6 +94,7 @@ export default function SiteHeader(){
         <a className="mobileSimpleLink mobileSampleLink" href={sample}>TRY A FREE SAMPLE <span>→</span></a>
         <a className="mobileIpoSimple" href={ASK_IPO_HREF}><span>ASK IPO</span><small>Help me choose what my skin needs</small></a>
         <a className="mobileSimpleLink" href={outletMall} target="_blank" rel="noopener noreferrer">OUTLET MALL <span>↗</span></a>
+        <div className="mobileSocialRow"><SocialLinks /></div>
       </div>
     </details>
   </header>;

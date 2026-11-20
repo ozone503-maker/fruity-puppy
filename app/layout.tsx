@@ -5,6 +5,7 @@ import OutletMallPortal from "./components/OutletMallPortal";
 import JsonLd from "./components/JsonLd";
 import { ORGANIZATION_LD } from "./seo";
 import "./globals.css";
+import "./social-links.css";
 import "./photo-sections.css";
 import "./product-proof.css";
 import "./our-team/team.css";

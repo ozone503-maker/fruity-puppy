@@ -2,6 +2,7 @@ import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, CONTACT_EMAIL, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF, contactMailto } from "../site-config";
+import SocialLinks from "../components/SocialLinks";
 
 /** Lava-Guava is not for sale yet. Nav "Shop" goes where the site header's Shop goes. */
 const shop = "/store";
@@ -323,7 +324,7 @@ export default function LavaGuava() {
           <a href={TERMS_HREF}>Terms</a>
           <a href={RETURNS_HREF}>Returns</a>
           <a href={shop}>Shop</a>
-        </div>
+        <SocialLinks /></div>
       </footer>
     </main>
   );

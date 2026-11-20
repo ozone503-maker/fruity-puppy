@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PRICE, SHOP } from "./shop-links";
+import { SOCIAL } from "./social";
 
 /** Site-wide default share image (same one the root layout uses). */
 export const DEFAULT_OG_IMAGE = {
@@ -79,11 +80,7 @@ export const ORGANIZATION_LD = {
   name: "Fruity Puppy",
   url: "https://www.fruitypuppy.com",
   logo: "https://www.fruitypuppy.com/favicon.svg",
-  sameAs: [
-    "https://www.instagram.com/fruitypuppyskincream",
-    "https://www.tiktok.com/@fruitypuppy.com",
-    "https://www.fruitypuppy.com/store",
-  ],
+  sameAs: [...SOCIAL.map((s) => s.href), "https://www.fruitypuppy.com/store"],
   address: {
     "@type": "PostalAddress",
     postOfficeBoxNumber: "711416",
