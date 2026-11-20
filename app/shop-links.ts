@@ -8,6 +8,12 @@ export const SHOP = {
     "/store",
 } as const;
 
+/** Direct-buy links: one unit straight to Stripe Checkout (store route /store/buy/<sku>). */
+export const BUY = {
+  original: "/store/buy/FP-2OZ",
+  sample: "/store/buy/FP-SAMPLE",
+} as const;
+
 export const PRICE = {
   original: "$59.99",
   fpx: "$59.99",

@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/store/buy/"],
     },
     sitemap: "https://www.fruitypuppy.com/sitemap.xml",
     host: "https://www.fruitypuppy.com",

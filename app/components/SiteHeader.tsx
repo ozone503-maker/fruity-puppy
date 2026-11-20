@@ -1,7 +1,8 @@
 import { ASK_IPO_HREF, BLOG_HREF } from "../site-config";
 
 const shop = "/store";
-const sample = "/store";
+const buyNow = "/store/buy/FP-2OZ";
+const sample = "/store/buy/FP-SAMPLE";
 const outletMall = "https://outlet-mall.vercel.app/";
 
 export default function SiteHeader(){
@@ -9,6 +10,7 @@ export default function SiteHeader(){
     <a className="siteHeaderLogo" href="/">FRUITY <b>PUPPY</b></a>
 
     <nav className="siteDesktopNav" aria-label="Main menu">
+      <a href="/">Home</a>
       <details className="siteNavGroup">
         <summary>About</summary>
         <div className="siteDropdown">
@@ -51,7 +53,8 @@ export default function SiteHeader(){
     <details className="siteMobileMenu">
       <summary aria-label="Open Fruity Puppy menu"><span>MENU</span><i aria-hidden="true">☰</i></summary>
       <div className="siteMobilePanel">
-        <a className="mobileBuyNow" href={shop}>BUY NOW <span>→</span></a>
+        <a className="mobileBuyNow" href={buyNow}>BUY NOW <span>→</span></a>
+        <a className="mobileSimpleLink" href="/">HOME <span>→</span></a>
 
         <details className="mobileShopMenu">
           <summary>SHOP <span>+</span></summary>

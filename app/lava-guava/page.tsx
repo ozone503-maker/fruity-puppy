@@ -2,10 +2,9 @@ import HeroVideo from "../components/HeroVideo";
 import AmbientScrollAudio from "../components/AmbientScrollAudio";
 import ProcessBeat from "../components/ProcessBeat";
 import { ASK_IPO_HREF, BLOG_HREF, CONTACT_EMAIL, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF, contactMailto } from "../site-config";
-import { SHOP } from "../shop-links";
 
 /** Lava-Guava is not for sale yet. Nav "Shop" goes where the site header's Shop goes. */
-const shop = SHOP.original;
+const shop = "/store";
 const notify = "#lava-notify";
 
 const botanicals = [
