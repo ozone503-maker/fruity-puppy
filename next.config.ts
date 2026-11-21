@@ -65,6 +65,11 @@ const nextConfig: NextConfig = {
       { source: "/store/admin", destination: "https://fruity-puppy-store.vercel.app/admin/" },
       { source: "/store/admin/", destination: "https://fruity-puppy-store.vercel.app/admin/" },
       { source: "/store/ship/:id", destination: "https://fruity-puppy-store.vercel.app/ship/:id" },
+      // /spin_to_win is the Fruity Puppy Slots game (github.com/ozone503-maker/reel-engine, Vercel project reel-engine),
+      // built with base /spin_to_win/ so its assets load through these rewrites.
+      { source: "/spin_to_win", destination: "https://reel-engine-ozone503-6682.vercel.app/spin_to_win/" },
+      { source: "/spin_to_win/", destination: "https://reel-engine-ozone503-6682.vercel.app/spin_to_win/" },
+      { source: "/spin_to_win/:path+", destination: "https://reel-engine-ozone503-6682.vercel.app/spin_to_win/:path+" },
       ],
       afterFiles: [],
       fallback: [],
