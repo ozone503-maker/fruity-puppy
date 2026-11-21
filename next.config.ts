@@ -44,6 +44,9 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return {
+      // /store is the Store Kit app (github.com/ozone503-maker/store-kit, Vercel project fruity-puppy-store):
+      // storefront, cart, checkout, webhooks and admin all live there. Do not add app/store pages here;
+      // these beforeFiles rewrites win and they would never show. Mount docs: store-kit/mount/README.md.
       beforeFiles: [
       { source: "/store", destination: "https://fruity-puppy-store.vercel.app/" },
       { source: "/store.css", destination: "https://fruity-puppy-store.vercel.app/store.css" },
