@@ -7,7 +7,7 @@ const OK = "You're on the list. Good choice.";
 const FAIL = "That didn't take. Try again?";
 
 /** "Get on the list." email signup that sits at the bottom of every footer. Posts to the store API. */
-export default function FooterSignup() {
+export default function FooterSignup({ id = "fp-signup-email" }: { id?: string } = {}) {
   const pathname = usePathname() || "/";
   const [state, setState] = useState<"idle" | "busy" | "ok" | "err">("idle");
 
@@ -35,8 +35,8 @@ export default function FooterSignup() {
     <form className="fpSignup" onSubmit={onSubmit} noValidate>
       <p className="fpSignupHead"><b>Get on the list.</b> <span>Skin news from a pink robot dog. No spam. I&rsquo;d know.</span></p>
       <p className="fpSignupRow">
-        <label className="fpSr" htmlFor="fp-signup-email">Email</label>
-        <input id="fp-signup-email" type="email" name="email" autoComplete="email" inputMode="email" placeholder="you@email.com" required maxLength={254} />
+        <label className="fpSr" htmlFor={id}>Email</label>
+        <input id={id} type="email" name="email" autoComplete="email" inputMode="email" placeholder="you@email.com" required maxLength={254} />
         <input className="fpHp" type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
         <button type="submit" disabled={state === "busy"}>I&rsquo;m in</button>
       </p>

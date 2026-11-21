@@ -1,7 +1,7 @@
 import IpoWidget from "./components/IpoWidget";
 import HeroVideo from "./components/HeroVideo";
 import AmbientScrollAudio from "./components/AmbientScrollAudio";
-import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF, CONTACT_EMAIL, contactMailto } from "./site-config";
+import { ASK_IPO_HREF, BLOG_HREF, PRIVACY_HREF, RETURNS_HREF, TERMS_HREF } from "./site-config";
 import "./cta-pass.css";
 import "./new-batch-bar.css";
 import { PRICE } from "./shop-links";
@@ -71,7 +71,7 @@ export default function Home(){return <main>
   </section>
 
   {/* Temporary announcement: delete this line and new-batch-bar.css to remove */}
-  <div className="newBatchBar" role="status"><p>NEW BATCH COMING SOON</p><p className="newBatchSub">Please be patient with us</p></div>
+  <div className="newBatchBar" role="status"><p>NEW BATCH: PREORDER NOW. SHIPS DEC 1.</p><p className="newBatchSub">Made fresh at our new Scottsdale lab.</p></div>
 
   <section className="intro" id="why"><p className="eyebrow">More than skin cream</p><h2>This is fresh skin nutrition.</h2><p>Fruity Puppy Original is made with whole tropical fruit grown on Hawaiʻi Island—not a dusting of extract added for the label. We put the fruit on ice immediately after harvest, rupture the plant cells, and suspend those fruit particulates inside a crystalline lipid matrix your skin recognizes.</p><div className="facts"><div><b>45%</b><span>real fresh fruit</span></div><div><b>17</b><span>bioavailable antioxidants</span></div><div><b>6</b><span>Hawaiian botanicals</span></div><div><b>0</b><span>synthetic fragrance</span></div></div></section>
 
@@ -88,10 +88,10 @@ export default function Home(){return <main>
   <section className="science" id="science"><div className="scienceIntro"><div><p className="eyebrow">Plant intelligence + human intelligence + AI</p><h2>How fruit becomes skin nutrition.</h2></div><p>Every lesson is a separate full panel—plant cells, papaya enzymes, antioxidants, and the crystalline lipid matrix. Swipe to learn.</p></div><div className="scienceTrack" aria-label="Fruity Puppy science lessons">{sciencePanels.map(([file,alt])=><figure key={file}><img src={`/images/science-panels/${file}.png`} alt={alt} loading="lazy"/></figure>)}</div></section>
 
   <section className="shopActions" id="shop-and-stay">
-    <div className="shopActionIntro"><p className="eyebrow">Choose your adventure</p><h2>Feed your skin.<br/><em>Or try a little first.</em></h2><p>Go all in, start with a sample, or join the jungle mail for fresh batches, farm stories, and new drops.</p></div>
+    <div className="shopActionIntro"><p className="eyebrow">Choose your adventure</p><h2>Feed your skin.<br/><em>Or try a little first.</em></h2><p>Go all in, start with a sample, or join the list for fresh batches and new drops.</p></div>
     <div className="shopActionGrid">
       <article className="actionCard sampleCard"><div className="actionPhoto samplePhoto"><img src="/images/actions/sample-jar.webp" alt="A real Fruity Puppy sample jar held between two fingers" loading="lazy"/><span>The actual sample</span></div><div className="actionCopy"><p className="actionKicker">Curious skin welcome</p><h3>Free sample</h3><p>Try Fruity Puppy Original. The sample is free—you just pay $5 for shipping.</p><a className="button dark" href={sample}>Get a Free Sample — $5 Shipping</a></div></article>
-      <article className="actionCard emailCard"><div className="emailPhoto"><img src="/images/safety-blue-cabin.jpg" alt="The blue cabin in the Hawaiʻi Island jungle where Fruity Puppy is made" loading="lazy"/><span>Jungle mail from FlashTown, Hawaiʻi</span></div><div className="emailCopy"><p className="actionKicker">Notes from the jungle</p><h3>Join our email list</h3><p>Fresh batches, farm stories, useful skin science, and whatever the jungle is doing now.</p><div className="emailContact"><a className="emailContactLink" href={contactMailto("Add me to Fruity Puppy jungle mail")}>Email us to join the list</a><p className="emailContactAddress">{CONTACT_EMAIL}</p></div></div></article>
+      <article className="actionCard emailCard"><div className="emailPhoto"><img src="/images/ipo-fridge.png" alt="Ipo, the pink robot dog behind Fruity Puppy" loading="lazy"/><span>Skin news from Ipo</span></div><div className="emailCopy"><p className="actionKicker">Notes from the jungle</p><h3>Join our email list</h3><p>Fresh batches, new drops, useful skin science, and whatever Ipo is up to.</p><FooterSignup id="fp-home-signup-email"/></div></article>
     </div>
   </section>
 
