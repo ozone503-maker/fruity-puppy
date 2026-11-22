@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import SiteHeader from "./components/SiteHeader";
 import OutletMallPortal from "./components/OutletMallPortal";
@@ -77,6 +78,7 @@ export default function RootLayout({
         {children}
         <OutletMallPortal />
         <JsonLd data={ORGANIZATION_LD} />
+        <Analytics />
       </body>
     </html>
   );
